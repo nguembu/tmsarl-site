@@ -314,6 +314,10 @@ body {
   padding-left: var(--stack-lg);
   padding-right: var(--stack-lg);
 }
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* ===== 7. COMPOSANTS ===== */
 
@@ -496,6 +500,9 @@ body {
 
 /* ----- 7.3 Cartes ----- */
 .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   background: var(--surface-container-lowest);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-level-2);
@@ -516,6 +523,7 @@ body {
 }
 
 .card-body {
+  flex: 1;
   padding: var(--stack-md);
 }
 
@@ -797,6 +805,37 @@ body {
 .contact-info-value {
   font-family: var(--font-family-body);
   font-size: 16px;
+  color: var(--on-surface);
+}
+
+/* ----- Liste à puces avec icône ronde (check-list) ----- */
+.check-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--stack-md);
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: var(--stack-sm);
+}
+
+.check-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: var(--radius-full);
+  background: var(--primary-light);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.check-text {
+  font-family: var(--font-family-body);
+  font-size: 18px;
   color: var(--on-surface);
 }
 
