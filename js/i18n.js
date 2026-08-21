@@ -167,6 +167,7 @@
             'legal.title': 'Mentions légales',
             'legal.subtitle': 'Conformément aux dispositions légales en vigueur au Cameroun, nous vous informons des éléments suivants.',
             'legal.last_update': 'Dernière mise à jour :',
+            'legal.back': 'Retour à l\'accueil',
 
             'legal.section1.title': '1. Éditeur du site',
             'legal.section1.company': 'Nom de la société :',
@@ -225,6 +226,7 @@
             'privacy.title': 'Politique de confidentialité',
             'privacy.subtitle': 'Nous nous engageons à protéger vos données personnelles conformément à la législation camerounaise en vigueur.',
             'privacy.last_update': 'Dernière mise à jour :',
+            'privacy.back': 'Retour à l\'accueil',
 
             'privacy.section1.title': '1. Introduction',
             'privacy.section1.p1': 'Technologie Médicale Company SARL (TMS SARL) accorde une importance particulière à la protection de vos données personnelles. Cette politique de confidentialité vous informe de la manière dont nous collectons, utilisons, conservons et protégeons vos informations lorsque vous utilisez notre site internet.',
@@ -315,6 +317,7 @@
             'cgv.title': 'Conditions Générales de Vente',
             'cgv.subtitle': 'Les présentes Conditions Générales de Vente régissent les relations contractuelles entre TMS SARL et ses clients.',
             'cgv.last_update': 'Dernière mise à jour :',
+            'cgv.back': 'Retour à l\'accueil',
 
             'cgv.article1.title': 'Article 1 : Champ d\'application',
             'cgv.article1.p1': 'Les présentes Conditions Générales de Vente (CGV) s\'appliquent à toutes les ventes de produits et services effectuées par Technologie Médicale Company SARL (TMS SARL), immatriculée au Registre de Commerce de Yaoundé sous le numéro RC/YAO/2023/B-XXX.',
@@ -574,6 +577,7 @@
             'legal.title': 'Legal notices',
             'legal.subtitle': 'In accordance with the legal provisions in force in Cameroon, we inform you of the following elements.',
             'legal.last_update': 'Last updated:',
+            'legal.back': 'Back to home',
 
             'legal.section1.title': '1. Publisher of the site',
             'legal.section1.company': 'Company name:',
@@ -632,6 +636,7 @@
             'privacy.title': 'Privacy policy',
             'privacy.subtitle': 'We are committed to protecting your personal data in accordance with applicable Cameroonian legislation.',
             'privacy.last_update': 'Last updated:',
+            'privacy.back': 'Back to home',
 
             'privacy.section1.title': '1. Introduction',
             'privacy.section1.p1': 'Technologie Médicale Company SARL (TMS SARL) places particular importance on the protection of your personal data. This privacy policy informs you about how we collect, use, store and protect your information when you use our website.',
@@ -722,6 +727,7 @@
             'cgv.title': 'Terms & Conditions of Sale',
             'cgv.subtitle': 'These Terms & Conditions of Sale govern the contractual relations between TMS SARL and its clients.',
             'cgv.last_update': 'Last updated:',
+            'cgv.back': 'Back to home',
 
             'cgv.article1.title': 'Article 1: Scope of application',
             'cgv.article1.p1': 'These Terms & Conditions of Sale (T&C) apply to all sales of products and services carried out by Technologie Médicale Company SARL (TMS SARL), registered in the Yaoundé Trade Register under number RC/YAO/2023/B-XXX.',

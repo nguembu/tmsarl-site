@@ -18,6 +18,7 @@
             padding: 60px 0 40px;
             background: var(--surface-container-low);
             border-bottom: 1px solid var(--outline-variant);
+            position: relative;
         }
 
         .legal-hero h1 {
@@ -142,9 +143,51 @@
             color: var(--on-surface-variant);
         }
 
+        /* ===== BOUTON RETOUR ===== */
+        .back-to-home {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--stack-sm);
+            padding: 10px 20px;
+            border-radius: var(--radius-default);
+            background: var(--surface-container-lowest);
+            color: var(--on-surface);
+            border: 1px solid var(--outline-variant);
+            font-weight: 500;
+            font-size: 14px;
+            transition: all var(--transition-medium);
+            box-shadow: var(--shadow-level-1);
+            text-decoration: none;
+            font-family: var(--font-family-body);
+        }
+
+        .back-to-home:hover {
+            background: var(--primary);
+            color: var(--on-primary);
+            border-color: var(--primary);
+            transform: translateX(-4px);
+            box-shadow: var(--shadow-level-2);
+        }
+
+        .back-to-home i {
+            font-size: 18px;
+            transition: transform var(--transition-medium);
+        }
+
+        .back-to-home:hover i {
+            transform: translateX(-4px);
+        }
+
+        .legal-hero .back-to-home {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
         @media (max-width: 768px) {
             .legal-hero {
                 padding: 40px 0 30px;
+                padding-top: 80px;
             }
             .legal-hero h1 {
                 font-size: 28px;
@@ -164,6 +207,15 @@
                 padding: 8px 12px;
                 font-size: 13px;
             }
+            .legal-hero .back-to-home {
+                top: 16px;
+                left: 16px;
+                padding: 8px 14px;
+                font-size: 13px;
+            }
+            .back-to-home i {
+                font-size: 16px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -172,6 +224,15 @@
             }
             .legal-content h2 {
                 font-size: 18px;
+            }
+            .legal-hero .back-to-home {
+                top: 12px;
+                left: 12px;
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+            .back-to-home i {
+                font-size: 14px;
             }
         }
     </style>
@@ -215,12 +276,38 @@
     <!-- Overlay pour fermer le menu mobile -->
     <div class="navbar-overlay" id="navOverlay"></div>
 
-   
+    <!-- Menu mobile panel -->
+    <div class="navbar-mobile-panel" id="navMobilePanel">
+        <ul>
+            <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+            <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+            <li><a href="apropos.html" data-i18n="nav.about">À propos</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+        <div class="mobile-lang">
+            <span style="font-size:14px;font-weight:500;color:var(--on-surface-variant);" data-i18n="footer.language">Langue</span>
+            <div class="lang-switcher">
+                <label class="switch" aria-label="Changer de langue">
+                    <input type="checkbox" id="lang-toggle-mobile">
+                    <span class="switch-track">
+                        <span class="switch-knob"></span>
+                    </span>
+                </label>
+                <div class="lang-labels">
+                    <span class="lang-fr">FR</span>
+                    <span class="lang-en">EN</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <main>
         <!-- ===== HERO ===== -->
         <section class="legal-hero">
             <div class="container">
+                <a href="index.html" class="back-to-home" data-i18n="legal.back">
+                    <i class="ri-arrow-left-line"></i> Retour à l'accueil
+                </a>
                 <h1 data-i18n="legal.title">Mentions légales</h1>
                 <p data-i18n="legal.subtitle">Conformément aux dispositions légales en vigueur au Cameroun, nous vous informons des éléments suivants.</p>
             </div>
