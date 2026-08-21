@@ -1,6 +1,6 @@
 /**
  * TMS SARL - Script principal
- * Fonctionnalités : menu mobile, scroll smooth, redirection commande → formulaire, newsletter
+ * Fonctionnalités : menu mobile, scroll smooth, redirection commande, newsletter
  */
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -10,43 +10,43 @@ document.addEventListener('DOMContentLoaded', function() {
     // 1. MENU MOBILE
     // =============================================
     const menuButton = document.getElementById('navToggle');
-    const navLinks = document.getElementById('navLinks');
+    const mobilePanel = document.getElementById('navMobilePanel');
+    const overlay = document.getElementById('navOverlay');
 
-    if (menuButton && navLinks) {
-        menuButton.addEventListener('click', function() {
-            const isOpen = navLinks.classList.toggle('open');
-            this.setAttribute('aria-expanded', isOpen);
+    function toggleMenu(open) {
+        const isOpen = open !== undefined ? open : !menuButton.classList.contains('open');
+        menuButton.classList.toggle('open', isOpen);
+        menuButton.setAttribute('aria-expanded', isOpen);
+        mobilePanel.classList.toggle('open', isOpen);
+        overlay.classList.toggle('active', isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+    }
 
-            // Animation du hamburger
-            const spans = this.querySelectorAll('span');
-            if (isOpen) {
-                spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-                spans[1].style.opacity = '0';
-                spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
-            } else {
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
-            }
+    if (menuButton && mobilePanel && overlay) {
+        menuButton.addEventListener('click', function(e) {
+            e.stopPropagation();
+            toggleMenu();
         });
 
-        // Fermer le menu au clic sur un lien
-        document.querySelectorAll('.navbar-links a').forEach(link => {
+        overlay.addEventListener('click', function() {
+            toggleMenu(false);
+        });
+
+        mobilePanel.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', function() {
-                if (navLinks.classList.contains('open')) {
-                    navLinks.classList.remove('open');
-                    menuButton.setAttribute('aria-expanded', 'false');
-                    const spans = menuButton.querySelectorAll('span');
-                    spans[0].style.transform = 'none';
-                    spans[1].style.opacity = '1';
-                    spans[2].style.transform = 'none';
-                }
+                toggleMenu(false);
             });
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && mobilePanel.classList.contains('open')) {
+                toggleMenu(false);
+            }
         });
     }
 
     // =============================================
-    // 2. SCROLL SMOOTH POUR LES ANCRES
+    // 2. SCROLL SMOOTH
     // =============================================
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
@@ -66,34 +66,27 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // =============================================
-    // 3. BOUTONS "COMMANDER" - REDIRECTION VERS LE FORMULAIRE
+    // 3. BOUTONS "COMMANDER"
     // =============================================
     document.querySelectorAll('.commander-btn').forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
-
             const productInfo = this.getAttribute('data-product') || 'un produit';
-
-            // Remplir le formulaire sur la page contact
             const subjectField = document.getElementById('subject');
             const messageField = document.getElementById('message');
             const contactSection = document.getElementById('contact');
 
-            if (subjectField) {
-                subjectField.value = 'devis';
-            }
+            if (subjectField) subjectField.value = 'devis';
             if (messageField) {
                 messageField.value = `Bonjour, je souhaite commander le produit suivant :\n\n${productInfo}\n\nMerci de me recontacter pour finaliser ma commande.`;
             }
 
-            // Aller à la section contact
             if (contactSection) {
                 const headerHeight = document.querySelector('.navbar')?.offsetHeight || 80;
                 const targetPosition = contactSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
                 window.scrollTo({ top: targetPosition, behavior: 'smooth' });
             }
 
-            // Focus sur le champ nom
             setTimeout(() => {
                 document.getElementById('name')?.focus();
             }, 600);
@@ -119,16 +112,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // =============================================
-    // 5. NAVIGATION ACTIVE AU SCROLL
+    // 5. NAVIGATION ACTIVE
     // =============================================
     const sections = document.querySelectorAll('section[id]');
-    const navLinksItems = document.querySelectorAll('.navbar-links a[href^="#"]');
+    const navItems = document.querySelectorAll('.navbar-links a[href^="#"], .navbar-mobile-panel a[href^="#"]');
 
-    if (sections.length && navLinksItems.length) {
+    if (sections.length && navItems.length) {
         function updateActiveLink() {
             const scrollPos = window.scrollY + 150;
             let currentId = '';
-
             sections.forEach(section => {
                 const top = section.offsetTop;
                 const height = section.offsetHeight;
@@ -136,13 +128,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     currentId = section.id;
                 }
             });
-
-            navLinksItems.forEach(link => {
+            navItems.forEach(link => {
                 const href = link.getAttribute('href');
                 link.classList.toggle('active', href === '#' + currentId);
             });
         }
-
         let ticking = false;
         window.addEventListener('scroll', function() {
             if (!ticking) {
@@ -153,43 +143,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 ticking = true;
             }
         });
-
         window.addEventListener('resize', updateActiveLink);
         setTimeout(updateActiveLink, 100);
     }
 
     // =============================================
-    // 6. GESTION DES FORMULAIRES DE CONTACT
+    // 6. NAVBAR SCROLL EFFECT
     // =============================================
-    const contactForm = document.getElementById('contactForm');
-    const formStatus = document.getElementById('formStatus');
-
-    if (contactForm && formStatus) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            const name = document.getElementById('name')?.value?.trim();
-            const email = document.getElementById('email')?.value?.trim();
-            const phone = document.getElementById('phone')?.value?.trim();
-            const subject = document.getElementById('subject')?.value || 'Demande depuis le site TMS SARL';
-            const message = document.getElementById('message')?.value?.trim();
-
-            if (!name || !email || !message) {
-                formStatus.textContent = '⚠️ Veuillez remplir tous les champs obligatoires.';
-                formStatus.style.color = 'var(--error)';
-                return;
-            }
-
-            // Construction du mailto
-            const body = `Nom: ${name}%0D%0AEmail: ${email}%0D%0ATéléphone: ${phone || 'Non renseigné'}%0D%0A%0D%0A${encodeURIComponent(message)}`;
-            const mailto = `mailto:contact@tmsarl.com?subject=${encodeURIComponent(subject)}&body=${body}`;
-
-            // Tentative d'ouverture du client mail
-            window.location.href = mailto;
-
-            formStatus.textContent = '✅ Ouverture du client mail... Si rien ne se passe, envoyez un email à contact@tmsarl.com';
-            formStatus.style.color = 'var(--secondary)';
-            contactForm.reset();
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        window.addEventListener('scroll', function() {
+            navbar.classList.toggle('scrolled', window.scrollY > 20);
         });
     }
 

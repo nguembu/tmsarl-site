@@ -1,5 +1,5 @@
 /* ============================================
-   TMS SARL - ANIMATIONS
+   TMS SARL - ANIMATIONS OPTIMISÉES
    ============================================ */
 
 /* ----- Reveal au scroll ----- */
@@ -36,7 +36,7 @@
     transform: translateX(0);
 }
 
-/* Délais pour les effets en cascade */
+/* Délais en cascade */
 .reveal:nth-child(1) { transition-delay: 0.05s; }
 .reveal:nth-child(2) { transition-delay: 0.10s; }
 .reveal:nth-child(3) { transition-delay: 0.15s; }
@@ -44,68 +44,21 @@
 .reveal:nth-child(5) { transition-delay: 0.25s; }
 .reveal:nth-child(6) { transition-delay: 0.30s; }
 
-/* Délais personnalisés via les attributs style */
-.reveal[style*="transition-delay"] {
-    transition-delay: attr(style transition-delay);
-}
-
-/* ----- Animation de la modale ----- */
-@keyframes modalSlideIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px) scale(0.95);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-
-.modal-content {
-    animation: modalSlideIn 0.3s ease forwards;
-}
-
-/* ----- Curseur personnalisé ----- */
-.custom-cursor {
-    width: 20px;
-    height: 20px;
-    background: linear-gradient(135deg, #2563eb, #ec4899);
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 9999;
-    mix-blend-mode: difference;
-    transition: transform 0.2s ease, width 0.3s ease, height 0.3s ease;
-}
-
-.custom-cursor.active {
-    transform: scale(1.5);
-}
-
-.custom-cursor.hover {
-    width: 40px;
-    height: 40px;
-}
-
-/* ----- Animation des statistiques ----- */
-.stat-number {
-    transition: all 0.6s ease;
-}
-
 /* ----- Animation des cartes au survol ----- */
 .card,
 .product-card,
-.service-card {
+.service-card,
+.expertise-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover,
 .product-card:hover,
-.service-card:hover {
+.service-card:hover,
+.expertise-card:hover {
     transform: translateY(-6px);
 }
 
-/* ----- Animation des images dans les cartes ----- */
 .product-card .card-image,
 .card .card-image {
     transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -116,7 +69,7 @@
     transform: scale(1.04);
 }
 
-/* ----- Animation du menu mobile ----- */
+/* ----- Menu mobile ----- */
 .navbar-toggle span {
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -125,7 +78,11 @@
     transition: all 0.3s ease;
 }
 
-/* ----- Animation des icônes sociales ----- */
+.navbar-mobile-panel {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* ----- Icônes sociales ----- */
 .social-link {
     transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
 }
@@ -134,27 +91,22 @@
     transform: translateY(-3px) scale(1.05);
 }
 
-/* ----- Animation du badge ----- */
+/* ----- Statistiques ----- */
+.stat-number {
+    transition: all 0.6s ease;
+}
+
+/* ----- Badge ----- */
 .featured-badge {
     animation: pulseBadge 2s ease-in-out infinite;
 }
 
 @keyframes pulseBadge {
-    0%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.8;
-    }
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
 }
 
-/* ----- Animation de chargement ----- */
-@keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-/* ----- Animation de fade pour la page ----- */
+/* ----- Fade-in ----- */
 .fade-in {
     opacity: 0;
     transition: opacity 0.6s ease;
@@ -164,20 +116,7 @@
     opacity: 1;
 }
 
-/* ----- Animation du hero ----- */
-.hero-content .reveal {
-    transition-delay: 0.2s;
-}
-
-.hero-content .reveal:nth-child(2) {
-    transition-delay: 0.4s;
-}
-
-.hero-content .reveal:nth-child(3) {
-    transition-delay: 0.6s;
-}
-
-/* ----- Réduction de mouvement (accessibilité) ----- */
+/* ----- Réduction de mouvement ----- */
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -194,9 +133,5 @@
         opacity: 1;
         transform: none;
         transition: none;
-    }
-
-    .custom-cursor {
-        display: none !important;
     }
 }
