@@ -1,0 +1,12 @@
+# ============================================
+# TMS SARL - REDIRECTS
+# ============================================
+
+# Forcer HTTPS
+http://tmsarl.netlify.app/* https://tmsarl.netlify.app/:splat 301!
+
+# Rediriger www vers non-www
+https://www.tmsarl.netlify.app/* https://tmsarl.netlify.app/:splat 301!
+
+# Page 404
+/* /404.html 404
