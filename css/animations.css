@@ -8,62 +8,65 @@
     transform: translateY(40px);
     transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
 }
-
 .reveal-left {
     opacity: 0;
     transform: translateX(-40px);
     transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-
 .reveal-left.active {
     opacity: 1;
     transform: translateX(0);
 }
-
 .reveal-right {
     opacity: 0;
     transform: translateX(40px);
     transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-
 .reveal-right.active {
     opacity: 1;
     transform: translateX(0);
 }
 
-/* Délais en cascade */
-.reveal:nth-child(1) { transition-delay: 0.05s; }
-.reveal:nth-child(2) { transition-delay: 0.10s; }
-.reveal:nth-child(3) { transition-delay: 0.15s; }
-.reveal:nth-child(4) { transition-delay: 0.20s; }
-.reveal:nth-child(5) { transition-delay: 0.25s; }
-.reveal:nth-child(6) { transition-delay: 0.30s; }
+.reveal:nth-child(1) {
+    transition-delay: 0.05s;
+}
+.reveal:nth-child(2) {
+    transition-delay: 0.10s;
+}
+.reveal:nth-child(3) {
+    transition-delay: 0.15s;
+}
+.reveal:nth-child(4) {
+    transition-delay: 0.20s;
+}
+.reveal:nth-child(5) {
+    transition-delay: 0.25s;
+}
+.reveal:nth-child(6) {
+    transition-delay: 0.30s;
+}
 
-/* ----- Animation des cartes au survol ----- */
+/* ----- Cartes au survol ----- */
 .card,
 .product-card,
 .service-card,
 .expertise-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .card:hover,
 .product-card:hover,
 .service-card:hover,
 .expertise-card:hover {
     transform: translateY(-6px);
 }
-
 .product-card .card-image,
 .card .card-image {
     transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-
 .product-card:hover .card-image,
 .card:hover .card-image {
     transform: scale(1.04);
@@ -73,11 +76,6 @@
 .navbar-toggle span {
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
-
-.navbar-links {
-    transition: all 0.3s ease;
-}
-
 .navbar-mobile-panel {
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -86,34 +84,22 @@
 .social-link {
     transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
 }
-
 .social-link:hover {
     transform: translateY(-3px) scale(1.05);
-}
-
-/* ----- Statistiques ----- */
-.stat-number {
-    transition: all 0.6s ease;
 }
 
 /* ----- Badge ----- */
 .featured-badge {
     animation: pulseBadge 2s ease-in-out infinite;
 }
-
 @keyframes pulseBadge {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.8; }
-}
-
-/* ----- Fade-in ----- */
-.fade-in {
-    opacity: 0;
-    transition: opacity 0.6s ease;
-}
-
-.fade-in.visible {
-    opacity: 1;
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
 }
 
 /* ----- Réduction de mouvement ----- */
@@ -126,7 +112,6 @@
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
-
     .reveal,
     .reveal-left,
     .reveal-right {
