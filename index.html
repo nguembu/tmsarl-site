@@ -1,0 +1,3463 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>TMS SARL - Équipements Médicaux Cameroun</title>
+    <meta name="description" content="TMS SARL fournit des équipements médicaux et de laboratoire de haute qualité aux professionnels de santé au Cameroun depuis 2010.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Geist:wght@400;500;600;700;800;900&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <style>
+        /* ============================================
+           TMS SARL - STYLES COMPLETS
+           Version avec responsivité améliorée
+           ============================================ */
+
+        /* ===== 1. VARIABLES ===== */
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --primary-light: #dbe1ff;
+            --primary-dark: #003ea8;
+            --primary-gradient: linear-gradient(135deg, #2563eb, #4f46e5);
+            --secondary: #0d9488;
+            --secondary-hover: #0f766e;
+            --secondary-light: #ccfbf1;
+
+            --surface: #f8f9ff;
+            --surface-container-lowest: #ffffff;
+            --surface-container-low: #eff4ff;
+            --surface-container: #e5eeff;
+            --surface-container-high: #dce9ff;
+
+            --on-surface: #0b1c30;
+            --on-surface-variant: #434655;
+            --on-primary: #ffffff;
+            --on-secondary: #ffffff;
+
+            --error: #ba1a1a;
+            --outline: #737686;
+            --outline-variant: #c3c6d7;
+
+            --font-family-heading: 'Geist', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-family-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-family-script: 'Pacifico', cursive;
+
+            --container-max: 1280px;
+            --gutter: 24px;
+            --gutter-mobile: 16px;
+            --stack-xs: 8px;
+            --stack-sm: 12px;
+            --stack-md: 24px;
+            --stack-lg: 48px;
+            --stack-xl: 64px;
+            --stack-2xl: 80px;
+
+            --radius-default: 0.5rem;
+            --radius-md: 0.75rem;
+            --radius-lg: 1rem;
+            --radius-xl: 1.5rem;
+            --radius-full: 9999px;
+
+            --shadow-level-2: 0px 4px 20px rgba(37, 99, 235, 0.06);
+            --shadow-level-3: 0px 8px 30px rgba(37, 99, 235, 0.08);
+            --shadow-level-4: 0px 12px 48px rgba(37, 99, 235, 0.12);
+
+            --transition-fast: 150ms ease;
+            --transition-medium: 250ms ease;
+            --transition-slow: 400ms ease;
+
+            --header-height: 72px;
+            --header-height-mobile: 64px;
+        }
+
+        /* ===== 2. RESET ===== */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: var(--font-family-body);
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--on-surface);
+            background-color: var(--surface);
+            overflow-x: hidden;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* ===== 3. TYPOGRAPHIE ===== */
+        .headline-xl {
+            font-family: var(--font-family-heading);
+            font-size: 56px;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+        }
+
+        .headline-lg {
+            font-family: var(--font-family-heading);
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        .headline-md {
+            font-family: var(--font-family-heading);
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 1.25;
+        }
+
+        .headline-sm {
+            font-family: var(--font-family-heading);
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .body-lg {
+            font-family: var(--font-family-body);
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .body-md {
+            font-family: var(--font-family-body);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .body-sm {
+            font-family: var(--font-family-body);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .label-sm {
+            font-family: var(--font-family-body);
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.4;
+            letter-spacing: 0.01em;
+        }
+
+        .caption {
+            font-family: var(--font-family-body);
+            font-size: 12px;
+            line-height: 1.4;
+        }
+
+        .script {
+            font-family: var(--font-family-script);
+            font-weight: 400;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        .text-gradient {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ===== 4. CONTENEURS ===== */
+        .container {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 var(--gutter);
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 var(--gutter-mobile);
+            }
+        }
+
+        .grid {
+            display: grid;
+            gap: var(--stack-md);
+        }
+
+        .grid-cols-12 {
+            grid-template-columns: repeat(12, 1fr);
+        }
+
+        .col-span-3 {
+            grid-column: span 3;
+        }
+        .col-span-4 {
+            grid-column: span 4;
+        }
+        .col-span-6 {
+            grid-column: span 6;
+        }
+        .col-span-12 {
+            grid-column: span 12;
+        }
+
+        @media (max-width: 1024px) {
+            .grid-cols-12 {
+                grid-template-columns: repeat(6, 1fr);
+            }
+            .col-span-3 {
+                grid-column: span 3;
+            }
+            .col-span-4 {
+                grid-column: span 3;
+            }
+            .col-span-6 {
+                grid-column: span 6;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .grid-cols-12 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .col-span-3,
+            .col-span-4 {
+                grid-column: span 2;
+            }
+            .col-span-6 {
+                grid-column: span 2;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid-cols-12 {
+                grid-template-columns: 1fr;
+            }
+            .col-span-3,
+            .col-span-4,
+            .col-span-6 {
+                grid-column: span 1;
+            }
+        }
+
+        /* ===== 5. HEADER / NAVIGATION ===== */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(195, 198, 215, 0.3);
+            padding: 0 var(--gutter);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: box-shadow var(--transition-medium);
+            height: var(--header-height);
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 0 var(--gutter-mobile);
+                height: var(--header-height-mobile);
+            }
+        }
+
+        .navbar.scrolled {
+            box-shadow: var(--shadow-level-3);
+        }
+
+        .navbar-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            height: 100%;
+            gap: var(--stack-sm);
+        }
+
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+
+        .navbar-logo .script {
+            font-size: 24px;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+            transition: color var(--transition-fast);
+        }
+
+        @media (max-width: 768px) {
+            .navbar-logo .script {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar-logo .script {
+                font-size: 18px;
+            }
+        }
+
+        .navbar-logo .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--primary-gradient);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 480px) {
+            .navbar-logo .logo-icon {
+                width: 32px;
+                height: 32px;
+                font-size: 14px;
+            }
+        }
+
+        /* Menu desktop */
+        .navbar-links {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .navbar-links a {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--on-surface);
+            transition: color var(--transition-fast);
+            position: relative;
+            cursor: pointer;
+            padding: 4px 0;
+            white-space: nowrap;
+        }
+
+        @media (max-width: 1024px) {
+            .navbar-links {
+                gap: 16px;
+            }
+            .navbar-links a {
+                font-size: 13px;
+            }
+        }
+
+        .navbar-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2.5px;
+            background: var(--primary-gradient);
+            border-radius: var(--radius-full);
+            transition: width var(--transition-medium);
+        }
+
+        .navbar-links a:hover,
+        .navbar-links a.active {
+            color: var(--primary);
+        }
+
+        .navbar-links a:hover::after,
+        .navbar-links a.active::after {
+            width: 100%;
+        }
+
+        /* Bouton menu mobile */
+        .navbar-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 6px;
+            flex-direction: column;
+            gap: 4px;
+            flex-shrink: 0;
+        }
+
+        .navbar-toggle span {
+            display: block;
+            width: 22px;
+            height: 2.5px;
+            background: var(--on-surface);
+            border-radius: var(--radius-full);
+            transition: var(--transition-medium);
+            transform-origin: center;
+        }
+
+        .navbar-toggle.open span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .navbar-toggle.open span:nth-child(2) {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+        .navbar-toggle.open span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* Menu mobile overlay */
+        .navbar-overlay {
+            display: none;
+            position: fixed;
+            top: var(--header-height);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            z-index: 99;
+            opacity: 0;
+            transition: opacity var(--transition-medium);
+        }
+
+        .navbar-overlay.active {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .navbar-overlay {
+                top: var(--header-height-mobile);
+            }
+        }
+
+        /* Menu mobile panel */
+        .navbar-mobile-panel {
+            display: none;
+            position: fixed;
+            top: var(--header-height);
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            padding: var(--stack-md) var(--gutter-mobile);
+            box-shadow: var(--shadow-level-3);
+            z-index: 100;
+            transform: translateY(-10px);
+            opacity: 0;
+            transition: transform var(--transition-medium), opacity var(--transition-medium);
+            max-height: calc(100vh - var(--header-height));
+            overflow-y: auto;
+        }
+
+        @media (max-width: 768px) {
+            .navbar-mobile-panel {
+                top: var(--header-height-mobile);
+                max-height: calc(100vh - var(--header-height-mobile));
+            }
+        }
+
+        .navbar-mobile-panel.open {
+            display: block;
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .navbar-mobile-panel ul {
+            display: flex;
+            flex-direction: column;
+            gap: var(--stack-sm);
+        }
+
+        .navbar-mobile-panel ul li a {
+            display: block;
+            padding: 12px 0;
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--on-surface);
+            border-bottom: 1px solid var(--outline-variant);
+            transition: color var(--transition-fast);
+        }
+
+        .navbar-mobile-panel ul li a:last-child {
+            border-bottom: none;
+        }
+
+        .navbar-mobile-panel ul li a:hover,
+        .navbar-mobile-panel ul li a.active {
+            color: var(--primary);
+        }
+
+        .navbar-mobile-panel .mobile-lang {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: var(--stack-md);
+            margin-top: var(--stack-sm);
+            border-top: 1px solid var(--outline-variant);
+        }
+
+        @media (max-width: 768px) {
+            .navbar-toggle {
+                display: flex;
+            }
+
+            .navbar-links {
+                display: none;
+            }
+
+            .navbar-mobile-panel {
+                display: none;
+            }
+
+            .navbar-overlay {
+                display: block;
+                pointer-events: none;
+            }
+
+            .navbar-overlay.active {
+                pointer-events: auto;
+            }
+        }
+
+        /* ===== LANGUAGE TOGGLE ===== */
+        .lang-switcher {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+
+        .switch {
+            display: inline-block;
+            position: relative;
+            width: 48px;
+            height: 26px;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 480px) {
+            .switch {
+                width: 42px;
+                height: 24px;
+            }
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+            position: absolute;
+        }
+
+        .switch-track {
+            background: var(--surface-container);
+            border-radius: 999px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 3px;
+            transition: background var(--transition-medium);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+        }
+
+        .switch-knob {
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 2px 6px rgba(16, 24, 40, 0.12);
+            transform: translateX(0);
+            transition: transform var(--transition-medium);
+        }
+
+        @media (max-width: 480px) {
+            .switch-knob {
+                width: 18px;
+                height: 18px;
+            }
+        }
+
+        .switch input:checked+.switch-track {
+            background: var(--primary-gradient);
+        }
+
+        .switch input:checked+.switch-track .switch-knob {
+            transform: translateX(22px);
+        }
+
+        @media (max-width: 480px) {
+            .switch input:checked+.switch-track .switch-knob {
+                transform: translateX(18px);
+            }
+        }
+
+        .lang-labels {
+            display: flex;
+            gap: 4px;
+            font-weight: 600;
+            font-size: 11px;
+            color: var(--on-surface);
+            letter-spacing: 0.02em;
+        }
+
+        .lang-labels .lang-en {
+            color: var(--on-surface-variant);
+        }
+
+        .switch input:checked~.lang-labels .lang-en {
+            color: var(--primary);
+        }
+
+        .switch input:not(:checked)~.lang-labels .lang-fr {
+            color: var(--primary);
+        }
+
+        /* ===== 6. BOUTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: var(--radius-default);
+            border: none;
+            cursor: pointer;
+            transition: all var(--transition-medium);
+            text-decoration: none;
+            letter-spacing: 0.01em;
+            position: relative;
+            overflow: hidden;
+            font-family: var(--font-family-body);
+            white-space: nowrap;
+        }
+
+        @media (max-width: 480px) {
+            .btn {
+                font-size: 13px;
+                padding: 10px 18px;
+                white-space: normal;
+            }
+        }
+
+        .btn::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, 0);
+            transition: background var(--transition-medium);
+        }
+
+        .btn:hover::after {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .btn-primary {
+            background: var(--primary-gradient);
+            color: var(--on-primary);
+            box-shadow: 0 4px 16px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(37, 99, 235, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--secondary);
+            color: var(--on-secondary);
+            box-shadow: 0 4px 16px rgba(13, 148, 136, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: var(--secondary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(13, 148, 136, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--on-primary);
+            transform: translateY(-2px);
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: var(--primary);
+        }
+
+        .btn-ghost:hover {
+            background: var(--surface-container);
+        }
+
+        .btn-sm {
+            padding: 6px 14px;
+            font-size: 12px;
+        }
+
+        .btn-lg {
+            padding: 16px 32px;
+            font-size: 16px;
+        }
+
+        @media (max-width: 480px) {
+            .btn-lg {
+                padding: 14px 24px;
+                font-size: 14px;
+            }
+        }
+
+        .btn-block {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .btn-cta {
+            background: var(--on-primary);
+            color: var(--primary);
+            padding: 14px 32px;
+            border-radius: var(--radius-default);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.25);
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(255, 255, 255, 0.35);
+        }
+
+        /* ===== 7. SECTIONS ===== */
+        .section {
+            padding: var(--stack-2xl) 0;
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: var(--stack-lg) 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section {
+                padding: var(--stack-md) 0;
+            }
+        }
+
+        .section-title {
+            font-family: var(--font-family-heading);
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--on-surface);
+            margin-bottom: var(--stack-sm);
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section-title {
+                font-size: 24px;
+            }
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            line-height: 1.6;
+            color: var(--on-surface-variant);
+            text-align: center;
+            max-width: 640px;
+            margin: 0 auto var(--stack-lg);
+            font-family: var(--font-family-body);
+        }
+
+        @media (max-width: 768px) {
+            .section-subtitle {
+                font-size: 16px;
+                padding: 0 var(--gutter-mobile);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section-subtitle {
+                font-size: 15px;
+                margin-bottom: var(--stack-md);
+            }
+        }
+
+        .bg-low {
+            background: var(--surface-container-low);
+        }
+
+        .bg-white {
+            background: var(--surface-container-lowest);
+        }
+
+        /* ===== 8. HERO ===== */
+        .hero {
+            padding: var(--stack-2xl) 0;
+            background: linear-gradient(180deg, var(--surface-container-low) 0%, var(--surface) 100%);
+            position: relative;
+            overflow: hidden;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: var(--stack-lg) 0;
+                min-height: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: var(--stack-md) 0;
+            }
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -40%;
+            right: -15%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            left: -10%;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(13, 148, 136, 0.04) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--stack-xl);
+            align-items: center;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-split {
+                grid-template-columns: 1fr;
+                gap: var(--stack-lg);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-split {
+                gap: var(--stack-md);
+            }
+        }
+
+        .hero-content {
+            max-width: 600px;
+            position: relative;
+            z-index: 2;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-content {
+                max-width: 100%;
+                text-align: center;
+            }
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            padding: 5px 14px;
+            border-radius: var(--radius-full);
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: var(--stack-md);
+            animation: fadeInUp 0.6s ease forwards;
+            font-family: var(--font-family-body);
+        }
+
+        @media (max-width: 1024px) {
+            .hero-badge {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-badge {
+                font-size: 12px;
+                padding: 4px 12px;
+            }
+        }
+
+        .hero-title {
+            font-family: var(--font-family-heading);
+            font-size: 48px;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            color: var(--on-surface);
+            margin-bottom: var(--stack-md);
+            animation: fadeInUp 0.6s ease 0.1s forwards;
+            opacity: 0;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-title {
+                font-size: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 26px;
+            }
+        }
+
+        .hero-title .highlight {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 17px;
+            line-height: 1.7;
+            color: var(--on-surface-variant);
+            margin-bottom: var(--stack-lg);
+            animation: fadeInUp 0.6s ease 0.2s forwards;
+            opacity: 0;
+            max-width: 520px;
+            font-family: var(--font-family-body);
+        }
+
+        @media (max-width: 1024px) {
+            .hero-subtitle {
+                max-width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-subtitle {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-subtitle {
+                font-size: 14px;
+                margin-bottom: var(--stack-md);
+            }
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: var(--stack-sm);
+            flex-wrap: wrap;
+            animation: fadeInUp 0.6s ease 0.3s forwards;
+            opacity: 0;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-actions {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-actions {
+                flex-direction: column;
+                width: 100%;
+            }
+            .hero-actions .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        .hero-visual {
+            position: relative;
+            z-index: 2;
+            animation: fadeInRight 0.8s ease 0.3s forwards;
+            opacity: 0;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-visual {
+                order: -1;
+            }
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-level-4);
+        }
+
+        .hero-image-wrapper img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+
+        @media (max-width: 1024px) {
+            .hero-image-wrapper img {
+                height: 320px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-image-wrapper img {
+                height: 240px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-image-wrapper img {
+                height: 180px;
+            }
+        }
+
+        .hero-image-wrapper:hover img {
+            transform: scale(1.02);
+        }
+
+        /* Cartes flottantes */
+        .floating-card {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 12px 16px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-level-3);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            animation: floatCard 4s ease-in-out infinite;
+            transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+            z-index: 2;
+        }
+
+        .floating-card:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: var(--shadow-level-4);
+        }
+
+        .floating-card .icon {
+            width: 34px;
+            height: 34px;
+            background: var(--primary-light);
+            border-radius: var(--radius-default);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .floating-card .text .label {
+            font-size: 10px;
+            color: var(--on-surface-variant);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            font-family: var(--font-family-body);
+        }
+
+        .floating-card .text .value {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--on-surface);
+            font-family: var(--font-family-heading);
+        }
+
+        /* Positionnement des 4 cartes */
+        .floating-card-1 {
+            top: -10px;
+            left: -10px;
+            animation-delay: 0s;
+        }
+
+        .floating-card-2 {
+            top: -10px;
+            right: -10px;
+            animation-delay: 1s;
+        }
+
+        .floating-card-3 {
+            bottom: -10px;
+            left: -10px;
+            animation-delay: 2s;
+        }
+
+        .floating-card-4 {
+            bottom: -10px;
+            right: -10px;
+            animation-delay: 3s;
+        }
+
+        @keyframes floatCard {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .floating-card {
+                padding: 10px 14px;
+                gap: 8px;
+            }
+            .floating-card .icon {
+                width: 30px;
+                height: 30px;
+                font-size: 14px;
+            }
+            .floating-card .text .value {
+                font-size: 13px;
+            }
+            .floating-card .text .label {
+                font-size: 9px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .floating-card {
+                display: none;
+            }
+        }
+
+        /* ===== 9. STATISTIQUES ===== */
+        .stat-item {
+            text-align: center;
+            padding: var(--stack-sm);
+        }
+
+        .stat-number {
+            font-family: var(--font-family-heading);
+            font-size: 40px;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        @media (max-width: 768px) {
+            .stat-number {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stat-number {
+                font-size: 26px;
+            }
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--on-surface-variant);
+            font-weight: 500;
+            font-family: var(--font-family-body);
+        }
+
+        @media (max-width: 480px) {
+            .stat-label {
+                font-size: 12px;
+            }
+        }
+
+        /* ===== 10. SERVICE CARDS ===== */
+        .service-card {
+            background: var(--surface-container-lowest);
+            padding: var(--stack-md);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-level-2);
+            transition: all var(--transition-medium);
+            border: 1px solid var(--outline-variant);
+            position: relative;
+            overflow: hidden;
+        }
+
+        @media (max-width: 480px) {
+            .service-card {
+                padding: var(--stack-sm);
+                text-align: center;
+            }
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--primary-gradient);
+            transform: scaleX(0);
+            transition: transform var(--transition-medium);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-level-3);
+        }
+
+        .service-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: var(--radius-default);
+            background: var(--primary-light);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: var(--stack-sm);
+            transition: all var(--transition-medium);
+        }
+
+        @media (max-width: 480px) {
+            .service-icon {
+                width: 44px;
+                height: 44px;
+                font-size: 20px;
+                margin: 0 auto var(--stack-sm);
+            }
+        }
+
+        .service-card:hover .service-icon {
+            background: var(--primary-gradient);
+            color: var(--on-primary);
+            transform: scale(1.05);
+        }
+
+        .service-card h3 {
+            font-family: var(--font-family-heading);
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: var(--stack-sm);
+        }
+
+        @media (max-width: 480px) {
+            .service-card h3 {
+                font-size: 17px;
+            }
+        }
+
+        .service-card p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--on-surface-variant);
+            margin-bottom: var(--stack-sm);
+            font-family: var(--font-family-body);
+        }
+
+        @media (max-width: 480px) {
+            .service-card p {
+                font-size: 14px;
+            }
+        }
+
+        /* ===== 11. PRODUCT CARDS ===== */
+        .product-card {
+            background: var(--surface-container-lowest);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-level-2);
+            overflow: hidden;
+            transition: all var(--transition-medium);
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-level-4);
+        }
+
+        .product-card .card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+
+        @media (max-width: 768px) {
+            .product-card .card-image {
+                height: 160px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product-card .card-image {
+                height: 140px;
+            }
+        }
+
+        .product-card:hover .card-image {
+            transform: scale(1.05);
+        }
+
+        .product-card .card-body {
+            padding: var(--stack-md);
+        }
+
+        @media (max-width: 480px) {
+            .product-card .card-body {
+                padding: var(--stack-sm);
+            }
+        }
+
+        .card-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--primary);
+            background: var(--primary-light);
+            padding: 4px 12px;
+            border-radius: var(--radius-full);
+            margin-bottom: var(--stack-sm);
+            font-family: var(--font-family-body);
+        }
+
+        .card-title {
+            font-family: var(--font-family-heading);
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--on-surface);
+            margin-bottom: var(--stack-sm);
+        }
+
+        @media (max-width: 480px) {
+            .card-title {
+                font-size: 17px;
+            }
+        }
+
+        .card-text {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--on-surface-variant);
+            font-family: var(--font-family-body);
+        }
+
+        @media (max-width: 480px) {
+            .card-text {
+                font-size: 14px;
+            }
+        }
+
+        .card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: var(--stack-sm);
+            border-top: 1px solid var(--outline-variant);
+            flex-wrap: wrap;
+            gap: var(--stack-sm);
+            margin-top: var(--stack-sm);
+        }
+
+        @media (max-width: 480px) {
+            .card-footer {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .card-footer .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        .product-price {
+            font-family: var(--font-family-heading);
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        @media (max-width: 480px) {
+            .product-price {
+                font-size: 17px;
+            }
+        }
+
+        /* ===== 12. EXPERTISE CARDS ===== */
+        .expertise-card {
+            background: var(--surface-container-lowest);
+            padding: var(--stack-lg);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-level-2);
+            transition: all var(--transition-medium);
+            text-align: center;
+            border: 1px solid var(--outline-variant);
+        }
+
+        @media (max-width: 480px) {
+            .expertise-card {
+                padding: var(--stack-md);
+            }
+        }
+
+        .expertise-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-level-3);
+            border-color: var(--primary);
+        }
+
+        .expertise-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: var(--radius-full);
+            background: var(--primary-gradient);
+            color: var(--on-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin: 0 auto var(--stack-sm);
+            transition: all var(--transition-medium);
+        }
+
+        @media (max-width: 480px) {
+            .expertise-icon {
+                width: 52px;
+                height: 52px;
+                font-size: 22px;
+            }
+        }
+
+        .expertise-card:hover .expertise-icon {
+            transform: scale(1.1) rotate(-5deg);
+        }
+
+        .expertise-card h3 {
+            font-family: var(--font-family-heading);
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: var(--stack-sm);
+        }
+
+        @media (max-width: 480px) {
+            .expertise-card h3 {
+                font-size: 17px;
+            }
+        }
+
+        .expertise-card p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--on-surface-variant);
+            font-family: var(--font-family-body);
+        }
+
+        @media (max-width: 480px) {
+            .expertise-card p {
+                font-size: 14px;
+            }
+        }
+
+        /* ===== 13. ÉQUIPE ===== */
+        .team-member {
+            text-align: center;
+        }
+
+        .team-member-image {
+            width: 120px;
+            height: 120px;
+            border-radius: var(--radius-full);
+            object-fit: cover;
+            margin: 0 auto var(--stack-sm);
+            border: 3px solid var(--primary-light);
+            transition: all var(--transition-medium);
+        }
+
+        @media (max-width: 768px) {
+            .team-member-image {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .team-member-image {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        .team-member:hover .team-member-image {
+            border-color: var(--primary);
+            transform: scale(1.05);
+        }
+
+        .team-member-name {
+            font-family: var(--font-family-heading);
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        @media (max-width: 480px) {
+            .team-member-name {
+                font-size: 16px;
+            }
+        }
+
+        .team-member-role {
+            font-size: 14px;
+            color: var(--on-surface-variant);
+            font-family: var(--font-family-body);
+        }
+
+        @media (max-width: 480px) {
+            .team-member-role {
+                font-size: 13px;
+            }
+        }
+
+        /* ===== 14. TÉMOIGNAGES ===== */
+        .testimonial-card {
+            background: var(--surface-container-lowest);
+            padding: var(--stack-lg);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-level-2);
+            border: 1px solid var(--outline-variant);
+            transition: all var(--transition-medium);
+            position: relative;
+        }
+
+        @media (max-width: 480px) {
+            .testimonial-card {
+                padding: var(--stack-md);
+            }
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 56px;
+            color: var(--primary-light);
+            font-family: var(--font-family-script);
+            line-height: 1;
+            opacity: 0.5;
+        }
+
+        @media (max-width: 480px) {
+            .testimonial-card::before {
+                font-size: 40px;
+                top: 6px;
+                right: 12px;
+            }
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-level-3);
+        }
+
+        .testimonial-text {
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--on-surface);
+            font-style: italic;
+            margin-bottom: var(--stack-sm);
+            position: relative;
+            z-index: 1;
+            font-family: var(--font-family-body);
+        }
+
+        @media (max-width: 480px) {
+            .testimonial-text {
+                font-size: 14px;
+            }
+        }
+
+        .testimonial-author {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary);
+            font-family: var(--font-family-body);
+        }
+
+        @media (max-width: 480px) {
+            .testimonial-author {
+                font-size: 13px;
+            }
+        }
+
+        /* ===== 15. CONTACT ===== */
+        .contact-info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--stack-sm);
+            margin-bottom: var(--stack-md);
+        }
+
+        @media (max-width: 480px) {
+            .contact-info-item {
+                gap: var(--stack-xs);
+                margin-bottom: var(--stack-sm);
+            }
+        }
+
+        .contact-info-icon {
+            width: 44px;
+            height: 44px;
+            flex-shrink: 0;
+            background: var(--primary-light);
+            border-radius: var(--radius-default);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 20px;
+            transition: all var(--transition-medium);
+        }
+
+        @media (max-width: 480px) {
+            .contact-info-icon {
+                width: 36px;
+                height: 36px;
+                font-size: 16px;
+            }
+        }
+
+        .contact-info-item:hover .contact-info-icon {
+            background: var(--primary-gradient);
+            color: var(--on-primary);
+            transform: scale(1.05);
+        }
+
+        .contact-info-label {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--on-surface-variant);
+            font-family: var(--font-family-body);
+        }
+
+        @media (max-width: 480px) {
+            .contact-info-label {
+                font-size: 13px;
+            }
+        }
+
+        .contact-info-value {
+            font-size: 16px;
+            color: var(--on-surface);
+            font-family: var(--font-family-body);
+        }
+
+        @media (max-width: 480px) {
+            .contact-info-value {
+                font-size: 14px;
+            }
+        }
+
+        /* ===== 16. FORMULAIRES ===== */
+        .form-group {
+            margin-bottom: var(--stack-md);
+        }
+
+        @media (max-width: 480px) {
+            .form-group {
+                margin-bottom: var(--stack-sm);
+            }
+        }
+
+        .form-label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--on-surface-variant);
+            margin-bottom: 6px;
+            font-family: var(--font-family-body);
+        }
+
+        @media (max-width: 480px) {
+            .form-label {
+                font-size: 13px;
+            }
+        }
+
+        .form-input,
+        .form-textarea,
+        .form-select {
+            width: 100%;
+            padding: 12px 16px;
+            font-size: 16px;
+            color: var(--on-surface);
+            background: var(--surface-container-lowest);
+            border: 2px solid var(--outline-variant);
+            border-radius: var(--radius-default);
+            transition: all var(--transition-fast);
+            font-family: var(--font-family-body);
+        }
+
+        @media (max-width: 480px) {
+            .form-input,
+            .form-textarea,
+            .form-select {
+                font-size: 14px;
+                padding: 10px 14px;
+            }
+        }
+
+        .form-input:focus,
+        .form-textarea:focus,
+        .form-select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23737686'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            background-size: 20px;
+            padding-right: 48px;
+        }
+
+        /* ===== 17. BADGES ===== */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 6px 16px;
+            border-radius: var(--radius-full);
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 1.5;
+            gap: 8px;
+            transition: all var(--transition-medium);
+            font-family: var(--font-family-body);
+        }
+
+        @media (max-width: 480px) {
+            .badge {
+                font-size: 12px;
+                padding: 4px 12px;
+            }
+        }
+
+        .badge-primary {
+            background: var(--primary-light);
+            color: var(--primary-dark);
+        }
+
+        .badge-secondary {
+            background: var(--secondary-light);
+            color: var(--secondary-hover);
+        }
+
+        .badge:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-level-2);
+        }
+
+        /* ===== 18. CTA BANNER ===== */
+        .cta-banner {
+            background: var(--primary-gradient);
+            border-radius: var(--radius-xl);
+            padding: var(--stack-lg);
+            text-align: center;
+            color: var(--on-primary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        @media (max-width: 768px) {
+            .cta-banner {
+                padding: var(--stack-md);
+                border-radius: var(--radius-lg);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cta-banner {
+                padding: var(--stack-sm);
+                border-radius: var(--radius-default);
+            }
+        }
+
+        .cta-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+        }
+
+        .cta-banner .headline-md {
+            color: var(--on-primary);
+            margin-bottom: var(--stack-sm);
+        }
+
+        @media (max-width: 480px) {
+            .cta-banner .headline-md {
+                font-size: 22px;
+            }
+        }
+
+        .cta-banner .body-lg {
+            color: var(--on-primary);
+            opacity: 0.9;
+            max-width: 560px;
+            margin: 0 auto var(--stack-md);
+            font-family: var(--font-family-body);
+        }
+
+        @media (max-width: 480px) {
+            .cta-banner .body-lg {
+                font-size: 15px;
+                margin-bottom: var(--stack-sm);
+            }
+        }
+
+        /* ===== 19. FOOTER ===== */
+        .footer {
+            background: var(--surface-container-high);
+            padding: var(--stack-xl) 0;
+            margin-top: var(--stack-xl);
+            border-top: 1px solid var(--outline-variant);
+        }
+
+        @media (max-width: 768px) {
+            .footer {
+                padding: var(--stack-lg) 0;
+                margin-top: var(--stack-lg);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer {
+                padding: var(--stack-md) 0;
+                margin-top: var(--stack-md);
+            }
+        }
+
+        .footer-brand .script {
+            font-size: 24px;
+            color: var(--primary);
+        }
+
+        @media (max-width: 480px) {
+            .footer-brand .script {
+                font-size: 20px;
+            }
+        }
+
+        .footer-links li {
+            margin-bottom: var(--stack-sm);
+        }
+
+        @media (max-width: 480px) {
+            .footer-links li {
+                margin-bottom: var(--stack-xs);
+            }
+        }
+
+        .footer-links a {
+            font-size: 14px;
+            color: var(--on-surface-variant);
+            transition: all var(--transition-fast);
+            display: inline-block;
+            font-family: var(--font-family-body);
+        }
+
+        @media (max-width: 480px) {
+            .footer-links a {
+                font-size: 13px;
+            }
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+            transform: translateX(4px);
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius-full);
+            background: var(--surface-container-lowest);
+            color: var(--on-surface-variant);
+            transition: all var(--transition-fast);
+        }
+
+        @media (max-width: 480px) {
+            .social-link {
+                width: 36px;
+                height: 36px;
+                font-size: 14px;
+            }
+        }
+
+        .social-link:hover {
+            background: var(--primary-gradient);
+            color: var(--on-primary);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 4px 16px rgba(37, 99, 235, 0.3);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--outline-variant);
+            padding-top: var(--stack-md);
+            margin-top: var(--stack-lg);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--stack-sm);
+        }
+
+        @media (max-width: 768px) {
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                gap: var(--stack-sm);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-bottom {
+                padding-top: var(--stack-sm);
+                margin-top: var(--stack-md);
+            }
+        }
+
+        .footer-bottom p,
+        .footer-bottom a {
+            font-size: 14px;
+            color: var(--on-surface-variant);
+            font-family: var(--font-family-body);
+        }
+
+        @media (max-width: 480px) {
+            .footer-bottom p,
+            .footer-bottom a {
+                font-size: 12px;
+            }
+        }
+
+        .footer-bottom a:hover {
+            color: var(--primary);
+        }
+
+        /* ===== 20. ANIMATIONS ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .reveal-left.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .reveal-right.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+            .reveal,
+            .reveal-left,
+            .reveal-right {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+        }
+
+        /* ===== 21. UTILITAIRES ===== */
+        .flex {
+            display: flex;
+        }
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
+        .items-center {
+            align-items: center;
+        }
+        .justify-center {
+            justify-content: center;
+        }
+        .gap-sm {
+            gap: var(--stack-sm);
+        }
+        .gap-md {
+            gap: var(--stack-md);
+        }
+        .gap-lg {
+            gap: var(--stack-lg);
+        }
+        .text-center {
+            text-align: center;
+        }
+        .text-left {
+            text-align: left;
+        }
+        .text-right {
+            text-align: right;
+        }
+        .mt-sm {
+            margin-top: var(--stack-sm);
+        }
+        .mt-md {
+            margin-top: var(--stack-md);
+        }
+        .mt-lg {
+            margin-top: var(--stack-lg);
+        }
+        .mb-sm {
+            margin-bottom: var(--stack-sm);
+        }
+        .mb-md {
+            margin-bottom: var(--stack-md);
+        }
+        .mb-lg {
+            margin-bottom: var(--stack-lg);
+        }
+
+        *:focus-visible {
+            outline: 2px solid var(--primary);
+            outline-offset: 2px;
+        }
+
+        @media print {
+            .navbar,
+            .footer,
+            .btn,
+            .commander-btn {
+                display: none !important;
+            }
+            body {
+                background: #ffffff !important;
+                color: #000000 !important;
+            }
+            .section {
+                padding: 20px 0 !important;
+                break-inside: avoid;
+            }
+            .card,
+            .product-card,
+            .service-card {
+                box-shadow: none !important;
+                border: 1px solid #ddd !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="navbar" role="banner">
+        <div class="container navbar-inner">
+            <a href="#accueil" class="navbar-logo" aria-label="TMS SARL Accueil">
+                <span class="logo-icon"><i class="ri-heart-pulse-fill"></i></span>
+                <span class="script">TMS SARL</span>
+            </a>
+            <nav aria-label="Navigation principale">
+                <!-- Menu desktop -->
+                <ul class="navbar-links" id="navLinksDesktop">
+                    <li><a href="#accueil" class="active" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="#services" data-i18n="nav.services">Services</a></li>
+                    <li><a href="#produits" data-i18n="nav.products">Produits</a></li>
+                    <li><a href="#apropos" data-i18n="nav.about">À propos</a></li>
+                    <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+                </ul>
+
+                <!-- Bouton menu mobile -->
+                <button class="navbar-toggle" aria-label="Ouvrir le menu" id="navToggle" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </nav>
+
+            <div class="lang-switcher">
+                <label class="switch" aria-label="Changer de langue">
+                    <input type="checkbox" id="lang-toggle">
+                    <span class="switch-track">
+                        <span class="switch-knob"></span>
+                    </span>
+                </label>
+                <div class="lang-labels">
+                    <span class="lang-fr">FR</span>
+                    <span class="lang-en">EN</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Overlay pour fermer le menu mobile -->
+    <div class="navbar-overlay" id="navOverlay"></div>
+
+    <!-- Menu mobile panel -->
+    <div class="navbar-mobile-panel" id="navMobilePanel">
+        <ul>
+            <li><a href="#accueil" class="active" data-i18n="nav.home">Accueil</a></li>
+            <li><a href="#services" data-i18n="nav.services">Services</a></li>
+            <li><a href="#produits" data-i18n="nav.products">Produits</a></li>
+            <li><a href="#apropos" data-i18n="nav.about">À propos</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+        <div class="mobile-lang">
+            <span style="font-size:14px;font-weight:500;color:var(--on-surface-variant);">Langue</span>
+            <div class="lang-switcher">
+                <label class="switch" aria-label="Changer de langue">
+                    <input type="checkbox" id="lang-toggle-mobile">
+                    <span class="switch-track">
+                        <span class="switch-knob"></span>
+                    </span>
+                </label>
+                <div class="lang-labels">
+                    <span class="lang-fr">FR</span>
+                    <span class="lang-en">EN</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- ===== SECTION ACCUEIL ===== -->
+        <section id="accueil" class="hero" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="hero-split">
+                    <div class="hero-content">
+                        <div class="hero-badge">
+                            <i class="ri-shield-check-line"></i>
+                            <span data-i18n="hero.badge">Leader au Cameroun</span>
+                        </div>
+                        <h1 class="hero-title" id="hero-title">
+                            <span data-i18n="hero.title">L'équipement médical de confiance</span><br>
+                            <span class="highlight" data-i18n="hero.title_highlight">au service de la santé au Cameroun</span>
+                        </h1>
+                        <p class="hero-subtitle" data-i18n="hero.subtitle">
+                            Depuis 2010, TMS SARL fournit aux hôpitaux, cliniques et laboratoires du Cameroun des équipements médicaux fiables, installés et entretenus par une équipe d'experts locaux.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="#produits" class="btn btn-primary" data-i18n="hero.cta_products">
+                                Découvrir nos produits <i class="ri-arrow-right-line"></i>
+                            </a>
+                            <a href="#contact" class="btn btn-outline" data-i18n="hero.cta_contact">
+                                <i class="ri-calendar-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="hero-image-wrapper">
+                            <img src="images/hero-medical-equipment.jpeg" alt="Équipements médicaux TMS SARL" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22%3E%3Crect fill=%22%23eff4ff%22 width=%22600%22 height=%22400%22/%3E%3Ctext x=%22300%22 y=%22200%22 text-anchor=%22middle%22 fill=%22%232563eb%22 font-size=%2220%22 font-family=%22Inter%22%3EImage médicale%3C/text%3E%3C/svg%3E'">
+
+                            <!-- Carte 1: Expertise - En haut à gauche -->
+                            <div class="floating-card floating-card-1">
+                                <div class="icon"><i class="ri-stethoscope-line"></i></div>
+                                <div class="text">
+                                    <span class="label">Expertise</span>
+                                    <span class="value">15 ans</span>
+                                </div>
+                            </div>
+
+                            <!-- Carte 2: Certification - En haut à droite -->
+                            <div class="floating-card floating-card-2">
+                                <div class="icon"><i class="ri-award-line"></i></div>
+                                <div class="text">
+                                    <span class="label">Certification</span>
+                                    <span class="value">ISO 13485</span>
+                                </div>
+                            </div>
+
+                            <!-- Carte 3: Clients - En bas à gauche -->
+                            <div class="floating-card floating-card-3">
+                                <div class="icon"><i class="ri-group-line"></i></div>
+                                <div class="text">
+                                    <span class="label">Clients</span>
+                                    <span class="value">500+</span>
+                                </div>
+                            </div>
+
+                            <!-- Carte 4: Spécialistes - En bas à droite -->
+                            <div class="floating-card floating-card-4">
+                                <div class="icon"><i class="ri-user-md-line"></i></div>
+                                <div class="text">
+                                    <span class="label">Spécialistes</span>
+                                    <span class="value">20+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SERVICES ===== -->
+        <section id="services" class="section" aria-labelledby="services-title">
+            <div class="container">
+                <h2 class="section-title" id="services-title" data-i18n="services.title">Nos Services</h2>
+                <p class="section-subtitle" data-i18n="services.subtitle">Des prestations professionnelles pour accompagner vos établissements de santé, de l'achat à la maintenance.</p>
+                <div class="grid grid-cols-12" style="gap:24px;">
+                    <div class="service-card col-span-4 reveal">
+                        <div class="service-icon"><i class="ri-stethoscope-line"></i></div>
+                        <h3 data-i18n="service.consultations.title">Consultations Médicales</h3>
+                        <p data-i18n="service.consultations.desc">Consultations avec des spécialistes qualifiés pour diagnostiquer et traiter diverses conditions médicales.</p>
+                        <a href="#contact" class="btn btn-ghost btn-sm" data-i18n="cta.quote">Demander un devis <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                    <div class="service-card col-span-4 reveal" style="transition-delay:0.1s;">
+                        <div class="service-icon"><i class="ri-test-tube-line"></i></div>
+                        <h3 data-i18n="service.analyses.title">Analyses Médicales</h3>
+                        <p data-i18n="service.analyses.desc">Services de laboratoire complets pour des analyses précises et rapides avec des résultats fiables.</p>
+                        <a href="#contact" class="btn btn-ghost btn-sm" data-i18n="cta.quote">Demander un devis <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                    <div class="service-card col-span-4 reveal" style="transition-delay:0.2s;">
+                        <div class="service-icon"><i class="ri-microscope-line"></i></div>
+                        <h3 data-i18n="service.imagerie.title">Imagerie Médicale</h3>
+                        <p data-i18n="service.imagerie.desc">Technologies d'imagerie avancées pour des diagnostics précis et non invasifs.</p>
+                        <a href="#contact" class="btn btn-ghost btn-sm" data-i18n="cta.quote">Demander un devis <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                    <div class="service-card col-span-4 reveal" style="transition-delay:0.3s;">
+                        <div class="service-icon"><i class="ri-medicine-bottle-line"></i></div>
+                        <h3 data-i18n="service.pharmacie.title">Pharmacie Spécialisée</h3>
+                        <p data-i18n="service.pharmacie.desc">Accès à des médicaments et produits médicaux spécialisés avec conseils professionnels.</p>
+                        <a href="#contact" class="btn btn-ghost btn-sm" data-i18n="cta.quote">Demander un devis <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                    <div class="service-card col-span-4 reveal" style="transition-delay:0.4s;">
+                        <div class="service-icon"><i class="ri-tools-line"></i></div>
+                        <h3 data-i18n="service.maintenance.title">Maintenance &amp; SAV</h3>
+                        <p data-i18n="service.maintenance.desc">Service de maintenance préventive et corrective pour tous vos équipements médicaux.</p>
+                        <a href="#contact" class="btn btn-ghost btn-sm" data-i18n="cta.quote">Demander un devis <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                    <div class="service-card col-span-4 reveal" style="transition-delay:0.5s;">
+                        <div class="service-icon"><i class="ri-graduation-cap-line"></i></div>
+                        <h3 data-i18n="service.formation.title">Formation Professionnelle</h3>
+                        <p data-i18n="service.formation.desc">Formation et accompagnement de vos équipes sur l'utilisation des équipements médicaux.</p>
+                        <a href="#contact" class="btn btn-ghost btn-sm" data-i18n="cta.quote">Demander un devis <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PRODUITS ===== -->
+        <section id="produits" class="section bg-low" aria-labelledby="products-title">
+            <div class="container">
+                <h2 class="section-title" id="products-title" data-i18n="products.title">Nos Produits</h2>
+                <p class="section-subtitle" data-i18n="products.subtitle">Une sélection d'équipements médicaux de haute qualité pour répondre à vos besoins.</p>
+                <div class="grid grid-cols-12" style="gap:24px;">
+
+                    <!-- Produit 1: Microscope -->
+                    <div class="product-card col-span-4 reveal">
+                        <img src="images/produits/Microscope.jpg" alt="Microscope de laboratoire" class="card-image" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22200%22%3E%3Crect fill=%22%23e5eeff%22 width=%22400%22 height=%22200%22/%3E%3Ctext x=%22200%22 y=%22110%22 text-anchor=%22middle%22 fill=%22%232563eb%22 font-size=%2216%22 font-family=%22Inter%22%3EMicroscope%3C/text%3E%3C/svg%3E'">
+                        <div class="card-body">
+                            <span class="card-tag"><i class="ri-microscope-line"></i> Microscopie</span>
+                            <h3 class="card-title" data-i18n="product.1.title">Microscope de Laboratoire</h3>
+                            <p class="card-text" data-i18n="product.1.desc">Microscope optique de haute précision pour analyses médicales et recherches en laboratoire. Résolution 4K.</p>
+                            <div class="card-footer">
+                                <span class="product-price" data-i18n="product.1.price">1 200 000 FCFA</span>
+                                <button class="btn btn-primary btn-sm commander-btn" data-product="Microscope de Laboratoire - 1 200 000 FCFA" data-i18n="product.order">Commander</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produit 2: ECG -->
+                    <div class="product-card col-span-4 reveal" style="transition-delay:0.1s;">
+                        <img src="images/produits/ECG.jpg" alt="Électrocardiogramme digital" class="card-image" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22200%22%3E%3Crect fill=%22%23e5eeff%22 width=%22400%22 height=%22200%22/%3E%3Ctext x=%22200%22 y=%22110%22 text-anchor=%22middle%22 fill=%22%232563eb%22 font-size=%2216%22 font-family=%22Inter%22%3EECG%3C/text%3E%3C/svg%3E'">
+                        <div class="card-body">
+                            <span class="card-tag"><i class="ri-heart-pulse-line"></i> Cardiologie</span>
+                            <h3 class="card-title" data-i18n="product.2.title">Électrocardiogramme Digital</h3>
+                            <p class="card-text" data-i18n="product.2.desc">Appareil ECG moderne pour diagnostics cardiaques précis avec interface intuitive et export des données.</p>
+                            <div class="card-footer">
+                                <span class="product-price" data-i18n="product.2.price">3 500 000 FCFA</span>
+                                <button class="btn btn-primary btn-sm commander-btn" data-product="Électrocardiogramme Digital - 3 500 000 FCFA" data-i18n="product.order">Commander</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produit 3: IRM Scanner -->
+                    <div class="product-card col-span-4 reveal" style="transition-delay:0.2s;">
+                        <img src="images/produits/IRM%20scan.jpg" alt="Scanner IRM 3T" class="card-image" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22200%22%3E%3Crect fill=%22%23e5eeff%22 width=%22400%22 height=%22200%22/%3E%3Ctext x=%22200%22 y=%22110%22 text-anchor=%22middle%22 fill=%22%232563eb%22 font-size=%2216%22 font-family=%22Inter%22%3EIRM%20Scanner%3C/text%3E%3C/svg%3E'">
+                        <div class="card-body">
+                            <span class="card-tag"><i class="ri-brain-line"></i> Imagerie</span>
+                            <h3 class="card-title" data-i18n="product.3.title">Scanner IRM 3T</h3>
+                            <p class="card-text" data-i18n="product.3.desc">Technologie d'imagerie par résonance magnétique 3 Tesla pour diagnostics neurologiques et oncologiques.</p>
+                            <div class="card-footer">
+                                <span class="product-price" data-i18n="product.3.price">45 000 000 FCFA</span>
+                                <button class="btn btn-primary btn-sm commander-btn" data-product="Scanner IRM 3T - 45 000 000 FCFA" data-i18n="product.order">Commander</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produit 4: Laboratoire -->
+                    <div class="product-card col-span-4 reveal" style="transition-delay:0.3s;">
+                        <img src="images/produits/Labo.jpg" alt="Kit laboratoire complet" class="card-image" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22200%22%3E%3Crect fill=%22%23e5eeff%22 width=%22400%22 height=%22200%22/%3E%3Ctext x=%22200%22 y=%22110%22 text-anchor=%22middle%22 fill=%22%232563eb%22 font-size=%2216%22 font-family=%22Inter%22%3ELaboratoire%3C/text%3E%3C/svg%3E'">
+                        <div class="card-body">
+                            <span class="card-tag"><i class="ri-flask-line"></i> Laboratoire</span>
+                            <h3 class="card-title" data-i18n="product.4.title">Kit Laboratoire Complet</h3>
+                            <p class="card-text" data-i18n="product.4.desc">Kit complet comprenant autoclave, centrifugeuse, agitateur et instruments d'analyse.</p>
+                            <div class="card-footer">
+                                <span class="product-price" data-i18n="product.4.price">8 500 000 FCFA</span>
+                                <button class="btn btn-primary btn-sm commander-btn" data-product="Kit Laboratoire Complet - 8 500 000 FCFA" data-i18n="product.order">Commander</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produit 5: Salle d'opération -->
+                    <div class="product-card col-span-4 reveal" style="transition-delay:0.4s;">
+                        <img src="images/produits/salle%20de%20chirugie.jpg" alt="Équipement salle d'opération" class="card-image" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22200%22%3E%3Crect fill=%22%23e5eeff%22 width=%22400%22 height=%22200%22/%3E%3Ctext x=%22200%22 y=%22110%22 text-anchor=%22middle%22 fill=%22%232563eb%22 font-size=%2216%22 font-family=%22Inter%22%3EChirurgie%3C/text%3E%3C/svg%3E'">
+                        <div class="card-body">
+                            <span class="card-tag"><i class="ri-scissors-line"></i> Chirurgie</span>
+                            <h3 class="card-title" data-i18n="product.5.title">Équipement Salle d'Opération</h3>
+                            <p class="card-text" data-i18n="product.5.desc">Table d'opération, lampes scialytiques, monitorage et instruments chirurgicaux de précision.</p>
+                            <div class="card-footer">
+                                <span class="product-price" data-i18n="product.5.price">15 000 000 FCFA</span>
+                                <button class="btn btn-primary btn-sm commander-btn" data-product="Équipement Salle d'Opération - 15 000 000 FCFA" data-i18n="product.order">Commander</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produit 6: Matériel médical -->
+                    <div class="product-card col-span-4 reveal" style="transition-delay:0.5s;">
+                        <img src="images/produits/materiel.jpeg" alt="Matériel médical divers" class="card-image" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22200%22%3E%3Crect fill=%22%23e5eeff%22 width=%22400%22 height=%22200%22/%3E%3Ctext x=%22200%22 y=%22110%22 text-anchor=%22middle%22 fill=%22%232563eb%22 font-size=%2216%22 font-family=%22Inter%22%3EMatériel%20médical%3C/text%3E%3C/svg%3E'">
+                        <div class="card-body">
+                            <span class="card-tag"><i class="ri-hospital-line"></i> Équipement</span>
+                            <h3 class="card-title" data-i18n="product.6.title">Matériel Médical Divers</h3>
+                            <p class="card-text" data-i18n="product.6.desc">Lits d'hospitalisation, fauteuils roulants, brancards et mobilier médical de qualité.</p>
+                            <div class="card-footer">
+                                <span class="product-price" data-i18n="product.6.price">Sur devis</span>
+                                <button class="btn btn-primary btn-sm commander-btn" data-product="Matériel Médical Divers - Sur devis" data-i18n="product.order">Commander</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produit 7: Irm img (image supplémentaire) -->
+                    <div class="product-card col-span-4 reveal" style="transition-delay:0.6s;">
+                        <img src="images/produits/Irm%20img.jpg" alt="Équipement d'imagerie médicale" class="card-image" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22200%22%3E%3Crect fill=%22%23e5eeff%22 width=%22400%22 height=%22200%22/%3E%3Ctext x=%22200%22 y=%22110%22 text-anchor=%22middle%22 fill=%22%232563eb%22 font-size=%2216%22 font-family=%22Inter%22%3EImagerie%20médicale%3C/text%3E%3C/svg%3E'">
+                        <div class="card-body">
+                            <span class="card-tag"><i class="ri-camera-line"></i> Imagerie</span>
+                            <h3 class="card-title">Équipement d'Imagerie Médicale</h3>
+                            <p class="card-text">Équipement d'imagerie de pointe pour des diagnostics précis et non invasifs.</p>
+                            <div class="card-footer">
+                                <span class="product-price">Sur devis</span>
+                                <button class="btn btn-primary btn-sm commander-btn" data-product="Équipement d'Imagerie Médicale - Sur devis" data-i18n="product.order">Commander</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produit 8: Labo (labo.jpeg) -->
+                    <div class="product-card col-span-4 reveal" style="transition-delay:0.7s;">
+                        <img src="images/produits/labo.jpeg" alt="Équipement de laboratoire" class="card-image" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22200%22%3E%3Crect fill=%22%23e5eeff%22 width=%22400%22 height=%22200%22/%3E%3Ctext x=%22200%22 y=%22110%22 text-anchor=%22middle%22 fill=%22%232563eb%22 font-size=%2216%22 font-family=%22Inter%22%3ELaboratoire%3C/text%3E%3C/svg%3E'">
+                        <div class="card-body">
+                            <span class="card-tag"><i class="ri-flask-line"></i> Laboratoire</span>
+                            <h3 class="card-title">Équipement de Laboratoire</h3>
+                            <p class="card-text">Équipement de laboratoire complet pour analyses médicales et recherches scientifiques.</p>
+                            <div class="card-footer">
+                                <span class="product-price">Sur devis</span>
+                                <button class="btn btn-primary btn-sm commander-btn" data-product="Équipement de Laboratoire - Sur devis" data-i18n="product.order">Commander</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produit 9: Matériel médical (istockphoto) -->
+                    <div class="product-card col-span-4 reveal" style="transition-delay:0.8s;">
+                        <img src="images/produits/istockphoto-1283314480-612x612.jpg" alt="Matériel médical" class="card-image" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22200%22%3E%3Crect fill=%22%23e5eeff%22 width=%22400%22 height=%22200%22/%3E%3Ctext x=%22200%22 y=%22110%22 text-anchor=%22middle%22 fill=%22%232563eb%22 font-size=%2216%22 font-family=%22Inter%22%3EMatériel%20médical%3C/text%3E%3C/svg%3E'">
+                        <div class="card-body">
+                            <span class="card-tag"><i class="ri-hospital-line"></i> Équipement</span>
+                            <h3 class="card-title">Matériel Médical Professionnel</h3>
+                            <p class="card-text">Matériel médical de qualité professionnelle pour les établissements de santé.</p>
+                            <div class="card-footer">
+                                <span class="product-price">Sur devis</span>
+                                <button class="btn btn-primary btn-sm commander-btn" data-product="Matériel Médical Professionnel - Sur devis" data-i18n="product.order">Commander</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== POURQUOI NOUS CHOISIR ===== -->
+        <section class="section" aria-labelledby="expertise-title">
+            <div class="container">
+                <h2 class="section-title" id="expertise-title" data-i18n="expert.title">Pourquoi Nous Choisir</h2>
+                <p class="section-subtitle" data-i18n="expert.subtitle">Ce qui fait de TMS SARL votre partenaire de confiance en solutions médicales au Cameroun.</p>
+                <div class="grid grid-cols-12" style="gap:24px;">
+                    <div class="expertise-card col-span-4 reveal">
+                        <div class="expertise-icon"><i class="ri-shield-star-line"></i></div>
+                        <h3 data-i18n="expert.quality.title">Qualité Certifiée</h3>
+                        <p data-i18n="expert.quality.desc">Nos produits répondent aux normes internationales les plus strictes, garantissant fiabilité et performance.</p>
+                    </div>
+                    <div class="expertise-card col-span-4 reveal" style="transition-delay:0.1s;">
+                        <div class="expertise-icon"><i class="ri-customer-service-2-line"></i></div>
+                        <h3 data-i18n="expert.support.title">Support Expert</h3>
+                        <p data-i18n="expert.support.desc">Notre équipe vous accompagne de la sélection à l'installation et la maintenance de vos équipements.</p>
+                    </div>
+                    <div class="expertise-card col-span-4 reveal" style="transition-delay:0.2s;">
+                        <div class="expertise-icon"><i class="ri-hand-heart-line"></i></div>
+                        <h3 data-i18n="expert.local.title">Engagement Local</h3>
+                        <p data-i18n="expert.local.desc">Présents au Cameroun depuis 2010, nous contribuons activement au développement du secteur médical local.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== À PROPOS ===== -->
+        <section id="apropos" class="section bg-low" aria-labelledby="about-title">
+            <div class="container">
+                <div class="grid grid-cols-12" style="gap:var(--stack-lg);align-items:center;">
+                    <div class="col-span-6 reveal-left">
+                        <span class="label-sm" style="color:var(--secondary);text-transform:uppercase;letter-spacing:0.06em;display:block;margin-bottom:8px;" data-i18n="about.label">À propos de TMS SARL</span>
+                        <h2 class="headline-md" id="about-title" style="color:var(--on-surface);margin-bottom:var(--stack-sm);" data-i18n="about.history.title">Notre Histoire</h2>
+                        <p class="body-lg" style="color:var(--on-surface-variant);" data-i18n="about.history.p1">
+                            Technologie Médicale Company Sarl (TMS SARL) a été fondée en 2010 avec une vision claire : fournir des équipements médicaux et de laboratoire de haute qualité aux professionnels de santé du Cameroun.
+                        </p>
+                        <p class="body-lg" style="color:var(--on-surface-variant);margin-top:var(--stack-sm);" data-i18n="about.history.p2">
+                            Aujourd'hui, TMS SARL est reconnue comme un acteur majeur dans la fourniture d'équipements médicaux, avec des références dans les plus grands hôpitaux et cliniques du Cameroun.
+                        </p>
+                        <div class="flex" style="gap:var(--stack-md);margin-top:var(--stack-md);flex-wrap:wrap;">
+                            <div>
+                                <h3 class="headline-sm" style="color:var(--primary);margin-bottom:6px;" data-i18n="about.mission.title">Mission</h3>
+                                <p class="body-md" style="color:var(--on-surface-variant);max-width:260px;" data-i18n="about.mission.p">Fournir des solutions médicales innovantes pour améliorer la qualité des soins au Cameroun.</p>
+                            </div>
+                            <div>
+                                <h3 class="headline-sm" style="color:var(--secondary);margin-bottom:6px;" data-i18n="about.vision.title">Vision</h3>
+                                <p class="body-md" style="color:var(--on-surface-variant);max-width:260px;" data-i18n="about.vision.p">Devenir le leader des solutions médicales en Afrique centrale.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-6 reveal-right">
+                        <img src="images/produits/about.jpg" alt="Histoire de TMS SARL" class="card-image" style="border-radius:var(--radius-lg);height:100%;object-fit:cover;min-height:320px;box-shadow:var(--shadow-level-3);" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22320%22%3E%3Crect fill=%22%23e5eeff%22 width=%22600%22 height=%22320%22/%3E%3Ctext x=%22300%22 y=%22160%22 text-anchor=%22middle%22 fill=%22%232563eb%22 font-size=%2220%22 font-family=%22Inter%22%3EÀ%20propos%3C/text%3E%3C/svg%3E'">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ÉQUIPE ===== -->
+        <section class="section" aria-labelledby="team-title">
+            <div class="container">
+                <h2 class="section-title" id="team-title" data-i18n="team.title">Notre Équipe d'Experts</h2>
+                <p class="section-subtitle" data-i18n="team.subtitle">Des professionnels expérimentés à votre service pour vous accompagner dans tous vos projets.</p>
+                <div class="grid grid-cols-12" style="gap:var(--stack-lg);">
+                    <div class="col-span-3 team-member reveal">
+                        <img src="images/equipe/docteur1.jfif" alt="Dr. Alice Mbala" class="team-member-image" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22120%22 height=%22120%22%3E%3Ccircle cx=%2260%22 cy=%2260%22 r=%2258%22 fill=%22%23e5eeff%22/%3E%3Ctext x=%2260%22 y=%2266%22 text-anchor=%22middle%22 fill=%22%232563eb%22 font-size=%2232%22 font-family=%22Inter%22%3E👩%3C/text%3E%3C/svg%3E'">
+                        <div class="team-member-name">Dr. Alice Mbala</div>
+                        <div class="team-member-role" data-i18n="team.member1.role">Responsable technique</div>
+                        <p class="caption" style="color:var(--on-surface-variant);margin-top:var(--stack-sm);" data-i18n="team.member1.experience">15 ans d'expérience en ingénierie biomédicale</p>
+                    </div>
+                    <div class="col-span-3 team-member reveal" style="transition-delay:0.1s;">
+                        <img src="images/equipe/docteur2.jfif" alt="Dr. Jean Kouam" class="team-member-image" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22120%22 height=%22120%22%3E%3Ccircle cx=%2260%22 cy=%2260%22 r=%2258%22 fill=%22%23e5eeff%22/%3E%3Ctext x=%2260%22 y=%2266%22 text-anchor=%22middle%22 fill=%22%232563eb%22 font-size=%2232%22 font-family=%22Inter%22%3E👨%3C/text%3E%3C/svg%3E'">
+                        <div class="team-member-name">Dr. Jean Kouam</div>
+                        <div class="team-member-role" data-i18n="team.member2.role">Vente &amp; Support</div>
+                        <p class="caption" style="color:var(--on-surface-variant);margin-top:var(--stack-sm);" data-i18n="team.member2.experience">Expert en équipements de laboratoire</p>
+                    </div>
+                    <div class="col-span-3 team-member reveal" style="transition-delay:0.2s;">
+                        <img src="images/equipe/docteur3.jfif" alt="Dr. Marie Tchameni" class="team-member-image" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22120%22 height=%22120%22%3E%3Ccircle cx=%2260%22 cy=%2260%22 r=%2258%22 fill=%22%23e5eeff%22/%3E%3Ctext x=%2260%22 y=%2266%22 text-anchor=%22middle%22 fill=%22%232563eb%22 font-size=%2232%22 font-family=%22Inter%22%3E👩%3C/text%3E%3C/svg%3E'">
+                        <div class="team-member-name">Dr. Marie Tchameni</div>
+                        <div class="team-member-role" data-i18n="team.member3.role">Formation &amp; services</div>
+                        <p class="caption" style="color:var(--on-surface-variant);margin-top:var(--stack-sm);" data-i18n="team.member3.experience">Spécialiste en formation clinique</p>
+                    </div>
+                    <div class="col-span-3 team-member reveal" style="transition-delay:0.3s;">
+                        <img src="images/equipe/docteur4.jfif" alt="Dr. Paul Nguembu" class="team-member-image" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22120%22 height=%22120%22%3E%3Ccircle cx=%2260%22 cy=%2260%22 r=%2258%22 fill=%22%23e5eeff%22/%3E%3Ctext x=%2260%22 y=%2266%22 text-anchor=%22middle%22 fill=%22%232563eb%22 font-size=%2232%22 font-family=%22Inter%22%3E👨%3C/text%3E%3C/svg%3E'">
+                        <div class="team-member-name">Dr. Paul Nguembu</div>
+                        <div class="team-member-role" data-i18n="team.member4.role">Directeur Général</div>
+                        <p class="caption" style="color:var(--on-surface-variant);margin-top:var(--stack-sm);" data-i18n="team.member4.experience">Visionnaire en santé numérique</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CERTIFICATIONS ===== -->
+        <section class="section bg-low" aria-labelledby="certifications-title">
+            <div class="container">
+                <h2 class="section-title" id="certifications-title" data-i18n="certifications.title">Nos Certifications</h2>
+                <p class="section-subtitle" data-i18n="certifications.subtitle">Des labels de qualité qui garantissent l'excellence de nos produits et services.</p>
+                <div class="flex" style="gap:var(--stack-md);justify-content:center;flex-wrap:wrap;">
+                    <div class="badge badge-primary">
+                        <i class="ri-award-line"></i> <span data-i18n="certification.iso">ISO 13485</span>
+                    </div>
+                    <div class="badge badge-primary">
+                        <i class="ri-award-line"></i> <span data-i18n="certification.ce">CE Médical</span>
+                    </div>
+                    <div class="badge badge-primary">
+                        <i class="ri-award-line"></i> <span data-i18n="certification.fda">FDA Approuvé</span>
+                    </div>
+                    <div class="badge badge-secondary">
+                        <i class="ri-award-line"></i> <span data-i18n="certification.gmp">GMP Certifié</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TÉMOIGNAGES ===== -->
+        <section class="section" aria-labelledby="testimonials-title">
+            <div class="container">
+                <h2 class="section-title" id="testimonials-title" data-i18n="testimonials.title">Ce que disent nos clients</h2>
+                <p class="section-subtitle" data-i18n="testimonials.subtitle">Des retours d'expérience de professionnels de santé qui nous font confiance.</p>
+                <div class="grid grid-cols-12" style="gap:24px;">
+                    <div class="testimonial-card col-span-4 reveal">
+                        <p class="testimonial-text" data-i18n="testimonial.1">Equipement performant et service après-vente exemplaire. Une équipe réactive et professionnelle.</p>
+                        <div class="testimonial-author" data-i18n="testimonial.1.author">— Clinique Saint-Luc, Douala</div>
+                    </div>
+                    <div class="testimonial-card col-span-4 reveal" style="transition-delay:0.1s;">
+                        <p class="testimonial-text" data-i18n="testimonial.2">Livraison rapide et installation professionnelle. Les équipements répondent parfaitement à nos besoins.</p>
+                        <div class="testimonial-author" data-i18n="testimonial.2.author">— Hôpital Central, Yaoundé</div>
+                    </div>
+                    <div class="testimonial-card col-span-4 reveal" style="transition-delay:0.2s;">
+                        <p class="testimonial-text" data-i18n="testimonial.3">Des produits conformes aux standards internationaux. Un partenaire de confiance pour notre cabinet.</p>
+                        <div class="testimonial-author" data-i18n="testimonial.3.author">— Cabinet Privé, Bafoussam</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT ===== -->
+        <section id="contact" class="section bg-low" aria-labelledby="contact-title">
+            <div class="container">
+                <h2 class="section-title" id="contact-title" data-i18n="contact.title">Contactez-nous</h2>
+                <p class="section-subtitle" data-i18n="contact.subtitle">Nous sommes à votre disposition pour répondre à toutes vos questions et vous accompagner dans vos besoins médicaux.</p>
+                <div class="grid grid-cols-12" style="gap:var(--stack-lg);">
+                    <!-- Formulaire -->
+                    <div class="col-span-6 reveal-left">
+                        <form class="form" id="contactForm" style="background:var(--surface-container-lowest);padding:var(--stack-lg);border-radius:var(--radius-lg);box-shadow:var(--shadow-level-3);" novalidate>
+                            <h3 class="headline-sm" style="margin-bottom:var(--stack-md);" data-i18n="form.heading">Envoyez-nous un message</h3>
+                            <div class="grid grid-cols-12" style="gap:var(--stack-md);">
+                                <div class="col-span-6">
+                                    <label for="name" class="form-label"><span data-i18n="form.name">Nom complet</span> <span style="color:var(--error);">*</span></label>
+                                    <input type="text" id="name" name="name" class="form-input" placeholder="Votre nom" required aria-required="true">
+                                </div>
+                                <div class="col-span-6">
+                                    <label for="email" class="form-label"><span data-i18n="form.email">Email</span> <span style="color:var(--error);">*</span></label>
+                                    <input type="email" id="email" name="email" class="form-input" placeholder="Votre email" required aria-required="true">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="form-label"><span data-i18n="form.phone">Téléphone</span></label>
+                                <input type="tel" id="phone" name="phone" class="form-input" placeholder="Votre numéro de téléphone">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject" class="form-label"><span data-i18n="form.subject">Sujet</span></label>
+                                <select id="subject" name="subject" class="form-select">
+                                    <option value="" data-i18n="form.select.subject">Sélectionnez un sujet</option>
+                                    <option value="consultation" data-i18n="form.option.consultation">Demande de consultation</option>
+                                    <option value="product" data-i18n="form.option.product">Information sur un produit</option>
+                                    <option value="service" data-i18n="form.option.service">Information sur un service</option>
+                                    <option value="devis" data-i18n="form.option.devis">Demande de devis</option>
+                                    <option value="other" data-i18n="form.option.other">Autre demande</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="form-label"><span data-i18n="form.message">Message</span> <span style="color:var(--error);">*</span></label>
+                                <textarea id="message" name="message" class="form-textarea" rows="5" placeholder="Décrivez votre demande en détail..." required aria-required="true"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block" data-i18n="form.send">Envoyer le message <i class="ri-send-plane-line"></i></button>
+                            <div id="formStatus" class="caption" style="margin-top:var(--stack-sm);color:var(--on-surface-variant);text-align:center;"></div>
+                        </form>
+                    </div>
+
+                    <!-- Informations -->
+                    <div class="col-span-6 reveal-right">
+                        <div style="background:var(--surface-container-lowest);padding:var(--stack-lg);border-radius:var(--radius-lg);box-shadow:var(--shadow-level-3);margin-bottom:var(--stack-md);">
+                            <h3 class="headline-sm" style="margin-bottom:var(--stack-md);" data-i18n="contact.info.title">Informations de Contact</h3>
+
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon"><i class="ri-map-pin-line"></i></div>
+                                <div>
+                                    <div class="contact-info-label" data-i18n="contact.info.address">Adresse</div>
+                                    <div class="contact-info-value">Rue 8612, Bastos, Yaoundé, Cameroun</div>
+                                </div>
+                            </div>
+
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon"><i class="ri-phone-line"></i></div>
+                                <div>
+                                    <div class="contact-info-label" data-i18n="contact.info.phone">Téléphone</div>
+                                    <div class="contact-info-value">+237 699 248 832</div>
+                                    <div class="contact-info-value" style="font-size:14px;color:var(--on-surface-variant);" data-i18n="contact.info.phone_available">Disponible 24h/24</div>
+                                </div>
+                            </div>
+
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon"><i class="ri-mail-line"></i></div>
+                                <div>
+                                    <div class="contact-info-label" data-i18n="contact.info.email">Email</div>
+                                    <div class="contact-info-value">contact@tmsarl.com</div>
+                                    <div class="contact-info-value" style="font-size:14px;color:var(--on-surface-variant);" data-i18n="contact.info.email_response">Réponse sous 24h</div>
+                                </div>
+                            </div>
+
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon"><i class="ri-time-line"></i></div>
+                                <div>
+                                    <div class="contact-info-label" data-i18n="contact.info.hours">Horaires d'ouverture</div>
+                                    <div class="contact-info-value" data-i18n="contact.info.hours_week">Lundi - Vendredi: 8h30 - 18h30</div>
+                                    <div class="contact-info-value" data-i18n="contact.info.hours_sat">Samedi: 9h00 - 13h00</div>
+                                    <div class="contact-info-value" style="color:var(--error);" data-i18n="contact.info.hours_sun">Dimanche: Fermé</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Carte -->
+                        <div style="background:var(--surface-container-lowest);padding:var(--stack-sm);border-radius:var(--radius-lg);box-shadow:var(--shadow-level-2);height:250px;overflow:hidden;">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15815.122919805!2d11.499433!3d3.8480236!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x108bcfbe019ebd31%3A0x62e5e7078b706413!2sBastos!5e0!3m2!1sfr!2scm!4v1685000000000!5m2!1sfr!2scm"
+                                width="100%"
+                                height="100%"
+                                style="border:0;border-radius:var(--radius-default);"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Plan d'accès à TMS SARL">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CTA FINAL ===== -->
+        <section class="section" aria-labelledby="cta-title">
+            <div class="container">
+                <div class="cta-banner">
+                    <h2 class="headline-md" id="cta-title" data-i18n="cta.call">Vous préférez nous appeler ?</h2>
+                    <p class="body-lg" data-i18n="cta.call_sub">Notre équipe est disponible pour répondre à vos questions du lundi au samedi.</p>
+                    <a href="tel:+237699248832" class="btn btn-cta">
+                        <i class="ri-phone-line"></i> +237 699 248 832
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="grid grid-cols-12" style="gap:var(--stack-lg);">
+                <div class="col-span-4">
+                    <div class="footer-brand">
+                        <a href="#accueil" class="navbar-logo" aria-label="TMS SARL Accueil">
+                            <span class="script">TMS SARL</span>
+                        </a>
+                        <p class="caption" style="color:var(--on-surface-variant);max-width:280px;margin-top:var(--stack-sm);">
+                            TMS SARL, votre partenaire de confiance en équipements médicaux et de laboratoire au Cameroun depuis 2010.
+                        </p>
+                        <p class="caption" style="color:var(--on-surface-variant);margin-top:var(--stack-sm);">
+                            <i class="ri-map-pin-line"></i> Rue 8612, Bastos, Yaoundé, Cameroun
+                        </p>
+                    </div>
+                    <div class="flex" style="gap:var(--stack-sm);margin-top:var(--stack-sm);flex-wrap:wrap;">
+                        <a href="#" aria-label="Facebook" class="social-link"><i class="ri-facebook-fill"></i></a>
+                        <a href="#" aria-label="Twitter" class="social-link"><i class="ri-twitter-x-fill"></i></a>
+                        <a href="#" aria-label="LinkedIn" class="social-link"><i class="ri-linkedin-fill"></i></a>
+                        <a href="#" aria-label="Instagram" class="social-link"><i class="ri-instagram-fill"></i></a>
+                        <a href="#" aria-label="YouTube" class="social-link"><i class="ri-youtube-fill"></i></a>
+                    </div>
+                </div>
+                <div class="col-span-2">
+                    <h3 class="label-sm" style="color:var(--on-surface);font-weight:600;" data-i18n="footer.links">Liens rapides</h3>
+                    <ul class="footer-links">
+                        <li><a href="#accueil" data-i18n="nav.home">Accueil</a></li>
+                        <li><a href="#services" data-i18n="nav.services">Services</a></li>
+                        <li><a href="#produits" data-i18n="nav.products">Produits</a></li>
+                        <li><a href="#apropos" data-i18n="nav.about">À propos</a></li>
+                        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-span-2">
+                    <h3 class="label-sm" style="color:var(--on-surface);font-weight:600;" data-i18n="footer.services">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services" data-i18n="service.consultations.title">Consultations</a></li>
+                        <li><a href="#services" data-i18n="service.analyses.title">Analyses</a></li>
+                        <li><a href="#services" data-i18n="service.imagerie.title">Imagerie</a></li>
+                        <li><a href="#services" data-i18n="service.pharmacie.title">Pharmacie</a></li>
+                        <li><a href="#services" data-i18n="service.maintenance.title">Maintenance</a></li>
+                    </ul>
+                </div>
+                <div class="col-span-4">
+                    <h3 class="label-sm" style="color:var(--on-surface);font-weight:600;" data-i18n="footer.newsletter_title">Newsletter</h3>
+                    <p class="caption" style="color:var(--on-surface-variant);" data-i18n="footer.newsletter">Abonnez-vous pour recevoir nos dernières actualités et offres spéciales.</p>
+                    <form class="flex" style="margin-top:var(--stack-sm);flex-wrap:wrap;" id="newsletterForm" novalidate>
+                        <input type="email" placeholder="Votre email" class="form-input" style="border-radius:var(--radius-default) 0 0 var(--radius-default);flex:1;min-width:120px;" required aria-label="Adresse email">
+                        <button type="submit" class="btn btn-primary" style="border-radius:0 var(--radius-default) var(--radius-default) 0;white-space:nowrap;" data-i18n="footer.subscribe">S'abonner</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copy">&copy; 2026 Technologie Medical Company Sarl. Tous droits réservés.</p>
+                <div class="flex" style="gap:var(--stack-md);flex-wrap:wrap;">
+                    <a href="legal.html" data-i18n="footer.legal">Mentions légales</a>
+                    <a href="privacy.html" data-i18n="footer.privacy">Politique de confidentialité</a>
+                    <a href="cgv.html" data-i18n="footer.cgv">CGV</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        // ============================================
+        // TMS SARL - TRADUCTIONS i18n COMPLÈTES
+        // ============================================
+        (function() {
+            'use strict';
+
+            const translations = {
+                fr: {
+                    // Navigation
+                    'nav.home': 'Accueil',
+                    'nav.services': 'Services',
+                    'nav.products': 'Produits',
+                    'nav.about': 'À propos',
+                    'nav.contact': 'Contact',
+
+                    // Hero
+                    'hero.badge': 'Leader au Cameroun',
+                    'hero.title': "L'équipement médical de confiance",
+                    'hero.title_highlight': 'au service de la santé au Cameroun',
+                    'hero.subtitle': "Depuis 2010, TMS SARL fournit aux hôpitaux, cliniques et laboratoires du Cameroun des équipements médicaux fiables, installés et entretenus par une équipe d'experts locaux.",
+                    'hero.cta_products': 'Découvrir nos produits',
+                    'hero.cta_contact': 'Prendre rendez-vous',
+
+                    // Services
+                    'services.title': 'Nos Services',
+                    'services.subtitle': 'Des prestations professionnelles pour accompagner vos établissements de santé, de l\'achat à la maintenance.',
+                    'service.consultations.title': 'Consultations Médicales',
+                    'service.consultations.desc': 'Consultations avec des spécialistes qualifiés pour diagnostiquer et traiter diverses conditions médicales.',
+                    'service.analyses.title': 'Analyses Médicales',
+                    'service.analyses.desc': 'Services de laboratoire complets pour des analyses précises et rapides avec des résultats fiables.',
+                    'service.imagerie.title': 'Imagerie Médicale',
+                    'service.imagerie.desc': 'Technologies d\'imagerie avancées pour des diagnostics précis et non invasifs.',
+                    'service.pharmacie.title': 'Pharmacie Spécialisée',
+                    'service.pharmacie.desc': 'Accès à des médicaments et produits médicaux spécialisés avec conseils professionnels.',
+                    'service.maintenance.title': 'Maintenance & SAV',
+                    'service.maintenance.desc': 'Service de maintenance préventive et corrective pour tous vos équipements médicaux.',
+                    'service.formation.title': 'Formation Professionnelle',
+                    'service.formation.desc': 'Formation et accompagnement de vos équipes sur l\'utilisation des équipements médicaux.',
+                    'cta.quote': 'Demander un devis',
+
+                    // Products
+                    'products.title': 'Nos Produits',
+                    'products.subtitle': 'Une sélection d\'équipements médicaux de haute qualité pour répondre à vos besoins.',
+                    'product.1.title': 'Microscope de Laboratoire',
+                    'product.1.desc': 'Microscope optique de haute précision pour analyses médicales et recherches en laboratoire. Résolution 4K.',
+                    'product.1.price': '1 200 000 FCFA',
+                    'product.2.title': 'Électrocardiogramme Digital',
+                    'product.2.desc': 'Appareil ECG moderne pour diagnostics cardiaques précis avec interface intuitive et export des données.',
+                    'product.2.price': '3 500 000 FCFA',
+                    'product.3.title': 'Scanner IRM 3T',
+                    'product.3.desc': 'Technologie d\'imagerie par résonance magnétique 3 Tesla pour diagnostics neurologiques et oncologiques.',
+                    'product.3.price': '45 000 000 FCFA',
+                    'product.4.title': 'Kit Laboratoire Complet',
+                    'product.4.desc': 'Kit complet comprenant autoclave, centrifugeuse, agitateur et instruments d\'analyse.',
+                    'product.4.price': '8 500 000 FCFA',
+                    'product.5.title': 'Équipement Salle d\'Opération',
+                    'product.5.desc': 'Table d\'opération, lampes scialytiques, monitorage et instruments chirurgicaux de précision.',
+                    'product.5.price': '15 000 000 FCFA',
+                    'product.6.title': 'Matériel Médical Divers',
+                    'product.6.desc': 'Lits d\'hospitalisation, fauteuils roulants, brancards et mobilier médical de qualité.',
+                    'product.6.price': 'Sur devis',
+                    'product.order': 'Commander',
+
+                    // Statistics
+                    'stat.years': "Années d'expérience",
+                    'stat.clients': 'Clients satisfaits',
+                    'stat.products': 'Produits médicaux',
+                    'stat.specialists': 'Spécialistes médicaux',
+
+                    // Expertise
+                    'expert.title': 'Pourquoi Nous Choisir',
+                    'expert.subtitle': 'Ce qui fait de TMS SARL votre partenaire de confiance en solutions médicales au Cameroun.',
+                    'expert.quality.title': 'Qualité Certifiée',
+                    'expert.quality.desc': 'Nos produits répondent aux normes internationales les plus strictes, garantissant fiabilité et performance.',
+                    'expert.support.title': 'Support Expert',
+                    'expert.support.desc': 'Notre équipe vous accompagne de la sélection à l\'installation et la maintenance de vos équipements.',
+                    'expert.local.title': 'Engagement Local',
+                    'expert.local.desc': 'Présents au Cameroun depuis 2010, nous contribuons activement au développement du secteur médical local.',
+
+                    // About
+                    'about.label': 'À propos de TMS SARL',
+                    'about.history.title': 'Notre Histoire',
+                    'about.history.p1': 'Technologie Médicale Company Sarl (TMS SARL) a été fondée en 2010 avec une vision claire : fournir des équipements médicaux et de laboratoire de haute qualité aux professionnels de santé du Cameroun.',
+                    'about.history.p2': 'Aujourd\'hui, TMS SARL est reconnue comme un acteur majeur dans la fourniture d\'équipements médicaux, avec des références dans les plus grands hôpitaux et cliniques du Cameroun.',
+                    'about.mission.title': 'Mission',
+                    'about.mission.p': 'Fournir des solutions médicales innovantes pour améliorer la qualité des soins au Cameroun.',
+                    'about.vision.title': 'Vision',
+                    'about.vision.p': 'Devenir le leader des solutions médicales en Afrique centrale.',
+
+                    // Team
+                    'team.title': 'Notre Équipe d\'Experts',
+                    'team.subtitle': 'Des professionnels expérimentés à votre service pour vous accompagner dans tous vos projets.',
+                    'team.member1.role': 'Responsable technique',
+                    'team.member1.experience': '15 ans d\'expérience en ingénierie biomédicale',
+                    'team.member2.role': 'Vente & Support',
+                    'team.member2.experience': 'Expert en équipements de laboratoire',
+                    'team.member3.role': 'Formation & services',
+                    'team.member3.experience': 'Spécialiste en formation clinique',
+                    'team.member4.role': 'Directeur Général',
+                    'team.member4.experience': 'Visionnaire en santé numérique',
+
+                    // Certifications
+                    'certifications.title': 'Nos Certifications',
+                    'certifications.subtitle': 'Des labels de qualité qui garantissent l\'excellence de nos produits et services.',
+                    'certification.iso': 'ISO 13485',
+                    'certification.ce': 'CE Médical',
+                    'certification.fda': 'FDA Approuvé',
+                    'certification.gmp': 'GMP Certifié',
+
+                    // Testimonials
+                    'testimonials.title': 'Ce que disent nos clients',
+                    'testimonials.subtitle': 'Des retours d\'expérience de professionnels de santé qui nous font confiance.',
+                    'testimonial.1': 'Equipement performant et service après-vente exemplaire. Une équipe réactive et professionnelle.',
+                    'testimonial.1.author': '— Clinique Saint-Luc, Douala',
+                    'testimonial.2': 'Livraison rapide et installation professionnelle. Les équipements répondent parfaitement à nos besoins.',
+                    'testimonial.2.author': '— Hôpital Central, Yaoundé',
+                    'testimonial.3': 'Des produits conformes aux standards internationaux. Un partenaire de confiance pour notre cabinet.',
+                    'testimonial.3.author': '— Cabinet Privé, Bafoussam',
+
+                    // Contact
+                    'contact.title': 'Contactez-nous',
+                    'contact.subtitle': 'Nous sommes à votre disposition pour répondre à toutes vos questions et vous accompagner dans vos besoins médicaux.',
+                    'contact.info.title': 'Informations de Contact',
+                    'contact.info.address': 'Adresse',
+                    'contact.info.phone': 'Téléphone',
+                    'contact.info.phone_available': 'Disponible 24h/24',
+                    'contact.info.email': 'Email',
+                    'contact.info.email_response': 'Réponse sous 24h',
+                    'contact.info.hours': 'Horaires d\'ouverture',
+                    'contact.info.hours_week': 'Lundi - Vendredi: 8h30 - 18h30',
+                    'contact.info.hours_sat': 'Samedi: 9h00 - 13h00',
+                    'contact.info.hours_sun': 'Dimanche: Fermé',
+
+                    // Form
+                    'form.heading': 'Envoyez-nous un message',
+                    'form.name': 'Nom complet',
+                    'form.email': 'Email',
+                    'form.phone': 'Téléphone',
+                    'form.subject': 'Sujet',
+                    'form.select.subject': 'Sélectionnez un sujet',
+                    'form.option.consultation': 'Demande de consultation',
+                    'form.option.product': 'Information sur un produit',
+                    'form.option.service': 'Information sur un service',
+                    'form.option.devis': 'Demande de devis',
+                    'form.option.other': 'Autre demande',
+                    'form.message': 'Message',
+                    'form.send': 'Envoyer le message',
+
+                    // CTA
+                    'cta.call': 'Vous préférez nous appeler ?',
+                    'cta.call_sub': 'Notre équipe est disponible pour répondre à vos questions du lundi au samedi.',
+
+                    // Footer
+                    'footer.links': 'Liens rapides',
+                    'footer.services': 'Services',
+                    'footer.newsletter_title': 'Newsletter',
+                    'footer.newsletter': 'Abonnez-vous pour recevoir nos dernières actualités et offres spéciales.',
+                    'footer.subscribe': 'S\'abonner',
+                    'footer.copy': '© 2026 Technologie Medical Company Sarl. Tous droits réservés.',
+                    'footer.legal': 'Mentions légales',
+                    'footer.privacy': 'Politique de confidentialité',
+                    'footer.cgv': 'CGV'
+                },
+                en: {
+                    // Navigation
+                    'nav.home': 'Home',
+                    'nav.services': 'Services',
+                    'nav.products': 'Products',
+                    'nav.about': 'About',
+                    'nav.contact': 'Contact',
+
+                    // Hero
+                    'hero.badge': 'Leader in Cameroon',
+                    'hero.title': 'Trusted medical equipment',
+                    'hero.title_highlight': 'serving healthcare in Cameroon',
+                    'hero.subtitle': 'Since 2010 TMS SARL has supplied hospitals, clinics and laboratories across Cameroon with reliable medical equipment installed and serviced by local experts.',
+                    'hero.cta_products': 'Discover our products',
+                    'hero.cta_contact': 'Book an appointment',
+
+                    // Services
+                    'services.title': 'Our Services',
+                    'services.subtitle': 'Professional services to support your healthcare facility from purchase to maintenance.',
+                    'service.consultations.title': 'Medical Consultations',
+                    'service.consultations.desc': 'Consultations with qualified specialists to diagnose and treat various medical conditions.',
+                    'service.analyses.title': 'Laboratory Tests',
+                    'service.analyses.desc': 'Comprehensive laboratory services for accurate and fast testing with reliable results.',
+                    'service.imagerie.title': 'Medical Imaging',
+                    'service.imagerie.desc': 'Advanced imaging technologies for accurate, non-invasive diagnostics.',
+                    'service.pharmacie.title': 'Specialized Pharmacy',
+                    'service.pharmacie.desc': 'Access to specialized medicines and medical products with professional advice.',
+                    'service.maintenance.title': 'Maintenance & Support',
+                    'service.maintenance.desc': 'Preventive and corrective maintenance services for all your medical equipment.',
+                    'service.formation.title': 'Professional Training',
+                    'service.formation.desc': 'Training and support for your teams on the use of medical equipment.',
+                    'cta.quote': 'Request a quote',
+
+                    // Products
+                    'products.title': 'Our Products',
+                    'products.subtitle': 'A selection of high-quality medical equipment to meet your needs.',
+                    'product.1.title': 'Laboratory Microscope',
+                    'product.1.desc': 'High-precision optical microscope for medical analyses and laboratory research. 4K resolution.',
+                    'product.1.price': '1,200,000 XAF',
+                    'product.2.title': 'Digital Electrocardiogram',
+                    'product.2.desc': 'Modern ECG device for precise cardiac diagnostics with intuitive interface and data export.',
+                    'product.2.price': '3,500,000 XAF',
+                    'product.3.title': '3T MRI Scanner',
+                    'product.3.desc': '3 Tesla magnetic resonance imaging technology for neurological and oncological diagnostics.',
+                    'product.3.price': '45,000,000 XAF',
+                    'product.4.title': 'Complete Laboratory Kit',
+                    'product.4.desc': 'Complete kit including autoclave, centrifuge, shaker and analysis instruments.',
+                    'product.4.price': '8,500,000 XAF',
+                    'product.5.title': 'Operating Room Equipment',
+                    'product.5.desc': 'Surgical table, operating lights, monitoring and precision surgical instruments.',
+                    'product.5.price': '15,000,000 XAF',
+                    'product.6.title': 'Medical Equipment',
+                    'product.6.desc': 'Hospital beds, wheelchairs, stretchers and quality medical furniture.',
+                    'product.6.price': 'Quote on request',
+                    'product.order': 'Order',
+
+                    // Statistics
+                    'stat.years': 'Years of experience',
+                    'stat.clients': 'Satisfied clients',
+                    'stat.products': 'Medical products',
+                    'stat.specialists': 'Medical specialists',
+
+                    // Expertise
+                    'expert.title': 'Why Choose Us',
+                    'expert.subtitle': 'What makes TMS SARL your trusted partner in medical solutions in Cameroon.',
+                    'expert.quality.title': 'Certified Quality',
+                    'expert.quality.desc': 'Our products meet the strictest international standards, ensuring reliability and performance.',
+                    'expert.support.title': 'Expert Support',
+                    'expert.support.desc': 'Our team supports you from selection to installation and maintenance of your equipment.',
+                    'expert.local.title': 'Local Commitment',
+                    'expert.local.desc': 'Present in Cameroon since 2010, we actively contribute to the development of the local medical sector.',
+
+                    // About
+                    'about.label': 'About TMS SARL',
+                    'about.history.title': 'Our Story',
+                    'about.history.p1': 'Technologie Médicale Company Sarl (TMS SARL) was founded in 2010 with a clear vision: to supply high-quality medical and laboratory equipment to healthcare professionals in Cameroon.',
+                    'about.history.p2': 'Today, TMS SARL is recognized as a major player in the supply of medical equipment, with references in the largest hospitals and clinics in Cameroon.',
+                    'about.mission.title': 'Mission',
+                    'about.mission.p': 'Provide innovative medical solutions to improve healthcare quality in Cameroon.',
+                    'about.vision.title': 'Vision',
+                    'about.vision.p': 'Become the leader in medical solutions in Central Africa.',
+
+                    // Team
+                    'team.title': 'Our Expert Team',
+                    'team.subtitle': 'Experienced professionals at your service to support you in all your projects.',
+                    'team.member1.role': 'Technical Manager',
+                    'team.member1.experience': '15 years of experience in biomedical engineering',
+                    'team.member2.role': 'Sales & Support',
+                    'team.member2.experience': 'Expert in laboratory equipment',
+                    'team.member3.role': 'Training & Services',
+                    'team.member3.experience': 'Clinical training specialist',
+                    'team.member4.role': 'General Manager',
+                    'team.member4.experience': 'Digital health visionary',
+
+                    // Certifications
+                    'certifications.title': 'Our Certifications',
+                    'certifications.subtitle': 'Quality labels that guarantee the excellence of our products and services.',
+                    'certification.iso': 'ISO 13485',
+                    'certification.ce': 'CE Medical',
+                    'certification.fda': 'FDA Approved',
+                    'certification.gmp': 'GMP Certified',
+
+                    // Testimonials
+                    'testimonials.title': 'What our clients say',
+                    'testimonials.subtitle': 'Feedback from healthcare professionals who trust us.',
+                    'testimonial.1': 'High-performance equipment and exemplary after-sales service. A responsive and professional team.',
+                    'testimonial.1.author': '— Saint-Luc Clinic, Douala',
+                    'testimonial.2': 'Fast delivery and professional installation. The equipment perfectly meets our needs.',
+                    'testimonial.2.author': '— Central Hospital, Yaoundé',
+                    'testimonial.3': 'Products compliant with international standards. A trusted partner for our practice.',
+                    'testimonial.3.author': '— Private Practice, Bafoussam',
+
+                    // Contact
+                    'contact.title': 'Get in touch',
+                    'contact.subtitle': 'We are available to answer your questions and support your medical needs.',
+                    'contact.info.title': 'Contact Information',
+                    'contact.info.address': 'Address',
+                    'contact.info.phone': 'Phone',
+                    'contact.info.phone_available': 'Available 24/7',
+                    'contact.info.email': 'Email',
+                    'contact.info.email_response': 'Response within 24h',
+                    'contact.info.hours': 'Opening Hours',
+                    'contact.info.hours_week': 'Monday - Friday: 8:30am - 6:30pm',
+                    'contact.info.hours_sat': 'Saturday: 9:00am - 1:00pm',
+                    'contact.info.hours_sun': 'Sunday: Closed',
+
+                    // Form
+                    'form.heading': 'Send us a message',
+                    'form.name': 'Full name',
+                    'form.email': 'Email',
+                    'form.phone': 'Phone',
+                    'form.subject': 'Subject',
+                    'form.select.subject': 'Select a subject',
+                    'form.option.consultation': 'Consultation request',
+                    'form.option.product': 'Product information',
+                    'form.option.service': 'Service information',
+                    'form.option.devis': 'Quote request',
+                    'form.option.other': 'Other request',
+                    'form.message': 'Message',
+                    'form.send': 'Send message',
+
+                    // CTA
+                    'cta.call': 'Prefer to call us?',
+                    'cta.call_sub': 'Our team is available to answer your questions Monday to Saturday.',
+
+                    // Footer
+                    'footer.links': 'Quick links',
+                    'footer.services': 'Services',
+                    'footer.newsletter_title': 'Newsletter',
+                    'footer.newsletter': 'Subscribe to receive our latest news and special offers.',
+                    'footer.subscribe': 'Subscribe',
+                    'footer.copy': '© 2026 Technologie Medical Company Sarl. All rights reserved.',
+                    'footer.legal': 'Legal notices',
+                    'footer.privacy': 'Privacy policy',
+                    'footer.cgv': 'Terms & Conditions'
+                }
+            };
+
+            function applyTranslations(lang) {
+                if (!translations[lang]) lang = 'fr';
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    const txt = translations[lang] && translations[lang][key];
+                    if (txt) {
+                        if (el.children.length === 0 || el.tagName === 'P' || el.tagName === 'H1' || el.tagName === 'H2' || el.tagName === 'H3' || el.tagName === 'SPAN' || el.tagName === 'DIV' || el.tagName === 'LI') {
+                            el.textContent = txt;
+                        } else {
+                            const textNode = el.childNodes[0];
+                            if (textNode && textNode.nodeType === 3) {
+                                textNode.textContent = txt;
+                            }
+                        }
+                    }
+                });
+                const toggle = document.getElementById('lang-toggle');
+                if (toggle) toggle.checked = (lang === 'en');
+                const toggleMobile = document.getElementById('lang-toggle-mobile');
+                if (toggleMobile) toggleMobile.checked = (lang === 'en');
+                document.documentElement.lang = lang;
+            }
+
+            function setLanguage(lang) {
+                applyTranslations(lang);
+                localStorage.setItem('tms_lang', lang);
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                const toggle = document.getElementById('lang-toggle');
+                const toggleMobile = document.getElementById('lang-toggle-mobile');
+
+                if (toggle) {
+                    toggle.addEventListener('change', function() {
+                        setLanguage(this.checked ? 'en' : 'fr');
+                        if (toggleMobile) toggleMobile.checked = this.checked;
+                    });
+                }
+
+                if (toggleMobile) {
+                    toggleMobile.addEventListener('change', function() {
+                        setLanguage(this.checked ? 'en' : 'fr');
+                        if (toggle) toggle.checked = this.checked;
+                    });
+                }
+
+                const saved = localStorage.getItem('tms_lang');
+                const browser = navigator.language && navigator.language.startsWith('en') ? 'en' : 'fr';
+                setLanguage(saved || browser);
+            });
+        })();
+
+        // ============================================
+        // TMS SARL - SCRIPTS PRINCIPAUX
+        // ============================================
+        document.addEventListener('DOMContentLoaded', function() {
+            'use strict';
+
+            // ----- MENU MOBILE -----
+            const menuButton = document.getElementById('navToggle');
+            const mobilePanel = document.getElementById('navMobilePanel');
+            const overlay = document.getElementById('navOverlay');
+
+            function toggleMenu(open) {
+                const isOpen = open !== undefined ? open : !menuButton.classList.contains('open');
+                menuButton.classList.toggle('open', isOpen);
+                menuButton.setAttribute('aria-expanded', isOpen);
+                mobilePanel.classList.toggle('open', isOpen);
+                overlay.classList.toggle('active', isOpen);
+                document.body.style.overflow = isOpen ? 'hidden' : '';
+            }
+
+            if (menuButton && mobilePanel && overlay) {
+                menuButton.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    toggleMenu();
+                });
+
+                overlay.addEventListener('click', function() {
+                    toggleMenu(false);
+                });
+
+                // Fermer le menu au clic sur un lien
+                mobilePanel.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', function() {
+                        toggleMenu(false);
+                    });
+                });
+
+                // Fermer avec la touche Echap
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && mobilePanel.classList.contains('open')) {
+                        toggleMenu(false);
+                    }
+                });
+            }
+
+            // ----- NAVIGATION ACTIVE -----
+            const sections = document.querySelectorAll('section[id]');
+            const navItems = document.querySelectorAll('.navbar-links a[href^="#"], .navbar-mobile-panel a[href^="#"]');
+
+            if (sections.length && navItems.length) {
+                function updateActiveLink() {
+                    const scrollPos = window.scrollY + 150;
+                    let currentId = '';
+                    sections.forEach(section => {
+                        const top = section.offsetTop;
+                        const height = section.offsetHeight;
+                        if (scrollPos >= top && scrollPos < top + height) {
+                            currentId = section.id;
+                        }
+                    });
+                    navItems.forEach(link => {
+                        const href = link.getAttribute('href');
+                        link.classList.toggle('active', href === '#' + currentId);
+                    });
+                }
+                let ticking = false;
+                window.addEventListener('scroll', function() {
+                    if (!ticking) {
+                        window.requestAnimationFrame(function() {
+                            updateActiveLink();
+                            ticking = false;
+                        });
+                        ticking = true;
+                    }
+                });
+                window.addEventListener('resize', updateActiveLink);
+                setTimeout(updateActiveLink, 100);
+            }
+
+            // ----- NAVBAR SCROLL EFFECT -----
+            const navbar = document.querySelector('.navbar');
+            if (navbar) {
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 20) {
+                        navbar.classList.add('scrolled');
+                    } else {
+                        navbar.classList.remove('scrolled');
+                    }
+                });
+            }
+
+            // ----- BOUTONS COMMANDER -----
+            document.querySelectorAll('.commander-btn').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const productInfo = this.getAttribute('data-product') || 'un produit';
+                    const subjectField = document.getElementById('subject');
+                    const messageField = document.getElementById('message');
+                    const contactSection = document.getElementById('contact');
+
+                    if (subjectField) subjectField.value = 'devis';
+                    if (messageField) {
+                        messageField.value =
+                            `Bonjour, je souhaite commander le produit suivant :\n\n${productInfo}\n\nMerci de me recontacter pour finaliser ma commande.`;
+                    }
+
+                    if (contactSection) {
+                        const headerHeight = document.querySelector('.navbar')?.offsetHeight || 80;
+                        const targetPosition = contactSection.getBoundingClientRect().top + window.pageYOffset -
+                            headerHeight;
+                        window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                    }
+
+                    setTimeout(() => {
+                        document.getElementById('name')?.focus();
+                    }, 600);
+                });
+            });
+
+            // ----- NEWSLETTER -----
+            const newsletterForm = document.getElementById('newsletterForm');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const input = this.querySelector('input[type="email"]');
+                    if (input && input.value && input.value.includes('@')) {
+                        alert('✅ Merci pour votre abonnement ! Vous recevrez bientôt nos actualités.');
+                        input.value = '';
+                    } else {
+                        alert('⚠️ Veuillez entrer une adresse email valide.');
+                        input?.focus();
+                    }
+                });
+            }
+
+            // ----- FORMULAIRE DE CONTACT -----
+            const contactForm = document.getElementById('contactForm');
+            const formStatus = document.getElementById('formStatus');
+
+            if (contactForm && formStatus) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const name = document.getElementById('name')?.value?.trim();
+                    const email = document.getElementById('email')?.value?.trim();
+                    const phone = document.getElementById('phone')?.value?.trim();
+                    const subject = document.getElementById('subject')?.value || 'Demande depuis le site TMS SARL';
+                    const message = document.getElementById('message')?.value?.trim();
+
+                    if (!name || !email || !message) {
+                        formStatus.textContent = '⚠️ Veuillez remplir tous les champs obligatoires.';
+                        formStatus.style.color = 'var(--error)';
+                        return;
+                    }
+
+                    if (!email.includes('@') || !email.includes('.')) {
+                        formStatus.textContent = '⚠️ Veuillez entrer une adresse email valide.';
+                        formStatus.style.color = 'var(--error)';
+                        return;
+                    }
+
+                    const body =
+                        `Nom: ${name}%0D%0AEmail: ${email}%0D%0ATéléphone: ${phone || 'Non renseigné'}%0D%0A%0D%0A${encodeURIComponent(message)}`;
+                    const mailto =
+                        `mailto:contact@tmsarl.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+
+                    try {
+                        window.location.href = mailto;
+                        formStatus.textContent =
+                            '✅ Ouverture du client mail... Si rien ne se passe, envoyez un email à contact@tmsarl.com';
+                        formStatus.style.color = 'var(--secondary)';
+                        contactForm.reset();
+                    } catch (error) {
+                        formStatus.textContent = '⚠️ Une erreur est survenue. Veuillez envoyer un email à contact@tmsarl.com';
+                        formStatus.style.color = 'var(--error)';
+                    }
+                });
+            }
+
+            // ----- REVEAL AU SCROLL -----
+            const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+
+            function revealOnScroll() {
+                const windowHeight = window.innerHeight;
+                const threshold = 0.85;
+                revealElements.forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < windowHeight * threshold) {
+                        el.classList.add('active');
+                    }
+                });
+            }
+
+            let tickingReveal = false;
+            window.addEventListener('scroll', function() {
+                if (!tickingReveal) {
+                    window.requestAnimationFrame(function() {
+                        revealOnScroll();
+                        tickingReveal = false;
+                    });
+                    tickingReveal = true;
+                }
+            });
+            window.addEventListener('resize', revealOnScroll);
+            setTimeout(revealOnScroll, 100);
+
+            // ----- COMPTEURS STATISTIQUES -----
+            const statNumbers = document.querySelectorAll('.stat-number');
+
+            function animateCounter(element, target, suffix) {
+                const duration = 2000;
+                const startTime = performance.now();
+
+                function updateCounter(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const easeOut = t => 1 - Math.pow(1 - t, 3);
+                    const currentValue = Math.floor(easeOut(progress) * target);
+                    element.textContent = currentValue + suffix;
+                    if (progress < 1) {
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        element.textContent = target + suffix;
+                    }
+                }
+                requestAnimationFrame(updateCounter);
+            }
+
+            const statObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const el = entry.target;
+                        const text = el.textContent;
+                        const match = text.match(/^([\d.]+)/);
+                        const suffix = text.replace(/^[\d.]+/, '');
+                        if (match && !el.dataset.animated) {
+                            const target = parseFloat(match[1]);
+                            if (!isNaN(target)) {
+                                el.dataset.animated = 'true';
+                                animateCounter(el, target, suffix);
+                            }
+                        }
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            statNumbers.forEach(el => statObserver.observe(el));
+
+            console.log('TMS SARL - Site initialisé avec succès');
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Mentions légales - TMS SARL</title>
+    <meta name="description" content="Mentions légales de TMS SARL - Société d'équipements médicaux au Cameroun.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Geist:wght@400;500;600;700;800;900&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <style>
+        /* ===== STYLES SPÉCIFIQUES PAGES LÉGALES ===== */
+        .legal-hero {
+            padding: 60px 0 40px;
+            background: var(--surface-container-low);
+            border-bottom: 1px solid var(--outline-variant);
+        }
+
+        .legal-hero h1 {
+            font-family: var(--font-family-heading);
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--on-surface);
+            margin-bottom: var(--stack-sm);
+        }
+
+        .legal-hero p {
+            font-size: 18px;
+            color: var(--on-surface-variant);
+            max-width: 640px;
+        }
+
+        .legal-content {
+            padding: var(--stack-xl) 0;
+        }
+
+        .legal-content .container {
+            max-width: 860px;
+        }
+
+        .legal-content h2 {
+            font-family: var(--font-family-heading);
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--on-surface);
+            margin-top: var(--stack-lg);
+            margin-bottom: var(--stack-sm);
+            padding-bottom: var(--stack-xs);
+            border-bottom: 2px solid var(--primary-light);
+        }
+
+        .legal-content h2:first-child {
+            margin-top: 0;
+        }
+
+        .legal-content h3 {
+            font-family: var(--font-family-heading);
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--on-surface);
+            margin-top: var(--stack-md);
+            margin-bottom: var(--stack-xs);
+        }
+
+        .legal-content p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--on-surface-variant);
+            margin-bottom: var(--stack-sm);
+        }
+
+        .legal-content ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: var(--stack-md);
+        }
+
+        .legal-content ul li {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--on-surface-variant);
+            padding-left: 24px;
+            position: relative;
+            margin-bottom: 6px;
+        }
+
+        .legal-content ul li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .legal-content .last-update {
+            font-size: 14px;
+            color: var(--on-surface-variant);
+            font-style: italic;
+            margin-bottom: var(--stack-md);
+            padding: var(--stack-sm) var(--stack-md);
+            background: var(--surface-container-low);
+            border-radius: var(--radius-default);
+        }
+
+        .legal-content .highlight-box {
+            background: var(--surface-container-low);
+            padding: var(--stack-md);
+            border-radius: var(--radius-lg);
+            border-left: 4px solid var(--primary);
+            margin: var(--stack-md) 0;
+        }
+
+        .legal-content .highlight-box p {
+            margin-bottom: 0;
+        }
+
+        .legal-content .table-data {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--stack-md) 0;
+            font-size: 15px;
+        }
+
+        .legal-content .table-data th,
+        .legal-content .table-data td {
+            padding: 12px 16px;
+            border: 1px solid var(--outline-variant);
+            text-align: left;
+        }
+
+        .legal-content .table-data th {
+            background: var(--surface-container-low);
+            font-weight: 600;
+            color: var(--on-surface);
+        }
+
+        .legal-content .table-data td {
+            color: var(--on-surface-variant);
+        }
+
+        @media (max-width: 768px) {
+            .legal-hero {
+                padding: 40px 0 30px;
+            }
+            .legal-hero h1 {
+                font-size: 28px;
+            }
+            .legal-content {
+                padding: var(--stack-lg) 0;
+            }
+            .legal-content h2 {
+                font-size: 20px;
+            }
+            .legal-content p,
+            .legal-content ul li {
+                font-size: 15px;
+            }
+            .legal-content .table-data th,
+            .legal-content .table-data td {
+                padding: 8px 12px;
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .legal-hero h1 {
+                font-size: 24px;
+            }
+            .legal-content h2 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="navbar" role="banner">
+        <div class="container navbar-inner">
+            <a href="index.html" class="navbar-logo" aria-label="TMS SARL Accueil">
+                <span class="logo-icon"><i class="ri-heart-pulse-fill"></i></span>
+                <span class="script">TMS SARL</span>
+            </a>
+            <nav aria-label="Navigation principale">
+                <ul class="navbar-links" id="navLinksDesktop">
+                    <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="apropos.html" data-i18n="nav.about">À propos</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                </ul>
+                <button class="navbar-toggle" aria-label="Ouvrir le menu" id="navToggle" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </nav>
+
+            <div class="lang-switcher">
+                <label class="switch" aria-label="Changer de langue">
+                    <input type="checkbox" id="lang-toggle">
+                    <span class="switch-track">
+                        <span class="switch-knob"></span>
+                    </span>
+                </label>
+                <div class="lang-labels">
+                    <span class="lang-fr">FR</span>
+                    <span class="lang-en">EN</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Overlay pour fermer le menu mobile -->
+    <div class="navbar-overlay" id="navOverlay"></div>
+
+   
+
+    <main>
+        <!-- ===== HERO ===== -->
+        <section class="legal-hero">
+            <div class="container">
+                <h1 data-i18n="legal.title">Mentions légales</h1>
+                <p data-i18n="legal.subtitle">Conformément aux dispositions légales en vigueur au Cameroun, nous vous informons des éléments suivants.</p>
+            </div>
+        </section>
+
+        <!-- ===== CONTENU ===== -->
+        <section class="legal-content">
+            <div class="container">
+
+                <div class="last-update">
+                    <i class="ri-calendar-line" style="margin-right:8px;"></i>
+                    <span data-i18n="legal.last_update">Dernière mise à jour :</span> 21 août 2026
+                </div>
+
+                <!-- ===== ÉDITEUR ===== -->
+                <h2 data-i18n="legal.section1.title">1. Éditeur du site</h2>
+                <p>
+                    <strong data-i18n="legal.section1.company">Nom de la société :</strong> Technologie Médicale Company SARL (TMS SARL)<br>
+                    <strong data-i18n="legal.section1.form">Forme juridique :</strong> Société à Responsabilité Limitée (SARL)<br>
+                    <strong data-i18n="legal.section1.capital">Capital social :</strong> 10 000 000 FCFA<br>
+                    <strong data-i18n="legal.section1.rc">Registre de commerce :</strong> RC/YAO/2023/B-XXX<br>
+                    <strong data-i18n="legal.section1.tax">N° de contribuable :</strong> M1234567890XYZ<br>
+                    <strong data-i18n="legal.section1.address">Siège social :</strong> Rue 8612, Bastos, Yaoundé, Cameroun<br>
+                    <strong data-i18n="legal.section1.phone">Téléphone :</strong> +237 699 248 832<br>
+                    <strong data-i18n="legal.section1.email">Email :</strong> contact@tmsarl.com<br>
+                    <strong data-i18n="legal.section1.director">Directeur de la publication :</strong> Dr. Paul Nguembu
+                </p>
+
+                <!-- ===== HÉBERGEUR ===== -->
+                <h2 data-i18n="legal.section2.title">2. Hébergeur du site</h2>
+                <p>
+                    <strong data-i18n="legal.section2.name">Nom :</strong> [Nom de l'hébergeur]<br>
+                    <strong data-i18n="legal.section2.address">Adresse :</strong> [Adresse complète de l'hébergeur]<br>
+                    <strong data-i18n="legal.section2.phone">Téléphone :</strong> [Téléphone de l'hébergeur]<br>
+                    <strong data-i18n="legal.section2.email">Email :</strong> [Email de l'hébergeur]
+                </p>
+
+                <!-- ===== PROPRIÉTÉ INTELLECTUELLE ===== -->
+                <h2 data-i18n="legal.section3.title">3. Propriété intellectuelle</h2>
+                <p data-i18n="legal.section3.p1">
+                    L'ensemble du contenu du site <strong>tmsarl.com</strong> (textes, images, vidéos, logos, icônes, graphismes, etc.) est la propriété exclusive de TMS SARL, sauf mention contraire explicite.
+                </p>
+                <p data-i18n="legal.section3.p2">
+                    Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable de TMS SARL.
+                </p>
+                <p data-i18n="legal.section3.p3">
+                    Les marques et logos présents sur le site sont déposés et protégés. Toute utilisation non autorisée constitue une contrefaçon et est passible de poursuites judiciaires.
+                </p>
+
+                <!-- ===== RESPONSABILITÉ ===== -->
+                <h2 data-i18n="legal.section4.title">4. Responsabilité</h2>
+                <p data-i18n="legal.section4.p1">
+                    TMS SARL s'efforce de fournir des informations aussi précises et à jour que possible. Cependant, elle ne peut garantir l'exactitude, la complétude ou l'actualité des informations diffusées sur le site.
+                </p>
+                <div class="highlight-box">
+                    <p>
+                        <i class="ri-information-line" style="color:var(--primary);margin-right:8px;"></i>
+                        <strong data-i18n="legal.section4.important">Important :</strong>
+                        <span data-i18n="legal.section4.important_text">Les informations présentes sur ce site sont fournies à titre indicatif et peuvent être modifiées sans préavis. TMS SARL décline toute responsabilité pour les dommages directs ou indirects résultant de l'utilisation du site ou des informations qu'il contient.</span>
+                    </p>
+                </div>
+                <p data-i18n="legal.section4.p2">
+                    TMS SARL ne peut être tenue responsable des éventuels virus ou autres éléments infectieux pouvant affecter votre système informatique suite à la consultation du site.
+                </p>
+
+                <!-- ===== LIENS EXTERNES ===== -->
+                <h2 data-i18n="legal.section5.title">5. Liens externes</h2>
+                <p data-i18n="legal.section5.p1">
+                    Le site peut contenir des liens hypertextes vers d'autres sites internet. TMS SARL n'exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu, leur disponibilité ou leur fonctionnement.
+                </p>
+                <p data-i18n="legal.section5.p2">
+                    La présence de liens externes ne constitue en aucun cas une approbation ou une recommandation de leur contenu par TMS SARL.
+                </p>
+
+                <!-- ===== DONNÉES PERSONNELLES ===== -->
+                <h2 data-i18n="legal.section6.title">6. Données personnelles</h2>
+                <p data-i18n="legal.section6.p1">
+                    Conformément à la loi n° 2011/014 du 14 décembre 2011 sur la protection des données à caractère personnel au Cameroun, TMS SARL s'engage à respecter la vie privée des utilisateurs de son site.
+                </p>
+                <p data-i18n="legal.section6.p2">
+                    Les données personnelles collectées via le formulaire de contact (nom, email, téléphone) sont utilisées uniquement pour répondre aux demandes des utilisateurs et ne sont en aucun cas transmises à des tiers.
+                </p>
+                <p data-i18n="legal.section6.p3">
+                    Conformément à la législation, vous disposez d'un droit d'accès, de rectification et de suppression des données vous concernant. Pour exercer ces droits, contactez-nous à : <a href="mailto:contact@tmsarl.com" style="color:var(--primary);">contact@tmsarl.com</a>.
+                </p>
+                <p data-i18n="legal.section6.p4">
+                    Pour plus d'informations, consultez notre <a href="privacy.html" style="color:var(--primary);">Politique de confidentialité</a>.
+                </p>
+
+                <!-- ===== COOKIES ===== -->
+                <h2 data-i18n="legal.section7.title">7. Cookies</h2>
+                <p data-i18n="legal.section7.p1">
+                    Le site utilise des cookies pour améliorer l'expérience utilisateur et analyser le trafic. Les cookies sont de petits fichiers texte stockés sur votre appareil lors de la visite du site.
+                </p>
+                <p data-i18n="legal.section7.p2">
+                    Vous pouvez à tout moment configurer votre navigateur pour refuser les cookies. Toutefois, cela pourrait limiter certaines fonctionnalités du site.
+                </p>
+
+                <!-- ===== LOI APPLICABLE ===== -->
+                <h2 data-i18n="legal.section8.title">8. Loi applicable</h2>
+                <p data-i18n="legal.section8.p1">
+                    Les présentes mentions légales sont régies par le droit camerounais. Tout litige relatif à l'utilisation du site est soumis à la compétence des tribunaux de Yaoundé, Cameroun.
+                </p>
+
+                <!-- ===== CONTACT ===== -->
+                <h2 data-i18n="legal.section9.title">9. Contact</h2>
+                <p data-i18n="legal.section9.p1">
+                    Pour toute question relative aux mentions légales du site, vous pouvez nous contacter :
+                </p>
+                <ul>
+                    <li><span data-i18n="legal.section9.email">Par email :</span> <a href="mailto:contact@tmsarl.com" style="color:var(--primary);">contact@tmsarl.com</a></li>
+                    <li><span data-i18n="legal.section9.phone">Par téléphone :</span> +237 699 248 832</li>
+                    <li><span data-i18n="legal.section9.mail">Par courrier :</span> Rue 8612, Bastos, Yaoundé, Cameroun</li>
+                </ul>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="grid grid-cols-12" style="gap:var(--stack-lg);">
+                <div class="col-span-4">
+                    <div class="footer-brand">
+                        <a href="index.html" class="navbar-logo" aria-label="TMS SARL Accueil">
+                            <span class="script">TMS SARL</span>
+                        </a>
+                        <p class="caption" style="color:var(--on-surface-variant);max-width:280px;margin-top:var(--stack-sm);" data-i18n="footer.description">
+                            TMS SARL, votre partenaire de confiance en équipements médicaux et de laboratoire au Cameroun depuis 2010.
+                        </p>
+                        <p class="caption" style="color:var(--on-surface-variant);margin-top:var(--stack-sm);">
+                            <i class="ri-map-pin-line"></i> Rue 8612, Bastos, Yaoundé, Cameroun
+                        </p>
+                    </div>
+                    <div class="flex" style="gap:var(--stack-sm);margin-top:var(--stack-sm);flex-wrap:wrap;">
+                        <a href="#" aria-label="Facebook" class="social-link"><i class="ri-facebook-fill"></i></a>
+                        <a href="#" aria-label="Twitter" class="social-link"><i class="ri-twitter-x-fill"></i></a>
+                        <a href="#" aria-label="LinkedIn" class="social-link"><i class="ri-linkedin-fill"></i></a>
+                        <a href="#" aria-label="Instagram" class="social-link"><i class="ri-instagram-fill"></i></a>
+                        <a href="#" aria-label="YouTube" class="social-link"><i class="ri-youtube-fill"></i></a>
+                    </div>
+                </div>
+                <div class="col-span-2">
+                    <h3 class="label-sm" style="color:var(--on-surface);font-weight:600;" data-i18n="footer.links">Liens rapides</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+                        <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                        <li><a href="apropos.html" data-i18n="nav.about">À propos</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-span-2">
+                    <h3 class="label-sm" style="color:var(--on-surface);font-weight:600;" data-i18n="footer.services">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html" data-i18n="service.consultations.title">Consultations</a></li>
+                        <li><a href="services.html" data-i18n="service.analyses.title">Analyses</a></li>
+                        <li><a href="services.html" data-i18n="service.imagerie.title">Imagerie</a></li>
+                        <li><a href="services.html" data-i18n="service.pharmacie.title">Pharmacie</a></li>
+                        <li><a href="services.html" data-i18n="service.maintenance.title">Maintenance</a></li>
+                    </ul>
+                </div>
+                <div class="col-span-4">
+                    <h3 class="label-sm" style="color:var(--on-surface);font-weight:600;" data-i18n="footer.newsletter_title">Newsletter</h3>
+                    <p class="caption" style="color:var(--on-surface-variant);" data-i18n="footer.newsletter">Abonnez-vous pour recevoir nos dernières actualités et offres spéciales.</p>
+                    <form class="flex" style="margin-top:var(--stack-sm);flex-wrap:wrap;" id="newsletterForm" novalidate>
+                        <input type="email" placeholder="Votre email" class="form-input" style="border-radius:var(--radius-default) 0 0 var(--radius-default);flex:1;min-width:120px;" required aria-label="Adresse email">
+                        <button type="submit" class="btn btn-primary" style="border-radius:0 var(--radius-default) var(--radius-default) 0;white-space:nowrap;" data-i18n="footer.subscribe">S'abonner</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copy">&copy; 2026 Technologie Medical Company Sarl. Tous droits réservés.</p>
+                <div class="flex" style="gap:var(--stack-md);flex-wrap:wrap;">
+                    <a href="legal.html" data-i18n="footer.legal">Mentions légales</a>
+                    <a href="privacy.html" data-i18n="footer.privacy">Politique de confidentialité</a>
+                    <a href="cgv.html" data-i18n="footer.cgv">CGV</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/i18n.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - TMS SARL</title>
+    <meta name="description" content="Contactez TMS SARL à Yaoundé, Cameroun. Rue 8612, Bastos. Téléphone : +237 699 248 832. Email : contact@tmsarl.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700&family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="navbar" role="banner">
+        <div class="container navbar-inner">
+            <a href="index.html" class="navbar-logo" aria-label="TMS SARL Accueil">
+                <span class="script">TMS SARL</span>
+            </a>
+            <nav aria-label="Navigation principale">
+                <button class="navbar-toggle" aria-label="Ouvrir le menu" id="navToggle" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="navbar-links" id="navLinks">
+                    <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="apropos.html" data-i18n="nav.about">À propos</a></li>
+                    <li><a href="contact.html" class="active" data-i18n="nav.contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="lang-switcher">
+                <label class="switch" aria-label="Changer de langue">
+                    <input type="checkbox" id="lang-toggle">
+                    <span class="switch-track">
+                        <span class="switch-knob"></span>
+                    </span>
+                </label>
+                <div class="lang-labels">
+                    <span class="lang-fr">FR</span>
+                    <span class="lang-en">EN</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== HERO ===== -->
+        <section class="hero" aria-labelledby="page-title" style="background:var(--surface-container-low);padding:var(--stack-lg) 0;">
+            <div class="container hero-content" style="max-width:100%;text-align:center;">
+                <h1 class="hero-title" id="page-title" style="font-size:42px;" data-i18n="contact.title">Contactez-nous</h1>
+                <p class="hero-subtitle" style="max-width:640px;margin:0 auto var(--stack-md);" data-i18n="contact.subtitle">
+                    Nous sommes à votre disposition pour répondre à toutes vos questions et vous accompagner dans vos besoins médicaux.
+                </p>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT ===== -->
+        <section class="section" aria-labelledby="contact-form-title">
+            <div class="container">
+                <div class="grid grid-cols-12" style="gap:var(--stack-lg);">
+
+                    <!-- Formulaire -->
+                    <div class="col-span-6">
+                        <form class="form" id="contactForm" style="background:var(--surface-container-lowest);padding:var(--stack-lg);border-radius:var(--radius-lg);box-shadow:var(--shadow-level-2);" novalidate>
+                            <h2 class="headline-sm" id="contact-form-title" style="margin-bottom:var(--stack-md);" data-i18n="form.heading">Envoyez-nous un message</h2>
+                            <div class="grid grid-cols-12" style="gap:var(--stack-md);">
+                                <div class="col-span-6">
+                                    <label for="name" class="form-label"><span data-i18n="form.name">Nom complet</span> <span style="color:var(--error);">*</span></label>
+                                    <input type="text" id="name" name="name" class="form-input" placeholder="Votre nom" required aria-required="true">
+                                </div>
+                                <div class="col-span-6">
+                                    <label for="email" class="form-label"><span data-i18n="form.email">Email</span> <span style="color:var(--error);">*</span></label>
+                                    <input type="email" id="email" name="email" class="form-input" placeholder="Votre email" required aria-required="true">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="form-label"><span data-i18n="form.phone">Téléphone</span></label>
+                                <input type="tel" id="phone" name="phone" class="form-input" placeholder="Votre numéro de téléphone">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject" class="form-label"><span data-i18n="form.subject">Sujet</span></label>
+                                <select id="subject" name="subject" class="form-select">
+                                    <option value="" data-i18n="form.select.subject">Sélectionnez un sujet</option>
+                                    <option value="consultation" data-i18n="form.option.consultation">Demande de consultation</option>
+                                    <option value="product" data-i18n="form.option.product">Information sur un produit</option>
+                                    <option value="service" data-i18n="form.option.service">Information sur un service</option>
+                                    <option value="devis" data-i18n="form.option.devis">Demande de devis</option>
+                                    <option value="other" data-i18n="form.option.other">Autre demande</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="form-label"><span data-i18n="form.message">Message</span> <span style="color:var(--error);">*</span></label>
+                                <textarea id="message" name="message" class="form-textarea" rows="5" placeholder="Décrivez votre demande en détail..." required aria-required="true"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block" data-i18n="form.send">Envoyer le message <i class="ri-send-plane-line"></i></button>
+                            <div id="formStatus" class="caption" style="margin-top:var(--stack-sm);color:var(--on-surface-variant);text-align:center;"></div>
+                        </form>
+                    </div>
+
+                    <!-- Informations -->
+                    <div class="col-span-6">
+                        <div style="background:var(--surface-container-lowest);padding:var(--stack-lg);border-radius:var(--radius-lg);box-shadow:var(--shadow-level-2);margin-bottom:var(--stack-md);">
+                            <h2 class="headline-sm" style="margin-bottom:var(--stack-md);">Informations de Contact</h2>
+
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon"><i class="ri-map-pin-line"></i></div>
+                                <div>
+                                    <div class="contact-info-label">Adresse</div>
+                                    <div class="contact-info-value">Rue 8612, Bastos, Yaoundé, Cameroun</div>
+                                </div>
+                            </div>
+
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon"><i class="ri-phone-line"></i></div>
+                                <div>
+                                    <div class="contact-info-label">Téléphone</div>
+                                    <div class="contact-info-value">+237 699 248 832</div>
+                                    <div class="contact-info-value" style="font-size:14px;color:var(--on-surface-variant);">Disponible 24h/24</div>
+                                </div>
+                            </div>
+
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon"><i class="ri-mail-line"></i></div>
+                                <div>
+                                    <div class="contact-info-label">Email</div>
+                                    <div class="contact-info-value">contact@tmsarl.com</div>
+                                    <div class="contact-info-value" style="font-size:14px;color:var(--on-surface-variant);">Réponse sous 24h</div>
+                                </div>
+                            </div>
+
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon"><i class="ri-time-line"></i></div>
+                                <div>
+                                    <div class="contact-info-label">Horaires d'ouverture</div>
+                                    <div class="contact-info-value">Lundi - Vendredi: 8h30 - 18h30</div>
+                                    <div class="contact-info-value">Samedi: 9h00 - 13h00</div>
+                                    <div class="contact-info-value" style="color:var(--error);">Dimanche: Fermé</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Carte -->
+                        <div style="background:var(--surface-container-lowest);padding:var(--stack-sm);border-radius:var(--radius-lg);box-shadow:var(--shadow-level-2);height:250px;overflow:hidden;">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15815.122919805!2d11.499433!3d3.8480236!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x108bcfbe019ebd31%3A0x62e5e7078b706413!2sBastos!5e0!3m2!1sfr!2scm!4v1685000000000!5m2!1sfr!2scm"
+                                width="100%"
+                                height="100%"
+                                style="border:0;border-radius:var(--radius-default);"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Plan d'accès à TMS SARL">
+                            </iframe>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CTA ===== -->
+        <section class="section" aria-labelledby="cta-title" style="background:var(--surface-container-low);">
+            <div class="container">
+                <div class="cta-banner" style="text-align:center;">
+                    <h2 class="section-title" id="cta-title" data-i18n="cta.call">Vous préférez nous appeler ?</h2>
+                    <p class="section-subtitle" data-i18n="cta.call_sub">Notre équipe est disponible pour répondre à vos questions du lundi au samedi.</p>
+                    <a href="tel:+237699248832" class="btn btn-secondary" style="padding:16px 40px;font-size:18px;">
+                        <i class="ri-phone-line"></i> +237 699 248 832
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="grid grid-cols-12" style="gap:var(--stack-lg);">
+                <div class="col-span-4">
+                    <div class="footer-brand">
+                        <a href="index.html" class="navbar-logo" aria-label="TMS SARL Accueil">
+                            <span class="script">TMS SARL</span>
+                        </a>
+                        <p class="caption" style="color:var(--on-surface-variant);max-width:280px;margin-top:var(--stack-sm);">
+                            TMS SARL, votre partenaire de confiance en équipements médicaux et de laboratoire au Cameroun depuis 2010.
+                        </p>
+                        <p class="caption" style="color:var(--on-surface-variant);margin-top:var(--stack-sm);">
+                            <i class="ri-map-pin-line"></i> Rue 8612, Bastos, Yaoundé, Cameroun
+                        </p>
+                    </div>
+                    <div class="flex" style="gap:var(--stack-sm);margin-top:var(--stack-sm);">
+                        <a href="#" aria-label="Facebook" class="social-link"><i class="ri-facebook-fill"></i></a>
+                        <a href="#" aria-label="Twitter" class="social-link"><i class="ri-twitter-x-fill"></i></a>
+                        <a href="#" aria-label="LinkedIn" class="social-link"><i class="ri-linkedin-fill"></i></a>
+                        <a href="#" aria-label="Instagram" class="social-link"><i class="ri-instagram-fill"></i></a>
+                        <a href="#" aria-label="YouTube" class="social-link"><i class="ri-youtube-fill"></i></a>
+                    </div>
+                </div>
+                <div class="col-span-2">
+                    <h3 class="label-sm" style="color:var(--on-surface);font-weight:600;" data-i18n="footer.links">Liens rapides</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+                        <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                        <li><a href="apropos.html" data-i18n="nav.about">À propos</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-span-2">
+                    <h3 class="label-sm" style="color:var(--on-surface);font-weight:600;">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Consultations</a></li>
+                        <li><a href="services.html">Analyses</a></li>
+                        <li><a href="services.html">Imagerie</a></li>
+                        <li><a href="services.html">Pharmacie</a></li>
+                        <li><a href="services.html">Maintenance</a></li>
+                    </ul>
+                </div>
+                <div class="col-span-4">
+                    <h3 class="label-sm" style="color:var(--on-surface);font-weight:600;">Newsletter</h3>
+                    <p class="caption" style="color:var(--on-surface-variant);" data-i18n="footer.newsletter">Abonnez-vous pour recevoir nos dernières actualités et offres spéciales.</p>
+                    <form class="flex" style="margin-top:var(--stack-sm);" id="newsletterForm" novalidate>
+                        <input type="email" placeholder="Votre email" class="form-input" style="border-radius:var(--radius-default) 0 0 var(--radius-default);flex:1;min-width:0;" required aria-label="Adresse email">
+                        <button type="submit" class="btn btn-primary" style="border-radius:0 var(--radius-default) var(--radius-default) 0;white-space:nowrap;">S'abonner</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copy">&copy; 2026 Technologie Medical Company Sarl. Tous droits réservés.</p>
+                <div class="flex" style="gap:var(--stack-md);flex-wrap:wrap;">
+                    <a href="#" data-i18n="footer.legal">Mentions légales</a>
+                    <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+                    <a href="#" data-i18n="footer.cgv">CGV</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/animations.js"></script>
+
+</body>
+</html>
