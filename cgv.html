@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Conditions Générales de Vente - TMS SARL</title>
+    <meta name="description" content="Conditions Générales de Vente de TMS SARL - Équipements médicaux au Cameroun.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Geist:wght@400;500;600;700;800;900&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <style>
+        /* ===== STYLES SPÉCIFIQUES PAGES LÉGALES ===== */
+        .legal-hero {
+            padding: 60px 0 40px;
+            background: var(--surface-container-low);
+            border-bottom: 1px solid var(--outline-variant);
+        }
+
+        .legal-hero h1 {
+            font-family: var(--font-family-heading);
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--on-surface);
+            margin-bottom: var(--stack-sm);
+        }
+
+        .legal-hero p {
+            font-size: 18px;
+            color: var(--on-surface-variant);
+            max-width: 640px;
+        }
+
+        .legal-content {
+            padding: var(--stack-xl) 0;
+        }
+
+        .legal-content .container {
+            max-width: 860px;
+        }
+
+        .legal-content h2 {
+            font-family: var(--font-family-heading);
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--on-surface);
+            margin-top: var(--stack-lg);
+            margin-bottom: var(--stack-sm);
+            padding-bottom: var(--stack-xs);
+            border-bottom: 2px solid var(--primary-light);
+        }
+
+        .legal-content h2:first-child {
+            margin-top: 0;
+        }
+
+        .legal-content h3 {
+            font-family: var(--font-family-heading);
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--on-surface);
+            margin-top: var(--stack-md);
+            margin-bottom: var(--stack-xs);
+        }
+
+        .legal-content p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--on-surface-variant);
+            margin-bottom: var(--stack-sm);
+        }
+
+        .legal-content ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: var(--stack-md);
+        }
+
+        .legal-content ul li {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--on-surface-variant);
+            padding-left: 24px;
+            position: relative;
+            margin-bottom: 6px;
+        }
+
+        .legal-content ul li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .legal-content .last-update {
+            font-size: 14px;
+            color: var(--on-surface-variant);
+            font-style: italic;
+            margin-bottom: var(--stack-md);
+            padding: var(--stack-sm) var(--stack-md);
+            background: var(--surface-container-low);
+            border-radius: var(--radius-default);
+        }
+
+        .legal-content .highlight-box {
+            background: var(--surface-container-low);
+            padding: var(--stack-md);
+            border-radius: var(--radius-lg);
+            border-left: 4px solid var(--primary);
+            margin: var(--stack-md) 0;
+        }
+
+        .legal-content .highlight-box p {
+            margin-bottom: 0;
+        }
+
+        .legal-content .highlight-box.warning {
+            border-left-color: var(--error);
+        }
+
+        @media (max-width: 768px) {
+            .legal-hero {
+                padding: 40px 0 30px;
+            }
+            .legal-hero h1 {
+                font-size: 28px;
+            }
+            .legal-content {
+                padding: var(--stack-lg) 0;
+            }
+            .legal-content h2 {
+                font-size: 20px;
+            }
+            .legal-content p,
+            .legal-content ul li {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .legal-hero h1 {
+                font-size: 24px;
+            }
+            .legal-content h2 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="navbar" role="banner">
+        <div class="container navbar-inner">
+            <a href="index.html" class="navbar-logo" aria-label="TMS SARL Accueil">
+                <span class="logo-icon"><i class="ri-heart-pulse-fill"></i></span>
+                <span class="script">TMS SARL</span>
+            </a>
+            <nav aria-label="Navigation principale">
+                <ul class="navbar-links" id="navLinksDesktop">
+                    <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="apropos.html" data-i18n="nav.about">À propos</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                </ul>
+                <button class="navbar-toggle" aria-label="Ouvrir le menu" id="navToggle" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </nav>
+
+            <div class="lang-switcher">
+                <label class="switch" aria-label="Changer de langue">
+                    <input type="checkbox" id="lang-toggle">
+                    <span class="switch-track">
+                        <span class="switch-knob"></span>
+                    </span>
+                </label>
+                <div class="lang-labels">
+                    <span class="lang-fr">FR</span>
+                    <span class="lang-en">EN</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Overlay pour fermer le menu mobile -->
+    <div class="navbar-overlay" id="navOverlay"></div>
+
+    <main>
+        <!-- ===== HERO ===== -->
+        <section class="legal-hero">
+            <div class="container">
+                <h1 data-i18n="cgv.title">Conditions Générales de Vente</h1>
+                <p data-i18n="cgv.subtitle">Les présentes Conditions Générales de Vente régissent les relations contractuelles entre TMS SARL et ses clients.</p>
+            </div>
+        </section>
+
+        <!-- ===== CONTENU ===== -->
+        <section class="legal-content">
+            <div class="container">
+
+                <div class="last-update">
+                    <i class="ri-calendar-line" style="margin-right:8px;"></i>
+                    <span data-i18n="cgv.last_update">Dernière mise à jour :</span> 21 août 2026
+                </div>
+
+                <!-- ===== ARTICLE 1 ===== -->
+                <h2 data-i18n="cgv.article1.title">Article 1 : Champ d'application</h2>
+                <p data-i18n="cgv.article1.p1">
+                    Les présentes Conditions Générales de Vente (CGV) s'appliquent à toutes les ventes de produits et services effectuées par <strong>Technologie Médicale Company SARL (TMS SARL)</strong>, immatriculée au Registre de Commerce de Yaoundé sous le numéro RC/YAO/2023/B-XXX.
+                </p>
+                <p data-i18n="cgv.article1.p2">
+                    Toute commande passée auprès de TMS SARL implique l'acceptation sans réserve des présentes CGV par le client.
+                </p>
+                <div class="highlight-box warning">
+                    <p>
+                        <i class="ri-error-warning-line" style="color:var(--error);margin-right:8px;"></i>
+                        <strong data-i18n="cgv.article1.warning">Attention :</strong>
+                        <span data-i18n="cgv.article1.warning_text">Les présentes CGV prévalent sur toute autre condition, sauf accord écrit préalable de TMS SARL.</span>
+                    </p>
+                </div>
+
+                <!-- ===== ARTICLE 2 ===== -->
+                <h2 data-i18n="cgv.article2.title">Article 2 : Produits et services</h2>
+                <h3 data-i18n="cgv.article2.sub1">2.1. Description des produits</h3>
+                <p data-i18n="cgv.article2.p1">
+                    TMS SARL propose une gamme d'équipements médicaux et de laboratoire, incluant notamment :
+                </p>
+                <ul>
+                    <li data-i18n="cgv.article2.list1">Équipements de diagnostic (microscopes, ECG, IRM, scanners)</li>
+                    <li data-i18n="cgv.article2.list2">Équipements de laboratoire (autoclaves, centrifugeuses, analyseurs)</li>
+                    <li data-i18n="cgv.article2.list3">Équipements chirurgicaux (tables d'opération, lampes scialytiques)</li>
+                    <li data-i18n="cgv.article2.list4">Matériel médical (lits, fauteuils roulants, brancards)</li>
+                    <li data-i18n="cgv.article2.list5">Services de maintenance et de formation</li>
+                </ul>
+                <h3 data-i18n="cgv.article2.sub2">2.2. Caractéristiques</h3>
+                <p data-i18n="cgv.article2.p2">
+                    Les caractéristiques des produits sont présentées sur notre site internet. Les photos sont fournies à titre indicatif et ne sont pas contractuelles.
+                </p>
+                <p data-i18n="cgv.article2.p3">
+                    TMS SARL s'efforce de maintenir à jour les informations relatives à ses produits, mais ne peut garantir l'absence d'erreurs ou d'omissions.
+                </p>
+
+                <!-- ===== ARTICLE 3 ===== -->
+                <h2 data-i18n="cgv.article3.title">Article 3 : Commandes</h2>
+                <h3 data-i18n="cgv.article3.sub1">3.1. Processus de commande</h3>
+                <p data-i18n="cgv.article3.p1">
+                    Les commandes peuvent être passées par :
+                </p>
+                <ul>
+                    <li>Email : <a href="mailto:contact@tmsarl.com" style="color:var(--primary);">contact@tmsarl.com</a></li>
+                    <li>Téléphone : +237 699 248 832</li>
+                    <li data-i18n="cgv.article3.list3">Formulaire de contact sur notre site</li>
+                </ul>
+                <h3 data-i18n="cgv.article3.sub2">3.2. Validation</h3>
+                <p data-i18n="cgv.article3.p2">
+                    Toute commande n'est définitive qu'après confirmation écrite de TMS SARL et acceptation du devis par le client. TMS SARL se réserve le droit de refuser toute commande anormale ou non conforme.
+                </p>
+                <div class="highlight-box">
+                    <p>
+                        <i class="ri-check-line" style="color:var(--secondary);margin-right:8px;"></i>
+                        <strong data-i18n="cgv.article3.confirmation">Confirmation :</strong>
+                        <span data-i18n="cgv.article3.confirmation_text">Un accusé de réception de la commande sera envoyé par email dans un délai de 48 heures.</span>
+                    </p>
+                </div>
+
+                <!-- ===== ARTICLE 4 ===== -->
+                <h2 data-i18n="cgv.article4.title">Article 4 : Prix et paiement</h2>
+                <h3 data-i18n="cgv.article4.sub1">4.1. Prix</h3>
+                <p data-i18n="cgv.article4.p1">
+                    Les prix sont indiqués en Francs CFA (FCFA), hors taxes. Ils sont valables pour la durée indiquée sur le devis, généralement 30 jours.
+                </p>
+                <p data-i18n="cgv.article4.p2">
+                    TMS SARL se réserve le droit de modifier ses prix à tout moment, étant entendu que le prix applicable est celui en vigueur au moment de la validation de la commande.
+                </p>
+                <h3 data-i18n="cgv.article4.sub2">4.2. Modes de paiement</h3>
+                <p data-i18n="cgv.article4.p3">
+                    Les paiements peuvent être effectués par :
+                </p>
+                <ul>
+                    <li data-i18n="cgv.article4.payment1">Virement bancaire</li>
+                    <li data-i18n="cgv.article4.payment2">Chèque certifié</li>
+                    <li data-i18n="cgv.article4.payment3">Espèces (dans la limite légale)</li>
+                    <li data-i18n="cgv.article4.payment4">Mobile Money (Orange Money, MTN Mobile Money)</li>
+                </ul>
+                <h3 data-i18n="cgv.article4.sub3">4.3. Conditions de paiement</h3>
+                <ul>
+                    <li data-i18n="cgv.article4.condition1"><strong>Acompte :</strong> 30% à la commande</li>
+                    <li data-i18n="cgv.article4.condition2"><strong>Solde :</strong> 70% avant livraison ou à la livraison selon accord</li>
+                </ul>
+
+                <!-- ===== ARTICLE 5 ===== -->
+                <h2 data-i18n="cgv.article5.title">Article 5 : Livraison</h2>
+                <h3 data-i18n="cgv.article5.sub1">5.1. Délais</h3>
+                <p data-i18n="cgv.article5.p1">
+                    Les délais de livraison sont indiqués à titre indicatif et dépendent de la disponibilité des produits. TMS SARL s'efforce de respecter les délais annoncés, mais ne peut être tenue responsable des retards indépendants de sa volonté.
+                </p>
+                <h3 data-i18n="cgv.article5.sub2">5.2. Frais de livraison</h3>
+                <p data-i18n="cgv.article5.p2">
+                    Les frais de livraison sont à la charge du client, sauf mention contraire sur le devis. Un devis de transport sera fourni avant validation de la commande.
+                </p>
+                <h3 data-i18n="cgv.article5.sub3">5.3. Réception</h3>
+                <p data-i18n="cgv.article5.p3">
+                    Le client est tenu de vérifier l'état des produits à la réception. Toute réserve doit être formulée par écrit dans un délai de 48 heures suivant la livraison.
+                </p>
+
+                <!-- ===== ARTICLE 6 ===== -->
+                <h2 data-i18n="cgv.article6.title">Article 6 : Garantie et SAV</h2>
+                <h3 data-i18n="cgv.article6.sub1">6.1. Garantie légale</h3>
+                <p data-i18n="cgv.article6.p1">
+                    TMS SARL garantit ses produits contre tout défaut de fabrication pendant une période de 12 mois à compter de la date de livraison, conformément à la législation camerounaise.
+                </p>
+                <h3 data-i18n="cgv.article6.sub2">6.2. Service Après-Vente</h3>
+                <p data-i18n="cgv.article6.p2">
+                    TMS SARL assure un service après-vente pour tous ses produits, incluant :
+                </p>
+                <ul>
+                    <li data-i18n="cgv.article6.sav1">Maintenance préventive et corrective</li>
+                    <li data-i18n="cgv.article6.sav2">Fourniture de pièces détachées</li>
+                    <li data-i18n="cgv.article6.sav3">Assistance technique à distance</li>
+                    <li data-i18n="cgv.article6.sav4">Formation des utilisateurs</li>
+                </ul>
+                <div class="highlight-box">
+                    <p>
+                        <i class="ri-phone-line" style="color:var(--primary);margin-right:8px;"></i>
+                        <strong data-i18n="cgv.article6.sav_contact">Contact SAV :</strong> +237 699 248 832 - sav@tmsarl.com
+                    </p>
+                </div>
+
+                <!-- ===== ARTICLE 7 ===== -->
+                <h2 data-i18n="cgv.article7.title">Article 7 : Rétractation et retour</h2>
+                <h3 data-i18n="cgv.article7.sub1">7.1. Droit de rétractation</h3>
+                <p data-i18n="cgv.article7.p1">
+                    Conformément à la loi, le client dispose d'un délai de 14 jours à compter de la réception des produits pour exercer son droit de rétractation.
+                </p>
+                <h3 data-i18n="cgv.article7.sub2">7.2. Conditions de retour</h3>
+                <p data-i18n="cgv.article7.p2">
+                    Les produits retournés doivent être :
+                </p>
+                <ul>
+                    <li data-i18n="cgv.article7.return1">Dans leur emballage d'origine</li>
+                    <li data-i18n="cgv.article7.return2">En parfait état de revente</li>
+                    <li data-i18n="cgv.article7.return3">Accompagnés de tous les accessoires et documents</li>
+                </ul>
+                <p data-i18n="cgv.article7.p3">
+                    Les frais de retour sont à la charge du client, sauf en cas de produit défectueux.
+                </p>
+
+                <!-- ===== ARTICLE 8 ===== -->
+                <h2 data-i18n="cgv.article8.title">Article 8 : Responsabilité</h2>
+                <p data-i18n="cgv.article8.p1">
+                    TMS SARL met tout en œuvre pour assurer la conformité des produits livrés. Sa responsabilité ne saurait être engagée en cas de :
+                </p>
+                <ul>
+                    <li data-i18n="cgv.article8.list1">Utilisation non conforme des produits</li>
+                    <li data-i18n="cgv.article8.list2">Défauts imputables au client (mauvaise installation, usage inapproprié)</li>
+                    <li data-i18n="cgv.article8.list3">Dommages indirects ou immatériels</li>
+                    <li data-i18n="cgv.article8.list4">Cas de force majeure</li>
+                </ul>
+
+                <!-- ===== ARTICLE 9 ===== -->
+                <h2 data-i18n="cgv.article9.title">Article 9 : Propriété intellectuelle</h2>
+                <p data-i18n="cgv.article9.p1">
+                    Tous les contenus du site (textes, images, logos, marques) sont la propriété exclusive de TMS SARL. Toute reproduction, modification ou utilisation sans autorisation est interdite.
+                </p>
+
+                <!-- ===== ARTICLE 10 ===== -->
+                <h2 data-i18n="cgv.article10.title">Article 10 : Données personnelles</h2>
+                <p data-i18n="cgv.article10.p1">
+                    Les données personnelles collectées sont traitées conformément à la loi camerounaise sur la protection des données. Pour plus d'informations, consultez notre <a href="privacy.html" style="color:var(--primary);">Politique de confidentialité</a>.
+                </p>
+
+                <!-- ===== ARTICLE 11 ===== -->
+                <h2 data-i18n="cgv.article11.title">Article 11 : Loi applicable et litiges</h2>
+                <p data-i18n="cgv.article11.p1">
+                    Les présentes CGV sont régies par le droit camerounais. Tout litige relatif à leur interprétation ou à leur exécution est soumis à la compétence des tribunaux de Yaoundé, Cameroun.
+                </p>
+
+                <!-- ===== ARTICLE 12 ===== -->
+                <h2 data-i18n="cgv.article12.title">Article 12 : Contact</h2>
+                <p data-i18n="cgv.article12.p1">
+                    Pour toute question relative aux présentes CGV, vous pouvez nous contacter :
+                </p>
+                <ul>
+                    <li><strong data-i18n="cgv.article12.email">Email :</strong> <a href="mailto:contact@tmsarl.com" style="color:var(--primary);">contact@tmsarl.com</a></li>
+                    <li><strong data-i18n="cgv.article12.phone">Téléphone :</strong> +237 699 248 832</li>
+                    <li><strong data-i18n="cgv.article12.address">Adresse :</strong> Rue 8612, Bastos, Yaoundé, Cameroun</li>
+                </ul>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="grid grid-cols-12" style="gap:var(--stack-lg);">
+                <div class="col-span-4">
+                    <div class="footer-brand">
+                        <a href="index.html" class="navbar-logo" aria-label="TMS SARL Accueil">
+                            <span class="script">TMS SARL</span>
+                        </a>
+                        <p class="caption" style="color:var(--on-surface-variant);max-width:280px;margin-top:var(--stack-sm);" data-i18n="footer.description">
+                            TMS SARL, votre partenaire de confiance en équipements médicaux et de laboratoire au Cameroun depuis 2010.
+                        </p>
+                        <p class="caption" style="color:var(--on-surface-variant);margin-top:var(--stack-sm);">
+                            <i class="ri-map-pin-line"></i> Rue 8612, Bastos, Yaoundé, Cameroun
+                        </p>
+                    </div>
+                    <div class="flex" style="gap:var(--stack-sm);margin-top:var(--stack-sm);flex-wrap:wrap;">
+                        <a href="#" aria-label="Facebook" class="social-link"><i class="ri-facebook-fill"></i></a>
+                        <a href="#" aria-label="Twitter" class="social-link"><i class="ri-twitter-x-fill"></i></a>
+                        <a href="#" aria-label="LinkedIn" class="social-link"><i class="ri-linkedin-fill"></i></a>
+                        <a href="#" aria-label="Instagram" class="social-link"><i class="ri-instagram-fill"></i></a>
+                        <a href="#" aria-label="YouTube" class="social-link"><i class="ri-youtube-fill"></i></a>
+                    </div>
+                </div>
+                <div class="col-span-2">
+                    <h3 class="label-sm" style="color:var(--on-surface);font-weight:600;" data-i18n="footer.links">Liens rapides</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+                        <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                        <li><a href="apropos.html" data-i18n="nav.about">À propos</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-span-2">
+                    <h3 class="label-sm" style="color:var(--on-surface);font-weight:600;" data-i18n="footer.services">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html" data-i18n="service.consultations.title">Consultations</a></li>
+                        <li><a href="services.html" data-i18n="service.analyses.title">Analyses</a></li>
+                        <li><a href="services.html" data-i18n="service.imagerie.title">Imagerie</a></li>
+                        <li><a href="services.html" data-i18n="service.pharmacie.title">Pharmacie</a></li>
+                        <li><a href="services.html" data-i18n="service.maintenance.title">Maintenance</a></li>
+                    </ul>
+                </div>
+                <div class="col-span-4">
+                    <h3 class="label-sm" style="color:var(--on-surface);font-weight:600;" data-i18n="footer.newsletter_title">Newsletter</h3>
+                    <p class="caption" style="color:var(--on-surface-variant);" data-i18n="footer.newsletter">Abonnez-vous pour recevoir nos dernières actualités et offres spéciales.</p>
+                    <form class="flex" style="margin-top:var(--stack-sm);flex-wrap:wrap;" id="newsletterForm" novalidate>
+                        <input type="email" placeholder="Votre email" class="form-input" style="border-radius:var(--radius-default) 0 0 var(--radius-default);flex:1;min-width:120px;" required aria-label="Adresse email">
+                        <button type="submit" class="btn btn-primary" style="border-radius:0 var(--radius-default) var(--radius-default) 0;white-space:nowrap;" data-i18n="footer.subscribe">S'abonner</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copy">&copy; 2026 Technologie Medical Company Sarl. Tous droits réservés.</p>
+                <div class="flex" style="gap:var(--stack-md);flex-wrap:wrap;">
+                    <a href="legal.html" data-i18n="footer.legal">Mentions légales</a>
+                    <a href="privacy.html" data-i18n="footer.privacy">Politique de confidentialité</a>
+                    <a href="cgv.html" data-i18n="footer.cgv">CGV</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/i18n.js"></script>
+
+</body>
+</html>

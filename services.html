@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services & Produits - TMS SARL</title>
+    <meta name="description" content="Découvrez la gamme complète de produits et services médicaux de TMS SARL à Yaoundé, Cameroun.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700&family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="navbar" role="banner">
+        <div class="container navbar-inner">
+            <a href="index.html" class="navbar-logo" aria-label="TMS SARL Accueil">
+                <span class="script">TMS SARL</span>
+            </a>
+            <nav aria-label="Navigation principale">
+                <button class="navbar-toggle" aria-label="Ouvrir le menu" id="navToggle" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="navbar-links" id="navLinks">
+                    <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="services.html" class="active" data-i18n="nav.services">Services</a></li>
+                    <li><a href="apropos.html" data-i18n="nav.about">À propos</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="lang-switcher">
+                <label class="switch" aria-label="Changer de langue">
+                    <input type="checkbox" id="lang-toggle">
+                    <span class="switch-track">
+                        <span class="switch-knob"></span>
+                    </span>
+                </label>
+                <div class="lang-labels">
+                    <span class="lang-fr">FR</span>
+                    <span class="lang-en">EN</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== HERO ===== -->
+        <section class="hero" aria-labelledby="page-title" style="background:var(--surface-container-low);padding:var(--stack-lg) 0;">
+            <div class="container hero-content" style="max-width:100%;text-align:center;">
+                <h1 class="hero-title" id="page-title" style="font-size:42px;" data-i18n="services.title">Nos Produits & Services</h1>
+                <p class="hero-subtitle" style="max-width:640px;margin:0 auto var(--stack-md);" data-i18n="services.subtitle">
+                    Découvrez notre gamme complète d'équipements médicaux et de services professionnels pour les établissements de santé au Cameroun.
+                </p>
+            </div>
+        </section>
+
+        <!-- ===== SERVICES ===== -->
+        <section class="section" aria-labelledby="services-title">
+            <div class="container">
+                <h2 class="section-title" id="services-title" data-i18n="services.title">Nos Services</h2>
+                <p class="section-subtitle" data-i18n="services.subtitle">Des prestations professionnelles pour accompagner vos établissements de santé.</p>
+                <div class="grid grid-cols-12" style="gap:24px;">
+                    <div class="service-card col-span-4 reveal">
+                        <div class="service-icon"><i class="ri-stethoscope-line"></i></div>
+                        <h3 data-i18n="service.consultations.title">Consultations Médicales</h3>
+                        <p data-i18n="service.consultations.desc">Consultations avec des spécialistes qualifiés pour diagnostiquer et traiter diverses conditions médicales.</p>
+                        <a href="contact.html" class="btn btn-ghost btn-sm" data-i18n="cta.quote">Demander un devis <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                    <div class="service-card col-span-4 reveal" style="transition-delay:0.1s;">
+                        <div class="service-icon"><i class="ri-test-tube-line"></i></div>
+                        <h3 data-i18n="service.analyses.title">Analyses Médicales</h3>
+                        <p data-i18n="service.analyses.desc">Services de laboratoire complets pour des analyses précises et rapides avec des résultats fiables.</p>
+                        <a href="contact.html" class="btn btn-ghost btn-sm" data-i18n="cta.quote">Demander un devis <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                    <div class="service-card col-span-4 reveal" style="transition-delay:0.2s;">
+                        <div class="service-icon"><i class="ri-microscope-line"></i></div>
+                        <h3 data-i18n="service.imagerie.title">Imagerie Médicale</h3>
+                        <p data-i18n="service.imagerie.desc">Technologies d'imagerie avancées pour des diagnostics précis et non invasifs.</p>
+                        <a href="contact.html" class="btn btn-ghost btn-sm" data-i18n="cta.quote">Demander un devis <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                    <div class="service-card col-span-4 reveal" style="transition-delay:0.3s;">
+                        <div class="service-icon"><i class="ri-medicine-bottle-line"></i></div>
+                        <h3 data-i18n="service.pharmacie.title">Pharmacie Spécialisée</h3>
+                        <p data-i18n="service.pharmacie.desc">Accès à des médicaments et produits médicaux spécialisés avec conseils professionnels.</p>
+                        <a href="contact.html" class="btn btn-ghost btn-sm" data-i18n="cta.quote">Demander un devis <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                    <div class="service-card col-span-4 reveal" style="transition-delay:0.4s;">
+                        <div class="service-icon"><i class="ri-tools-line"></i></div>
+                        <h3 data-i18n="service.maintenance.title">Maintenance &amp; SAV</h3>
+                        <p data-i18n="service.maintenance.desc">Service de maintenance préventive et corrective pour tous vos équipements médicaux.</p>
+                        <a href="contact.html" class="btn btn-ghost btn-sm" data-i18n="cta.quote">Demander un devis <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                    <div class="service-card col-span-4 reveal" style="transition-delay:0.5s;">
+                        <div class="service-icon"><i class="ri-graduation-cap-line"></i></div>
+                        <h3 data-i18n="service.formation.title">Formation Professionnelle</h3>
+                        <p data-i18n="service.formation.desc">Formation et accompagnement de vos équipes sur l'utilisation des équipements médicaux.</p>
+                        <a href="contact.html" class="btn btn-ghost btn-sm" data-i18n="cta.quote">Demander un devis <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PRODUITS ===== -->
+        <section class="section" aria-labelledby="products-title" style="background:var(--surface-container-low);">
+            <div class="container">
+                <h2 class="section-title" id="products-title" data-i18n="products.title">Nos Produits</h2>
+                <p class="section-subtitle" data-i18n="products.subtitle">Une sélection d'équipements médicaux de haute qualité pour répondre à vos besoins.</p>
+                <div class="grid grid-cols-12" style="gap:24px;">
+                    <!-- Mêmes produits que l'accueil -->
+                    <div class="product-card col-span-4 reveal">
+                        <img src="images/produits/Microscope.jpg" alt="Microscope" class="card-image" loading="lazy" style="height:200px;object-fit:cover;">
+                        <div class="card-body">
+                            <span class="card-tag"><i class="ri-microscope-line"></i> Microscopie</span>
+                            <h3 class="card-title" data-i18n="product.1.title">Microscope de Laboratoire</h3>
+                            <p class="card-text" data-i18n="product.1.desc">Microscope optique de haute précision pour analyses médicales et recherches en laboratoire. Résolution 4K.</p>
+                            <div class="card-footer">
+                                <span class="product-price" data-i18n="product.1.price">1 200 000 FCFA</span>
+                                <button class="btn btn-primary btn-sm commander-btn" data-product="Microscope de Laboratoire - 1 200 000 FCFA" data-i18n="product.order">Commander</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card col-span-4 reveal" style="transition-delay:0.1s;">
+                        <img src="images/produits/ECG.jpg" alt="Électrocardiogramme" class="card-image" loading="lazy" style="height:200px;object-fit:cover;">
+                        <div class="card-body">
+                            <span class="card-tag"><i class="ri-heart-pulse-line"></i> Cardiologie</span>
+                            <h3 class="card-title" data-i18n="product.2.title">Électrocardiogramme Digital</h3>
+                            <p class="card-text" data-i18n="product.2.desc">Appareil ECG moderne pour diagnostics cardiaques précis avec interface intuitive et export des données.</p>
+                            <div class="card-footer">
+                                <span class="product-price" data-i18n="product.2.price">3 500 000 FCFA</span>
+                                <button class="btn btn-primary btn-sm commander-btn" data-product="Électrocardiogramme Digital - 3 500 000 FCFA" data-i18n="product.order">Commander</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card col-span-4 reveal" style="transition-delay:0.2s;">
+                        <img src="images/produits/irm-scanner.jpg" alt="IRM Scanner" class="card-image" loading="lazy" style="height:200px;object-fit:cover;">
+                        <div class="card-body">
+                            <span class="card-tag"><i class="ri-brain-line"></i> Imagerie</span>
+                            <h3 class="card-title" data-i18n="product.3.title">Scanner IRM 3T</h3>
+                            <p class="card-text" data-i18n="product.3.desc">Technologie d'imagerie par résonance magnétique 3 Tesla pour diagnostics neurologiques et oncologiques.</p>
+                            <div class="card-footer">
+                                <span class="product-price" data-i18n="product.3.price">45 000 000 FCFA</span>
+                                <button class="btn btn-primary btn-sm commander-btn" data-product="Scanner IRM 3T - 45 000 000 FCFA" data-i18n="product.order">Commander</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card col-span-4 reveal" style="transition-delay:0.3s;">
+                        <img src="images/produits/Labo.jpg" alt="Équipement de laboratoire" class="card-image" loading="lazy" style="height:200px;object-fit:cover;">
+                        <div class="card-body">
+                            <span class="card-tag"><i class="ri-flask-line"></i> Laboratoire</span>
+                            <h3 class="card-title" data-i18n="product.4.title">Kit Laboratoire Complet</h3>
+                            <p class="card-text" data-i18n="product.4.desc">Kit complet comprenant autoclave, centrifugeuse, agitateur et instruments d'analyse.</p>
+                            <div class="card-footer">
+                                <span class="product-price" data-i18n="product.4.price">8 500 000 FCFA</span>
+                                <button class="btn btn-primary btn-sm commander-btn" data-product="Kit Laboratoire Complet - 8 500 000 FCFA" data-i18n="product.order">Commander</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card col-span-4 reveal" style="transition-delay:0.4s;">
+                        <img src="images/produits/salle-de-chirurgie.jpg" alt="Équipement chirurgical" class="card-image" loading="lazy" style="height:200px;object-fit:cover;">
+                        <div class="card-body">
+                            <span class="card-tag"><i class="ri-scissors-line"></i> Chirurgie</span>
+                            <h3 class="card-title" data-i18n="product.5.title">Équipement Salle d'Opération</h3>
+                            <p class="card-text" data-i18n="product.5.desc">Table d'opération, lampes scialytiques, monitorage et instruments chirurgicaux de précision.</p>
+                            <div class="card-footer">
+                                <span class="product-price" data-i18n="product.5.price">15 000 000 FCFA</span>
+                                <button class="btn btn-primary btn-sm commander-btn" data-product="Équipement Salle d'Opération - 15 000 000 FCFA" data-i18n="product.order">Commander</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card col-span-4 reveal" style="transition-delay:0.5s;">
+                        <img src="images/produits/materiel.jpeg" alt="Matériel médical" class="card-image" loading="lazy" style="height:200px;object-fit:cover;">
+                        <div class="card-body">
+                            <span class="card-tag"><i class="ri-hospital-line"></i> Équipement</span>
+                            <h3 class="card-title" data-i18n="product.6.title">Matériel Médical Divers</h3>
+                            <p class="card-text" data-i18n="product.6.desc">Lits d'hospitalisation, fauteuils roulants, brancards et mobilier médical de qualité.</p>
+                            <div class="card-footer">
+                                <span class="product-price" data-i18n="product.6.price">Sur devis</span>
+                                <button class="btn btn-primary btn-sm commander-btn" data-product="Matériel Médical Divers - Sur devis" data-i18n="product.order">Commander</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CTA ===== -->
+        <section class="section" aria-labelledby="cta-title">
+            <div class="container">
+                <div class="cta-banner" style="background:linear-gradient(135deg,var(--primary),var(--primary-hover));border-radius:var(--radius-lg);padding:var(--stack-lg);text-align:center;color:var(--on-primary);">
+                    <h2 class="headline-md" id="cta-title" style="color:var(--on-primary);margin-bottom:var(--stack-sm);">Besoin d'un équipement spécifique ?</h2>
+                    <p class="body-lg" style="color:var(--on-primary);opacity:0.9;max-width:560px;margin:0 auto var(--stack-md);">
+                        Nous vous accompagnons dans le choix, l'installation et la maintenance de vos équipements médicaux.
+                    </p>
+                    <a href="contact.html" class="btn btn-cta" style="background:var(--on-primary);color:var(--primary);padding:14px 36px;border-radius:var(--radius-default);font-weight:600;display:inline-flex;align-items:center;gap:8px;">
+                        <i class="ri-phone-line"></i> Contactez-nous
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" role="contentinfo">
+        <!-- Même footer que index.html -->
+        <div class="container">
+            <div class="grid grid-cols-12" style="gap:var(--stack-lg);">
+                <div class="col-span-4">
+                    <div class="footer-brand">
+                        <a href="index.html" class="navbar-logo" aria-label="TMS SARL Accueil">
+                            <span class="script">TMS SARL</span>
+                        </a>
+                        <p class="caption" style="color:var(--on-surface-variant);max-width:280px;margin-top:var(--stack-sm);">
+                            TMS SARL, votre partenaire de confiance en équipements médicaux et de laboratoire au Cameroun depuis 2010.
+                        </p>
+                        <p class="caption" style="color:var(--on-surface-variant);margin-top:var(--stack-sm);">
+                            <i class="ri-map-pin-line"></i> Rue 8612, Bastos, Yaoundé, Cameroun
+                        </p>
+                    </div>
+                    <div class="flex" style="gap:var(--stack-sm);margin-top:var(--stack-sm);">
+                        <a href="#" aria-label="Facebook" class="social-link"><i class="ri-facebook-fill"></i></a>
+                        <a href="#" aria-label="Twitter" class="social-link"><i class="ri-twitter-x-fill"></i></a>
+                        <a href="#" aria-label="LinkedIn" class="social-link"><i class="ri-linkedin-fill"></i></a>
+                        <a href="#" aria-label="Instagram" class="social-link"><i class="ri-instagram-fill"></i></a>
+                        <a href="#" aria-label="YouTube" class="social-link"><i class="ri-youtube-fill"></i></a>
+                    </div>
+                </div>
+                <div class="col-span-2">
+                    <h3 class="label-sm" style="color:var(--on-surface);font-weight:600;" data-i18n="footer.links">Liens rapides</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+                        <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                        <li><a href="apropos.html" data-i18n="nav.about">À propos</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-span-2">
+                    <h3 class="label-sm" style="color:var(--on-surface);font-weight:600;">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Consultations</a></li>
+                        <li><a href="services.html">Analyses</a></li>
+                        <li><a href="services.html">Imagerie</a></li>
+                        <li><a href="services.html">Pharmacie</a></li>
+                        <li><a href="services.html">Maintenance</a></li>
+                    </ul>
+                </div>
+                <div class="col-span-4">
+                    <h3 class="label-sm" style="color:var(--on-surface);font-weight:600;">Newsletter</h3>
+                    <p class="caption" style="color:var(--on-surface-variant);" data-i18n="footer.newsletter">Abonnez-vous pour recevoir nos dernières actualités et offres spéciales.</p>
+                    <form class="flex" style="margin-top:var(--stack-sm);" id="newsletterForm" novalidate>
+                        <input type="email" placeholder="Votre email" class="form-input" style="border-radius:var(--radius-default) 0 0 var(--radius-default);flex:1;min-width:0;" required aria-label="Adresse email">
+                        <button type="submit" class="btn btn-primary" style="border-radius:0 var(--radius-default) var(--radius-default) 0;white-space:nowrap;">S'abonner</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copy">&copy; 2026 Technologie Medical Company Sarl. Tous droits réservés.</p>
+                <div class="flex" style="gap:var(--stack-md);flex-wrap:wrap;">
+                    <a href="#" data-i18n="footer.legal">Mentions légales</a>
+                    <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+                    <a href="#" data-i18n="footer.cgv">CGV</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/animations.js"></script>
+
+</body>
+</html>

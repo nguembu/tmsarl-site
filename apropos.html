@@ -1,55 +1,275 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login/Register UI</title>
-  <link rel="stylesheet" href="css/style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - TMS SARL</title>
+    <meta name="description" content="Découvrez l'histoire, la mission et l'équipe de TMS SARL, fournisseur d'équipements médicaux à Yaoundé, Cameroun.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700&family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
 </head>
+<body>
 
-<section id="about" class="py-16 bg-white reveal active">
-            <div class="container mx-auto px-4">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Notre Expertise Médicale</h2>
-                        <p class="text-gray-600 mb-6">Depuis plus de 15 ans, Technologie Medical Company Sarl s'engage à fournir des solutions médicales innovantes et de haute qualité. Notre équipe de professionnels qualifiés travaille sans relâche pour offrir des services exceptionnels et des produits médicaux à la pointe de la technologie.</p>
-                        <div class="grid grid-cols-2 gap-6 mb-8">
-                            <div class="bg-gradient-to-br from-primary/5 to-secondary/5 p-5 rounded-lg">
-                                <div class="text-3xl font-bold text-primary mb-1">15+</div>
-                                <div class="text-gray-700">Années d'expérience</div>
-                            </div>
-                            <div class="bg-gray-50 p-5 rounded-lg">
-                                <div class="text-3xl font-bold text-primary mb-1">5000+</div>
-                                <div class="text-gray-700">Clients satisfaits</div>
-                            </div>
-                            <div class="bg-gray-50 p-5 rounded-lg">
-                                <div class="text-3xl font-bold text-primary mb-1">300+</div>
-                                <div class="text-gray-700">Produits médicaux</div>
-                            </div>
-                            <div class="bg-gray-50 p-5 rounded-lg">
-                                <div class="text-3xl font-bold text-primary mb-1">20+</div>
-                                <div class="text-gray-700">Spécialistes médicaux</div>
-                            </div>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Nos Certifications</h3>
-                        <div class="flex flex-wrap gap-4 mb-6">
-                            <div class="bg-gradient-to-br from-primary/5 to-secondary/5 px-4 py-2 rounded-lg flex items-center">
-                                <i class="ri-award-line ri-lg text-primary mr-2"></i>
-                                <span class="text-gray-700">ISO 13485</span>
-                            </div>
-                            <div class="bg-gradient-to-br from-primary/5 to-secondary/5 px-4 py-2 rounded-lg flex items-center">
-                                <i class="ri-award-line ri-lg text-primary mr-2"></i>
-                                <span class="text-gray-700">CE Médical</span>
-                            </div>
-                            <div class="bg-gradient-to-br from-primary/5 to-secondary/5 px-4 py-2 rounded-lg flex items-center">
-                                <i class="ri-award-line ri-lg text-primary mr-2"></i>
-                                <span class="text-gray-700">FDA Approuvé</span>
-                            </div>
-                        </div>
+    <!-- ===== HEADER ===== -->
+    <header class="navbar" role="banner">
+        <div class="container navbar-inner">
+            <a href="index.html" class="navbar-logo" aria-label="TMS SARL Accueil">
+                <span class="script">TMS SARL</span>
+            </a>
+            <nav aria-label="Navigation principale">
+                <button class="navbar-toggle" aria-label="Ouvrir le menu" id="navToggle" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="navbar-links" id="navLinks">
+                    <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="apropos.html" class="active" data-i18n="nav.about">À propos</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="lang-switcher">
+                <label class="switch" aria-label="Changer de langue">
+                    <input type="checkbox" id="lang-toggle">
+                    <span class="switch-track">
+                        <span class="switch-knob"></span>
+                    </span>
+                </label>
+                <div class="lang-labels">
+                    <span class="lang-fr">FR</span>
+                    <span class="lang-en">EN</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== HERO ===== -->
+        <section class="hero" aria-labelledby="page-title" style="background:var(--surface-container-low);padding:var(--stack-lg) 0;">
+            <div class="container hero-content" style="max-width:100%;text-align:center;">
+                <h1 class="hero-title" id="page-title" style="font-size:42px;" data-i18n="about.title">À propos de TMS SARL</h1>
+                <p class="hero-subtitle" style="max-width:640px;margin:0 auto var(--stack-md);" data-i18n="about.subtitle">
+                    Découvrez l'histoire, la mission et les valeurs de votre partenaire de confiance en solutions médicales au Cameroun.
+                </p>
+            </div>
+        </section>
+
+        <!-- ===== HISTOIRE ===== -->
+        <section class="section" aria-labelledby="history-title">
+            <div class="container">
+                <div class="grid grid-cols-12" style="gap:var(--stack-lg);align-items:center;">
+                    <div class="col-span-6">
+                        <h2 class="headline-md" id="history-title" style="color:var(--on-surface);margin-bottom:var(--stack-sm);" data-i18n="about.history.title">Notre Histoire</h2>
+                        <p class="body-lg" style="color:var(--on-surface-variant);" data-i18n="about.history.p1">
+                            Technologie Médicale Company Sarl (TMS SARL) a été fondée en 2010 avec une vision claire : fournir des équipements médicaux et de laboratoire de haute qualité aux professionnels de santé du Cameroun.
+                        </p>
+                        <p class="body-lg" style="color:var(--on-surface-variant);margin-top:var(--stack-sm);">
+                            Depuis sa création, notre entreprise n'a cessé d'évoluer pour s'adapter aux besoins changeants du secteur médical, en intégrant les dernières innovations technologiques et en élargissant notre gamme de produits.
+                        </p>
+                        <p class="body-lg" style="color:var(--on-surface-variant);margin-top:var(--stack-sm);">
+                            Aujourd'hui, TMS SARL est reconnue comme un acteur majeur dans la fourniture d'équipements médicaux, avec des références dans les plus grands hôpitaux et cliniques du Cameroun.
+                        </p>
                     </div>
-                    <div class="rounded-lg overflow-hidden shadow-lg">
-                        <img src="https://readdy.ai/api/search-image?query=modern%20medical%20laboratory%20with%20advanced%20equipment%2C%20doctors%20and%20medical%20professionals%20working%2C%20clean%20environment%2C%20blue%20and%20white%20color%20scheme%2C%20professional%20medical%20setting%2C%20high-tech%20medical%20devices%2C%20hospital%20interior%2C%20healthcare%20technology%2C%20medical%20team%20collaboration&amp;width=800&amp;height=600&amp;seq=6&amp;orientation=landscape" alt="Notre équipe médicale" class="w-full h-full object-cover">
+                    <div class="col-span-6">
+                        <img src="images/produits/about.jpg" alt="Histoire de TMS SARL" class="card-image" style="border-radius:var(--radius-lg);height:100%;object-fit:cover;min-height:300px;" loading="lazy">
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- ===== MISSION & VISION ===== -->
+        <section class="section" aria-labelledby="mission-title" style="background:var(--surface-container-low);">
+            <div class="container">
+                <div class="grid grid-cols-12" style="gap:var(--stack-lg);align-items:center;">
+                    <div class="col-span-6">
+                        <img src="images/produits/irm-scanner.jpg" alt="Mission de TMS SARL" class="card-image" style="border-radius:var(--radius-lg);height:100%;object-fit:cover;min-height:300px;" loading="lazy">
+                    </div>
+                    <div class="col-span-6">
+                        <h2 class="headline-md" id="mission-title" style="color:var(--on-surface);margin-bottom:var(--stack-sm);" data-i18n="about.mission.title">Notre Mission et Vision</h2>
+                        <h3 class="headline-sm" style="color:var(--primary);margin-bottom:var(--stack-sm);" data-i18n="about.mission.title">Mission</h3>
+                        <p class="body-lg" style="color:var(--on-surface-variant);" data-i18n="about.mission.p">
+                            Fournir des solutions médicales innovantes et fiables pour améliorer la qualité des soins de santé au Cameroun, en offrant des équipements de pointe et un service client exceptionnel.
+                        </p>
+                        <h3 class="headline-sm" style="color:var(--secondary);margin:var(--stack-md) 0 var(--stack-sm);" data-i18n="about.vision.title">Vision</h3>
+                        <p class="body-lg" style="color:var(--on-surface-variant);" data-i18n="about.vision.p">
+                            Devenir le leader incontesté des solutions médicales en Afrique centrale, en étant reconnu pour notre excellence, notre intégrité et notre engagement envers l'innovation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== STATISTIQUES ===== -->
+        <section class="section" aria-labelledby="stats-title">
+            <div class="container">
+                <h2 class="section-title" id="stats-title">TMS SARL en chiffres</h2>
+                <p class="section-subtitle">Des années d'expérience au service de la santé au Cameroun.</p>
+                <div class="grid grid-cols-12" style="gap:var(--stack-md);">
+                    <div class="stat-item col-span-3" style="background:var(--surface-container-lowest);padding:var(--stack-md);border-radius:var(--radius-lg);box-shadow:var(--shadow-level-2);text-align:center;">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label" data-i18n="stat.years">Années d'expérience</div>
+                    </div>
+                    <div class="stat-item col-span-3" style="background:var(--surface-container-lowest);padding:var(--stack-md);border-radius:var(--radius-lg);box-shadow:var(--shadow-level-2);text-align:center;">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label" data-i18n="stat.clients">Clients satisfaits</div>
+                    </div>
+                    <div class="stat-item col-span-3" style="background:var(--surface-container-lowest);padding:var(--stack-md);border-radius:var(--radius-lg);box-shadow:var(--shadow-level-2);text-align:center;">
+                        <div class="stat-number">300+</div>
+                        <div class="stat-label" data-i18n="stat.products">Produits médicaux</div>
+                    </div>
+                    <div class="stat-item col-span-3" style="background:var(--surface-container-lowest);padding:var(--stack-md);border-radius:var(--radius-lg);box-shadow:var(--shadow-level-2);text-align:center;">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label" data-i18n="stat.specialists">Spécialistes médicaux</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ÉQUIPE ===== -->
+        <section class="section" aria-labelledby="team-title" style="background:var(--surface-container-low);">
+            <div class="container">
+                <h2 class="section-title" id="team-title">Notre Équipe d'Experts</h2>
+                <p class="section-subtitle">Des professionnels expérimentés à votre service pour vous accompagner dans tous vos projets.</p>
+                <div class="grid grid-cols-12" style="gap:var(--stack-lg);">
+                    <div class="col-span-3 team-member reveal">
+                        <img src="images/equipe/docteur1.jfif" alt="Dr. Alice Mbala" class="team-member-image" loading="lazy">
+                        <div class="team-member-name">Dr. Alice Mbala</div>
+                        <div class="team-member-role" data-i18n="team.member1.role">Responsable technique</div>
+                        <p class="caption" style="color:var(--on-surface-variant);margin-top:var(--stack-sm);" data-i18n="team.member1.experience">15 ans d'expérience en ingénierie biomédicale</p>
+                    </div>
+                    <div class="col-span-3 team-member reveal" style="transition-delay:0.1s;">
+                        <img src="images/equipe/docteur2.jfif" alt="Dr. Jean Kouam" class="team-member-image" loading="lazy">
+                        <div class="team-member-name">Dr. Jean Kouam</div>
+                        <div class="team-member-role" data-i18n="team.member2.role">Vente &amp; Support</div>
+                        <p class="caption" style="color:var(--on-surface-variant);margin-top:var(--stack-sm);" data-i18n="team.member2.experience">Expert en équipements de laboratoire</p>
+                    </div>
+                    <div class="col-span-3 team-member reveal" style="transition-delay:0.2s;">
+                        <img src="images/equipe/docteur3.jfif" alt="Dr. Marie Tchameni" class="team-member-image" loading="lazy">
+                        <div class="team-member-name">Dr. Marie Tchameni</div>
+                        <div class="team-member-role" data-i18n="team.member3.role">Formation &amp; services</div>
+                        <p class="caption" style="color:var(--on-surface-variant);margin-top:var(--stack-sm);" data-i18n="team.member3.experience">Spécialiste en formation clinique</p>
+                    </div>
+                    <div class="col-span-3 team-member reveal" style="transition-delay:0.3s;">
+                        <img src="images/equipe/docteur4.jfif" alt="Dr. Paul Nguembu" class="team-member-image" loading="lazy">
+                        <div class="team-member-name">Dr. Paul Nguembu</div>
+                        <div class="team-member-role" data-i18n="team.member4.role">Directeur Général</div>
+                        <p class="caption" style="color:var(--on-surface-variant);margin-top:var(--stack-sm);" data-i18n="team.member4.experience">Visionnaire en santé numérique</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CERTIFICATIONS ===== -->
+        <section class="section" aria-labelledby="certifications-title">
+            <div class="container">
+                <h2 class="section-title" id="certifications-title">Nos Certifications</h2>
+                <p class="section-subtitle">Des labels de qualité qui garantissent l'excellence de nos produits et services.</p>
+                <div class="flex" style="gap:var(--stack-md);justify-content:center;flex-wrap:wrap;">
+                    <div class="badge badge-primary" style="padding:12px 24px;font-size:16px;">
+                        <i class="ri-award-line" style="margin-right:8px;"></i> ISO 13485
+                    </div>
+                    <div class="badge badge-primary" style="padding:12px 24px;font-size:16px;">
+                        <i class="ri-award-line" style="margin-right:8px;"></i> CE Médical
+                    </div>
+                    <div class="badge badge-primary" style="padding:12px 24px;font-size:16px;">
+                        <i class="ri-award-line" style="margin-right:8px;"></i> FDA Approuvé
+                    </div>
+                    <div class="badge badge-secondary" style="padding:12px 24px;font-size:16px;">
+                        <i class="ri-award-line" style="margin-right:8px;"></i> GMP Certifié
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CTA ===== -->
+        <section class="section" aria-labelledby="cta-title">
+            <div class="container">
+                <div class="cta-banner" style="background:linear-gradient(135deg,var(--primary),var(--primary-hover));border-radius:var(--radius-lg);padding:var(--stack-lg);text-align:center;color:var(--on-primary);">
+                    <h2 class="headline-md" id="cta-title" style="color:var(--on-primary);margin-bottom:var(--stack-sm);">Prêt à collaborer avec nous ?</h2>
+                    <p class="body-lg" style="color:var(--on-primary);opacity:0.9;max-width:560px;margin:0 auto var(--stack-md);">
+                        Contactez-nous dès maintenant pour découvrir comment TMS SARL peut répondre à vos besoins médicaux.
+                    </p>
+                    <a href="contact.html" class="btn btn-cta" style="background:var(--on-primary);color:var(--primary);padding:14px 36px;border-radius:var(--radius-default);font-weight:600;display:inline-flex;align-items:center;gap:8px;">
+                        <i class="ri-phone-line"></i> Contactez-nous
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" role="contentinfo">
+        <!-- Même footer que les autres pages -->
+        <div class="container">
+            <div class="grid grid-cols-12" style="gap:var(--stack-lg);">
+                <div class="col-span-4">
+                    <div class="footer-brand">
+                        <a href="index.html" class="navbar-logo" aria-label="TMS SARL Accueil">
+                            <span class="script">TMS SARL</span>
+                        </a>
+                        <p class="caption" style="color:var(--on-surface-variant);max-width:280px;margin-top:var(--stack-sm);">
+                            TMS SARL, votre partenaire de confiance en équipements médicaux et de laboratoire au Cameroun depuis 2010.
+                        </p>
+                        <p class="caption" style="color:var(--on-surface-variant);margin-top:var(--stack-sm);">
+                            <i class="ri-map-pin-line"></i> Rue 8612, Bastos, Yaoundé, Cameroun
+                        </p>
+                    </div>
+                    <div class="flex" style="gap:var(--stack-sm);margin-top:var(--stack-sm);">
+                        <a href="#" aria-label="Facebook" class="social-link"><i class="ri-facebook-fill"></i></a>
+                        <a href="#" aria-label="Twitter" class="social-link"><i class="ri-twitter-x-fill"></i></a>
+                        <a href="#" aria-label="LinkedIn" class="social-link"><i class="ri-linkedin-fill"></i></a>
+                        <a href="#" aria-label="Instagram" class="social-link"><i class="ri-instagram-fill"></i></a>
+                        <a href="#" aria-label="YouTube" class="social-link"><i class="ri-youtube-fill"></i></a>
+                    </div>
+                </div>
+                <div class="col-span-2">
+                    <h3 class="label-sm" style="color:var(--on-surface);font-weight:600;" data-i18n="footer.links">Liens rapides</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+                        <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                        <li><a href="apropos.html" data-i18n="nav.about">À propos</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-span-2">
+                    <h3 class="label-sm" style="color:var(--on-surface);font-weight:600;">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Consultations</a></li>
+                        <li><a href="services.html">Analyses</a></li>
+                        <li><a href="services.html">Imagerie</a></li>
+                        <li><a href="services.html">Pharmacie</a></li>
+                        <li><a href="services.html">Maintenance</a></li>
+                    </ul>
+                </div>
+                <div class="col-span-4">
+                    <h3 class="label-sm" style="color:var(--on-surface);font-weight:600;">Newsletter</h3>
+                    <p class="caption" style="color:var(--on-surface-variant);" data-i18n="footer.newsletter">Abonnez-vous pour recevoir nos dernières actualités et offres spéciales.</p>
+                    <form class="flex" style="margin-top:var(--stack-sm);" id="newsletterForm" novalidate>
+                        <input type="email" placeholder="Votre email" class="form-input" style="border-radius:var(--radius-default) 0 0 var(--radius-default);flex:1;min-width:0;" required aria-label="Adresse email">
+                        <button type="submit" class="btn btn-primary" style="border-radius:0 var(--radius-default) var(--radius-default) 0;white-space:nowrap;">S'abonner</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copy">&copy; 2026 Technologie Medical Company Sarl. Tous droits réservés.</p>
+                <div class="flex" style="gap:var(--stack-md);flex-wrap:wrap;">
+                    <a href="#" data-i18n="footer.legal">Mentions légales</a>
+                    <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+                    <a href="#" data-i18n="footer.cgv">CGV</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/animations.js"></script>
+
+</body>
+</html>

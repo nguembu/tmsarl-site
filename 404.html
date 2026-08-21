@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page non trouvée - TMS SARL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700&family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <style>
+        .error-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 60vh;
+            padding: var(--stack-lg) 0;
+        }
+        .error-content {
+            text-align: center;
+            max-width: 560px;
+            padding: var(--stack-md);
+        }
+        .error-code {
+            font-size: 120px;
+            font-weight: 700;
+            color: var(--primary);
+            font-family: var(--font-family-heading);
+            line-height: 1;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .error-title {
+            font-family: var(--font-family-heading);
+            font-size: 32px;
+            font-weight: 600;
+            color: var(--on-surface);
+            margin: var(--stack-sm) 0;
+        }
+        .error-description {
+            font-family: var(--font-family-body);
+            font-size: 18px;
+            color: var(--on-surface-variant);
+            margin-bottom: var(--stack-lg);
+            line-height: 1.7;
+        }
+        .error-actions {
+            display: flex;
+            gap: var(--stack-sm);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        @media (max-width: 480px) {
+            .error-code { font-size: 80px; }
+            .error-title { font-size: 24px; }
+            .error-description { font-size: 16px; }
+            .error-actions { flex-direction: column; align-items: center; }
+            .error-actions .btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="navbar" role="banner">
+        <div class="container navbar-inner">
+            <a href="index.html" class="navbar-logo" aria-label="TMS SARL Accueil">
+                <span class="script">TMS SARL</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="error-container" aria-labelledby="error-title">
+            <div class="error-content reveal">
+                <div class="error-code">404</div>
+                <h1 class="error-title" id="error-title">Oups ! Page non trouvée</h1>
+                <p class="error-description">
+                    Désolé, la page que vous recherchez n'existe pas ou a été déplacée.<br>
+                    Vérifiez l'URL ou retournez à l'accueil.
+                </p>
+                <div class="error-actions">
+                    <a href="index.html" class="btn btn-primary">
+                        <i class="ri-arrow-left-line"></i> Retour à l'accueil
+                    </a>
+                    <a href="contact.html" class="btn btn-outline">
+                        <i class="ri-phone-line"></i> Nous contacter
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" role="contentinfo" style="margin-top:0;">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Technologie Medical Company Sarl. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+
+</body>
+</html>

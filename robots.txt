@@ -1,0 +1,24 @@
+# Robots.txt pour TMS SARL
+# https://tmsarl.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Interdire l'accès aux dossiers d'administration
+Disallow: /admin/
+Disallow: /assets/
+
+# Sitemap
+Sitemap: https://tmsarl.com/sitemap.xml
+
+# Délai de crawl
+Crawl-delay: 5
+
+# Règles pour les bots spécifiques
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/
